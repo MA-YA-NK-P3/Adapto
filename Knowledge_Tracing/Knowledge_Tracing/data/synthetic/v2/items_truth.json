@@ -1,0 +1,6005 @@
+{
+ "_note": "SYNTHETIC ground truth; trueDifficulty0to10 = 5 + 1.25 * trueDifficultyLogit",
+ "items": [
+  {
+   "problemId": "LC1",
+   "priorDifficulty": 3.5,
+   "trueDifficultyLogit": -1.6831,
+   "trueDifficulty0to10": 2.896
+  },
+  {
+   "problemId": "LC2",
+   "priorDifficulty": 5.25,
+   "trueDifficultyLogit": 0.6387,
+   "trueDifficulty0to10": 5.798
+  },
+  {
+   "problemId": "LC3",
+   "priorDifficulty": 5.6,
+   "trueDifficultyLogit": 0.3659,
+   "trueDifficulty0to10": 5.457
+  },
+  {
+   "problemId": "LC4",
+   "priorDifficulty": 6.91,
+   "trueDifficultyLogit": 1.3334,
+   "trueDifficulty0to10": 6.667
+  },
+  {
+   "problemId": "LC5",
+   "priorDifficulty": 5.64,
+   "trueDifficultyLogit": 0.5448,
+   "trueDifficulty0to10": 5.681
+  },
+  {
+   "problemId": "LC6",
+   "priorDifficulty": 5.04,
+   "trueDifficultyLogit": 0.4125,
+   "trueDifficulty0to10": 5.516
+  },
+  {
+   "problemId": "LC7",
+   "priorDifficulty": 5.88,
+   "trueDifficultyLogit": 0.8998,
+   "trueDifficulty0to10": 6.125
+  },
+  {
+   "problemId": "LC8",
+   "priorDifficulty": 6.2,
+   "trueDifficultyLogit": 0.526,
+   "trueDifficulty0to10": 5.657
+  },
+  {
+   "problemId": "LC9",
+   "priorDifficulty": 3.39,
+   "trueDifficultyLogit": -1.4869,
+   "trueDifficulty0to10": 3.141
+  },
+  {
+   "problemId": "LC10",
+   "priorDifficulty": 7.52,
+   "trueDifficultyLogit": 2.5063,
+   "trueDifficulty0to10": 8.133
+  },
+  {
+   "problemId": "LC11",
+   "priorDifficulty": 4.83,
+   "trueDifficultyLogit": -0.5285,
+   "trueDifficulty0to10": 4.339
+  },
+  {
+   "problemId": "LC12",
+   "priorDifficulty": 4.4,
+   "trueDifficultyLogit": -0.2731,
+   "trueDifficulty0to10": 4.659
+  },
+  {
+   "problemId": "LC13",
+   "priorDifficulty": 3.15,
+   "trueDifficultyLogit": -1.0091,
+   "trueDifficulty0to10": 3.739
+  },
+  {
+   "problemId": "LC14",
+   "priorDifficulty": 3.83,
+   "trueDifficultyLogit": -0.9551,
+   "trueDifficulty0to10": 3.806
+  },
+  {
+   "problemId": "LC15",
+   "priorDifficulty": 5.59,
+   "trueDifficultyLogit": 0.0456,
+   "trueDifficulty0to10": 5.057
+  },
+  {
+   "problemId": "LC16",
+   "priorDifficulty": 5.32,
+   "trueDifficultyLogit": -0.5505,
+   "trueDifficulty0to10": 4.312
+  },
+  {
+   "problemId": "LC17",
+   "priorDifficulty": 4.6,
+   "trueDifficultyLogit": -0.3637,
+   "trueDifficulty0to10": 4.545
+  },
+  {
+   "problemId": "LC18",
+   "priorDifficulty": 5.53,
+   "trueDifficultyLogit": 0.2962,
+   "trueDifficulty0to10": 5.37
+  },
+  {
+   "problemId": "LC19",
+   "priorDifficulty": 5.13,
+   "trueDifficultyLogit": 0.2714,
+   "trueDifficulty0to10": 5.339
+  },
+  {
+   "problemId": "LC20",
+   "priorDifficulty": 3.95,
+   "trueDifficultyLogit": -0.4474,
+   "trueDifficulty0to10": 4.441
+  },
+  {
+   "problemId": "LC21",
+   "priorDifficulty": 3.08,
+   "trueDifficultyLogit": -1.3183,
+   "trueDifficulty0to10": 3.352
+  },
+  {
+   "problemId": "LC22",
+   "priorDifficulty": 4.03,
+   "trueDifficultyLogit": -0.2507,
+   "trueDifficulty0to10": 4.687
+  },
+  {
+   "problemId": "LC23",
+   "priorDifficulty": 6.43,
+   "trueDifficultyLogit": 0.9201,
+   "trueDifficulty0to10": 6.15
+  },
+  {
+   "problemId": "LC24",
+   "priorDifficulty": 4.46,
+   "trueDifficultyLogit": -0.4217,
+   "trueDifficulty0to10": 4.473
+  },
+  {
+   "problemId": "LC25",
+   "priorDifficulty": 6.16,
+   "trueDifficultyLogit": 1.4001,
+   "trueDifficulty0to10": 6.75
+  },
+  {
+   "problemId": "LC26",
+   "priorDifficulty": 3.28,
+   "trueDifficultyLogit": -1.3494,
+   "trueDifficulty0to10": 3.313
+  },
+  {
+   "problemId": "LC27",
+   "priorDifficulty": 3.33,
+   "trueDifficultyLogit": -2.0675,
+   "trueDifficulty0to10": 2.416
+  },
+  {
+   "problemId": "LC28",
+   "priorDifficulty": 3.86,
+   "trueDifficultyLogit": -1.1196,
+   "trueDifficulty0to10": 3.6
+  },
+  {
+   "problemId": "LC29",
+   "priorDifficulty": 6.2,
+   "trueDifficultyLogit": 0.7574,
+   "trueDifficulty0to10": 5.947
+  },
+  {
+   "problemId": "LC30",
+   "priorDifficulty": 7.38,
+   "trueDifficultyLogit": 1.3415,
+   "trueDifficulty0to10": 6.677
+  },
+  {
+   "problemId": "LC31",
+   "priorDifficulty": 5.36,
+   "trueDifficultyLogit": 0.2736,
+   "trueDifficulty0to10": 5.342
+  },
+  {
+   "problemId": "LC32",
+   "priorDifficulty": 7.2,
+   "trueDifficultyLogit": 1.491,
+   "trueDifficulty0to10": 6.864
+  },
+  {
+   "problemId": "LC33",
+   "priorDifficulty": 5.38,
+   "trueDifficultyLogit": -0.2466,
+   "trueDifficulty0to10": 4.692
+  },
+  {
+   "problemId": "LC34",
+   "priorDifficulty": 5.24,
+   "trueDifficultyLogit": 0.4115,
+   "trueDifficulty0to10": 5.514
+  },
+  {
+   "problemId": "LC35",
+   "priorDifficulty": 3.69,
+   "trueDifficultyLogit": -1.1216,
+   "trueDifficulty0to10": 3.598
+  },
+  {
+   "problemId": "LC36",
+   "priorDifficulty": 4.67,
+   "trueDifficultyLogit": -0.3028,
+   "trueDifficulty0to10": 4.621
+  },
+  {
+   "problemId": "LC37",
+   "priorDifficulty": 6.24,
+   "trueDifficultyLogit": 0.97,
+   "trueDifficulty0to10": 6.213
+  },
+  {
+   "problemId": "LC38",
+   "priorDifficulty": 4.72,
+   "trueDifficultyLogit": 0.2615,
+   "trueDifficulty0to10": 5.327
+  },
+  {
+   "problemId": "LC39",
+   "priorDifficulty": 4.14,
+   "trueDifficultyLogit": -0.6071,
+   "trueDifficulty0to10": 4.241
+  },
+  {
+   "problemId": "LC40",
+   "priorDifficulty": 4.86,
+   "trueDifficultyLogit": -0.3999,
+   "trueDifficulty0to10": 4.5
+  },
+  {
+   "problemId": "LC41",
+   "priorDifficulty": 7.05,
+   "trueDifficultyLogit": 0.9856,
+   "trueDifficulty0to10": 6.232
+  },
+  {
+   "problemId": "LC42",
+   "priorDifficulty": 6.12,
+   "trueDifficultyLogit": 1.1779,
+   "trueDifficulty0to10": 6.472
+  },
+  {
+   "problemId": "LC43",
+   "priorDifficulty": 5.42,
+   "trueDifficultyLogit": -0.7219,
+   "trueDifficulty0to10": 4.098
+  },
+  {
+   "problemId": "LC44",
+   "priorDifficulty": 7.48,
+   "trueDifficultyLogit": 2.0589,
+   "trueDifficulty0to10": 7.574
+  },
+  {
+   "problemId": "LC45",
+   "priorDifficulty": 5.46,
+   "trueDifficultyLogit": 0.7869,
+   "trueDifficulty0to10": 5.984
+  },
+  {
+   "problemId": "LC46",
+   "priorDifficulty": 3.85,
+   "trueDifficultyLogit": 0.3981,
+   "trueDifficulty0to10": 5.498
+  },
+  {
+   "problemId": "LC47",
+   "priorDifficulty": 4.7,
+   "trueDifficultyLogit": 0.0141,
+   "trueDifficulty0to10": 5.018
+  },
+  {
+   "problemId": "LC48",
+   "priorDifficulty": 3.95,
+   "trueDifficultyLogit": -0.8173,
+   "trueDifficulty0to10": 3.978
+  },
+  {
+   "problemId": "LC49",
+   "priorDifficulty": 4.33,
+   "trueDifficultyLogit": -0.198,
+   "trueDifficulty0to10": 4.753
+  },
+  {
+   "problemId": "LC50",
+   "priorDifficulty": 5.61,
+   "trueDifficultyLogit": 0.8761,
+   "trueDifficulty0to10": 6.095
+  },
+  {
+   "problemId": "LC51",
+   "priorDifficulty": 5.8,
+   "trueDifficultyLogit": 0.7246,
+   "trueDifficulty0to10": 5.906
+  },
+  {
+   "problemId": "LC52",
+   "priorDifficulty": 5.8,
+   "trueDifficultyLogit": 0.8245,
+   "trueDifficulty0to10": 6.031
+  },
+  {
+   "problemId": "LC53",
+   "priorDifficulty": 5.09,
+   "trueDifficultyLogit": 0.2023,
+   "trueDifficulty0to10": 5.253
+  },
+  {
+   "problemId": "LC54",
+   "priorDifficulty": 4.94,
+   "trueDifficultyLogit": -0.1338,
+   "trueDifficulty0to10": 4.833
+  },
+  {
+   "problemId": "LC55",
+   "priorDifficulty": 5.53,
+   "trueDifficultyLogit": 0.6055,
+   "trueDifficulty0to10": 5.757
+  },
+  {
+   "problemId": "LC56",
+   "priorDifficulty": 5.13,
+   "trueDifficultyLogit": 0.4193,
+   "trueDifficulty0to10": 5.524
+  },
+  {
+   "problemId": "LC57",
+   "priorDifficulty": 5.37,
+   "trueDifficultyLogit": 0.4173,
+   "trueDifficulty0to10": 5.522
+  },
+  {
+   "problemId": "LC58",
+   "priorDifficulty": 3.43,
+   "trueDifficultyLogit": -0.3768,
+   "trueDifficulty0to10": 4.529
+  },
+  {
+   "problemId": "LC59",
+   "priorDifficulty": 4.2,
+   "trueDifficultyLogit": -0.4102,
+   "trueDifficulty0to10": 4.487
+  },
+  {
+   "problemId": "LC60",
+   "priorDifficulty": 6.66,
+   "trueDifficultyLogit": 1.2677,
+   "trueDifficulty0to10": 6.585
+  },
+  {
+   "problemId": "LC61",
+   "priorDifficulty": 5.47,
+   "trueDifficultyLogit": 0.1374,
+   "trueDifficulty0to10": 5.172
+  },
+  {
+   "problemId": "LC62",
+   "priorDifficulty": 4.58,
+   "trueDifficultyLogit": 0.3633,
+   "trueDifficulty0to10": 5.454
+  },
+  {
+   "problemId": "LC63",
+   "priorDifficulty": 5.4,
+   "trueDifficultyLogit": -0.0186,
+   "trueDifficulty0to10": 4.977
+  },
+  {
+   "problemId": "LC64",
+   "priorDifficulty": 4.52,
+   "trueDifficultyLogit": -0.4198,
+   "trueDifficulty0to10": 4.475
+  },
+  {
+   "problemId": "LC66",
+   "priorDifficulty": 3.75,
+   "trueDifficultyLogit": -0.7631,
+   "trueDifficulty0to10": 4.046
+  },
+  {
+   "problemId": "LC67",
+   "priorDifficulty": 3.47,
+   "trueDifficultyLogit": -1.8475,
+   "trueDifficulty0to10": 2.691
+  },
+  {
+   "problemId": "LC68",
+   "priorDifficulty": 6.74,
+   "trueDifficultyLogit": 1.4365,
+   "trueDifficulty0to10": 6.796
+  },
+  {
+   "problemId": "LC69",
+   "priorDifficulty": 4.04,
+   "trueDifficultyLogit": -0.7058,
+   "trueDifficulty0to10": 4.118
+  },
+  {
+   "problemId": "LC70",
+   "priorDifficulty": 3.62,
+   "trueDifficultyLogit": -0.5918,
+   "trueDifficulty0to10": 4.26
+  },
+  {
+   "problemId": "LC71",
+   "priorDifficulty": 5.17,
+   "trueDifficultyLogit": 0.0859,
+   "trueDifficulty0to10": 5.107
+  },
+  {
+   "problemId": "LC72",
+   "priorDifficulty": 4.82,
+   "trueDifficultyLogit": -0.3438,
+   "trueDifficulty0to10": 4.57
+  },
+  {
+   "problemId": "LC73",
+   "priorDifficulty": 4.73,
+   "trueDifficultyLogit": -0.1184,
+   "trueDifficulty0to10": 4.852
+  },
+  {
+   "problemId": "LC74",
+   "priorDifficulty": 5.07,
+   "trueDifficultyLogit": -0.5723,
+   "trueDifficulty0to10": 4.285
+  },
+  {
+   "problemId": "LC75",
+   "priorDifficulty": 4.46,
+   "trueDifficultyLogit": -1.133,
+   "trueDifficulty0to10": 3.584
+  },
+  {
+   "problemId": "LC76",
+   "priorDifficulty": 6.88,
+   "trueDifficultyLogit": 2.1945,
+   "trueDifficulty0to10": 7.743
+  },
+  {
+   "problemId": "LC77",
+   "priorDifficulty": 4.24,
+   "trueDifficultyLogit": -1.1131,
+   "trueDifficulty0to10": 3.609
+  },
+  {
+   "problemId": "LC78",
+   "priorDifficulty": 3.82,
+   "trueDifficultyLogit": -1.4473,
+   "trueDifficulty0to10": 3.191
+  },
+  {
+   "problemId": "LC79",
+   "priorDifficulty": 5.29,
+   "trueDifficultyLogit": 0.2698,
+   "trueDifficulty0to10": 5.337
+  },
+  {
+   "problemId": "LC80",
+   "priorDifficulty": 4.66,
+   "trueDifficultyLogit": -0.1622,
+   "trueDifficulty0to10": 4.797
+  },
+  {
+   "problemId": "LC81",
+   "priorDifficulty": 5.57,
+   "trueDifficultyLogit": 0.5415,
+   "trueDifficulty0to10": 5.677
+  },
+  {
+   "problemId": "LC82",
+   "priorDifficulty": 5.14,
+   "trueDifficultyLogit": 0.1493,
+   "trueDifficulty0to10": 5.187
+  },
+  {
+   "problemId": "LC83",
+   "priorDifficulty": 3.51,
+   "trueDifficultyLogit": -1.5044,
+   "trueDifficulty0to10": 3.119
+  },
+  {
+   "problemId": "LC84",
+   "priorDifficulty": 6.79,
+   "trueDifficultyLogit": 1.6224,
+   "trueDifficulty0to10": 7.028
+  },
+  {
+   "problemId": "LC85",
+   "priorDifficulty": 6.46,
+   "trueDifficultyLogit": 1.0881,
+   "trueDifficulty0to10": 6.36
+  },
+  {
+   "problemId": "LC86",
+   "priorDifficulty": 4.79,
+   "trueDifficultyLogit": 0.1314,
+   "trueDifficulty0to10": 5.164
+  },
+  {
+   "problemId": "LC87",
+   "priorDifficulty": 6.98,
+   "trueDifficultyLogit": 1.2383,
+   "trueDifficulty0to10": 6.548
+  },
+  {
+   "problemId": "LC88",
+   "priorDifficulty": 3.57,
+   "trueDifficultyLogit": -1.1758,
+   "trueDifficulty0to10": 3.53
+  },
+  {
+   "problemId": "LC89",
+   "priorDifficulty": 4.63,
+   "trueDifficultyLogit": 0.2887,
+   "trueDifficulty0to10": 5.361
+  },
+  {
+   "problemId": "LC90",
+   "priorDifficulty": 4.79,
+   "trueDifficultyLogit": -0.1749,
+   "trueDifficulty0to10": 4.781
+  },
+  {
+   "problemId": "LC91",
+   "priorDifficulty": 5.64,
+   "trueDifficultyLogit": 0.8674,
+   "trueDifficulty0to10": 6.084
+  },
+  {
+   "problemId": "LC92",
+   "priorDifficulty": 5.14,
+   "trueDifficultyLogit": 0.2143,
+   "trueDifficulty0to10": 5.268
+  },
+  {
+   "problemId": "LC93",
+   "priorDifficulty": 4.97,
+   "trueDifficultyLogit": 0.0896,
+   "trueDifficulty0to10": 5.112
+  },
+  {
+   "problemId": "LC94",
+   "priorDifficulty": 2.54,
+   "trueDifficultyLogit": -1.4205,
+   "trueDifficulty0to10": 3.224
+  },
+  {
+   "problemId": "LC95",
+   "priorDifficulty": 4.74,
+   "trueDifficultyLogit": -0.6379,
+   "trueDifficulty0to10": 4.203
+  },
+  {
+   "problemId": "LC96",
+   "priorDifficulty": 4.7,
+   "trueDifficultyLogit": -0.158,
+   "trueDifficulty0to10": 4.802
+  },
+  {
+   "problemId": "LC97",
+   "priorDifficulty": 5.41,
+   "trueDifficultyLogit": 0.378,
+   "trueDifficulty0to10": 5.472
+  },
+  {
+   "problemId": "LC98",
+   "priorDifficulty": 5.73,
+   "trueDifficultyLogit": 0.597,
+   "trueDifficulty0to10": 5.746
+  },
+  {
+   "problemId": "LC99",
+   "priorDifficulty": 4.82,
+   "trueDifficultyLogit": 0.2122,
+   "trueDifficulty0to10": 5.265
+  },
+  {
+   "problemId": "LC100",
+   "priorDifficulty": 3.12,
+   "trueDifficultyLogit": -1.2539,
+   "trueDifficulty0to10": 3.433
+  },
+  {
+   "problemId": "LC101",
+   "priorDifficulty": 3.35,
+   "trueDifficultyLogit": -1.7624,
+   "trueDifficulty0to10": 2.797
+  },
+  {
+   "problemId": "LC102",
+   "priorDifficulty": 4.32,
+   "trueDifficultyLogit": -0.5194,
+   "trueDifficulty0to10": 4.351
+  },
+  {
+   "problemId": "LC103",
+   "priorDifficulty": 4.69,
+   "trueDifficultyLogit": -0.3932,
+   "trueDifficulty0to10": 4.508
+  },
+  {
+   "problemId": "LC104",
+   "priorDifficulty": 2.64,
+   "trueDifficultyLogit": -2.1502,
+   "trueDifficulty0to10": 2.312
+  },
+  {
+   "problemId": "LC105",
+   "priorDifficulty": 4.49,
+   "trueDifficultyLogit": -0.0347,
+   "trueDifficulty0to10": 4.957
+  },
+  {
+   "problemId": "LC106",
+   "priorDifficulty": 4.49,
+   "trueDifficultyLogit": -0.699,
+   "trueDifficulty0to10": 4.126
+  },
+  {
+   "problemId": "LC107",
+   "priorDifficulty": 4.51,
+   "trueDifficultyLogit": -0.2367,
+   "trueDifficulty0to10": 4.704
+  },
+  {
+   "problemId": "LC108",
+   "priorDifficulty": 2.77,
+   "trueDifficultyLogit": -1.7799,
+   "trueDifficulty0to10": 2.775
+  },
+  {
+   "problemId": "LC109",
+   "priorDifficulty": 4.58,
+   "trueDifficultyLogit": 0.3303,
+   "trueDifficulty0to10": 5.413
+  },
+  {
+   "problemId": "LC110",
+   "priorDifficulty": 3.45,
+   "trueDifficultyLogit": -1.3481,
+   "trueDifficulty0to10": 3.315
+  },
+  {
+   "problemId": "LC111",
+   "priorDifficulty": 3.64,
+   "trueDifficultyLogit": -0.7506,
+   "trueDifficulty0to10": 4.062
+  },
+  {
+   "problemId": "LC112",
+   "priorDifficulty": 3.57,
+   "trueDifficultyLogit": -1.069,
+   "trueDifficulty0to10": 3.664
+  },
+  {
+   "problemId": "LC113",
+   "priorDifficulty": 4.75,
+   "trueDifficultyLogit": -0.2243,
+   "trueDifficulty0to10": 4.72
+  },
+  {
+   "problemId": "LC114",
+   "priorDifficulty": 4.4,
+   "trueDifficultyLogit": -0.8037,
+   "trueDifficulty0to10": 3.995
+  },
+  {
+   "problemId": "LC115",
+   "priorDifficulty": 6.67,
+   "trueDifficultyLogit": 1.5327,
+   "trueDifficulty0to10": 6.916
+  },
+  {
+   "problemId": "LC116",
+   "priorDifficulty": 4.56,
+   "trueDifficultyLogit": -0.2439,
+   "trueDifficulty0to10": 4.695
+  },
+  {
+   "problemId": "LC117",
+   "priorDifficulty": 4.93,
+   "trueDifficultyLogit": 0.4684,
+   "trueDifficulty0to10": 5.585
+  },
+  {
+   "problemId": "LC118",
+   "priorDifficulty": 2.6,
+   "trueDifficultyLogit": -1.7871,
+   "trueDifficulty0to10": 2.766
+  },
+  {
+   "problemId": "LC119",
+   "priorDifficulty": 3.12,
+   "trueDifficultyLogit": -1.2363,
+   "trueDifficulty0to10": 3.455
+  },
+  {
+   "problemId": "LC120",
+   "priorDifficulty": 4.87,
+   "trueDifficultyLogit": 0.2348,
+   "trueDifficulty0to10": 5.294
+  },
+  {
+   "problemId": "LC121",
+   "priorDifficulty": 3.51,
+   "trueDifficultyLogit": -0.5156,
+   "trueDifficulty0to10": 4.355
+  },
+  {
+   "problemId": "LC122",
+   "priorDifficulty": 4.4,
+   "trueDifficultyLogit": -0.7049,
+   "trueDifficulty0to10": 4.119
+  },
+  {
+   "problemId": "LC123",
+   "priorDifficulty": 6.65,
+   "trueDifficultyLogit": 1.7973,
+   "trueDifficulty0to10": 7.247
+  },
+  {
+   "problemId": "LC124",
+   "priorDifficulty": 7.09,
+   "trueDifficultyLogit": 1.5516,
+   "trueDifficulty0to10": 6.94
+  },
+  {
+   "problemId": "LC125",
+   "priorDifficulty": 3.62,
+   "trueDifficultyLogit": -1.3006,
+   "trueDifficulty0to10": 3.374
+  },
+  {
+   "problemId": "LC126",
+   "priorDifficulty": 7.69,
+   "trueDifficultyLogit": 2.121,
+   "trueDifficulty0to10": 7.651
+  },
+  {
+   "problemId": "LC127",
+   "priorDifficulty": 6.95,
+   "trueDifficultyLogit": 1.3033,
+   "trueDifficulty0to10": 6.629
+  },
+  {
+   "problemId": "LC128",
+   "priorDifficulty": 5.33,
+   "trueDifficultyLogit": 0.4083,
+   "trueDifficulty0to10": 5.51
+  },
+  {
+   "problemId": "LC129",
+   "priorDifficulty": 4.45,
+   "trueDifficultyLogit": -0.4054,
+   "trueDifficulty0to10": 4.493
+  },
+  {
+   "problemId": "LC130",
+   "priorDifficulty": 5.36,
+   "trueDifficultyLogit": 0.4039,
+   "trueDifficulty0to10": 5.505
+  },
+  {
+   "problemId": "LC131",
+   "priorDifficulty": 4.26,
+   "trueDifficultyLogit": -0.6416,
+   "trueDifficulty0to10": 4.198
+  },
+  {
+   "problemId": "LC132",
+   "priorDifficulty": 7.27,
+   "trueDifficultyLogit": 1.9132,
+   "trueDifficulty0to10": 7.391
+  },
+  {
+   "problemId": "LC133",
+   "priorDifficulty": 4.63,
+   "trueDifficultyLogit": -0.4168,
+   "trueDifficulty0to10": 4.479
+  },
+  {
+   "problemId": "LC134",
+   "priorDifficulty": 5.27,
+   "trueDifficultyLogit": 0.1164,
+   "trueDifficulty0to10": 5.146
+  },
+  {
+   "problemId": "LC135",
+   "priorDifficulty": 6.85,
+   "trueDifficultyLogit": 1.2876,
+   "trueDifficulty0to10": 6.61
+  },
+  {
+   "problemId": "LC136",
+   "priorDifficulty": 2.66,
+   "trueDifficultyLogit": -1.3089,
+   "trueDifficulty0to10": 3.364
+  },
+  {
+   "problemId": "LC137",
+   "priorDifficulty": 4.56,
+   "trueDifficultyLogit": 0.0874,
+   "trueDifficulty0to10": 5.109
+  },
+  {
+   "problemId": "LC138",
+   "priorDifficulty": 4.72,
+   "trueDifficultyLogit": -0.5001,
+   "trueDifficulty0to10": 4.375
+  },
+  {
+   "problemId": "LC139",
+   "priorDifficulty": 5.23,
+   "trueDifficultyLogit": 0.2135,
+   "trueDifficulty0to10": 5.267
+  },
+  {
+   "problemId": "LC140",
+   "priorDifficulty": 6.6,
+   "trueDifficultyLogit": 1.3846,
+   "trueDifficulty0to10": 6.731
+  },
+  {
+   "problemId": "LC141",
+   "priorDifficulty": 3.59,
+   "trueDifficultyLogit": -0.9744,
+   "trueDifficulty0to10": 3.782
+  },
+  {
+   "problemId": "LC142",
+   "priorDifficulty": 4.89,
+   "trueDifficultyLogit": -0.1448,
+   "trueDifficulty0to10": 4.819
+  },
+  {
+   "problemId": "LC143",
+   "priorDifficulty": 4.62,
+   "trueDifficultyLogit": -0.5882,
+   "trueDifficulty0to10": 4.265
+  },
+  {
+   "problemId": "LC144",
+   "priorDifficulty": 2.74,
+   "trueDifficultyLogit": -1.5763,
+   "trueDifficulty0to10": 3.03
+  },
+  {
+   "problemId": "LC145",
+   "priorDifficulty": 2.62,
+   "trueDifficultyLogit": -2.1621,
+   "trueDifficulty0to10": 2.297
+  },
+  {
+   "problemId": "LC146",
+   "priorDifficulty": 5.3,
+   "trueDifficultyLogit": -0.1837,
+   "trueDifficulty0to10": 4.77
+  },
+  {
+   "problemId": "LC147",
+   "priorDifficulty": 4.85,
+   "trueDifficultyLogit": -0.3079,
+   "trueDifficulty0to10": 4.615
+  },
+  {
+   "problemId": "LC148",
+   "priorDifficulty": 4.66,
+   "trueDifficultyLogit": 0.4774,
+   "trueDifficulty0to10": 5.597
+  },
+  {
+   "problemId": "LC149",
+   "priorDifficulty": 7.54,
+   "trueDifficultyLogit": 2.2013,
+   "trueDifficulty0to10": 7.752
+  },
+  {
+   "problemId": "LC150",
+   "priorDifficulty": 4.91,
+   "trueDifficultyLogit": -0.2105,
+   "trueDifficulty0to10": 4.737
+  },
+  {
+   "problemId": "LC151",
+   "priorDifficulty": 4.94,
+   "trueDifficultyLogit": 0.0239,
+   "trueDifficulty0to10": 5.03
+  },
+  {
+   "problemId": "LC152",
+   "priorDifficulty": 5.7,
+   "trueDifficultyLogit": 0.4151,
+   "trueDifficulty0to10": 5.519
+  },
+  {
+   "problemId": "LC153",
+   "priorDifficulty": 5.04,
+   "trueDifficultyLogit": 0.9762,
+   "trueDifficulty0to10": 6.22
+  },
+  {
+   "problemId": "LC154",
+   "priorDifficulty": 6.94,
+   "trueDifficultyLogit": 2.1074,
+   "trueDifficulty0to10": 7.634
+  },
+  {
+   "problemId": "LC155",
+   "priorDifficulty": 4.92,
+   "trueDifficultyLogit": 0.2324,
+   "trueDifficulty0to10": 5.29
+  },
+  {
+   "problemId": "LC160",
+   "priorDifficulty": 3.25,
+   "trueDifficultyLogit": -1.4789,
+   "trueDifficulty0to10": 3.151
+  },
+  {
+   "problemId": "LC162",
+   "priorDifficulty": 5.33,
+   "trueDifficultyLogit": -0.1424,
+   "trueDifficulty0to10": 4.822
+  },
+  {
+   "problemId": "LC164",
+   "priorDifficulty": 5.11,
+   "trueDifficultyLogit": 0.107,
+   "trueDifficulty0to10": 5.134
+  },
+  {
+   "problemId": "LC165",
+   "priorDifficulty": 5.33,
+   "trueDifficultyLogit": -0.5597,
+   "trueDifficulty0to10": 4.3
+  },
+  {
+   "problemId": "LC166",
+   "priorDifficulty": 5.92,
+   "trueDifficultyLogit": 1.8093,
+   "trueDifficulty0to10": 7.262
+  },
+  {
+   "problemId": "LC167",
+   "priorDifficulty": 4.64,
+   "trueDifficultyLogit": -0.4218,
+   "trueDifficulty0to10": 4.473
+  },
+  {
+   "problemId": "LC168",
+   "priorDifficulty": 3.85,
+   "trueDifficultyLogit": -0.5876,
+   "trueDifficulty0to10": 4.266
+  },
+  {
+   "problemId": "LC169",
+   "priorDifficulty": 3.18,
+   "trueDifficultyLogit": -1.7612,
+   "trueDifficulty0to10": 2.799
+  },
+  {
+   "problemId": "LC171",
+   "priorDifficulty": 3.1,
+   "trueDifficultyLogit": -2.0068,
+   "trueDifficulty0to10": 2.491
+  },
+  {
+   "problemId": "LC172",
+   "priorDifficulty": 5.32,
+   "trueDifficultyLogit": 0.0033,
+   "trueDifficulty0to10": 5.004
+  },
+  {
+   "problemId": "LC173",
+   "priorDifficulty": 4.15,
+   "trueDifficultyLogit": -1.1567,
+   "trueDifficulty0to10": 3.554
+  },
+  {
+   "problemId": "LC174",
+   "priorDifficulty": 7.11,
+   "trueDifficultyLogit": 1.7843,
+   "trueDifficulty0to10": 7.23
+  },
+  {
+   "problemId": "LC179",
+   "priorDifficulty": 5.45,
+   "trueDifficultyLogit": 0.0761,
+   "trueDifficulty0to10": 5.095
+  },
+  {
+   "problemId": "LC187",
+   "priorDifficulty": 5.08,
+   "trueDifficultyLogit": 0.1318,
+   "trueDifficulty0to10": 5.165
+  },
+  {
+   "problemId": "LC188",
+   "priorDifficulty": 6.78,
+   "trueDifficultyLogit": 1.5504,
+   "trueDifficulty0to10": 6.938
+  },
+  {
+   "problemId": "LC189",
+   "priorDifficulty": 5.39,
+   "trueDifficultyLogit": 0.6456,
+   "trueDifficulty0to10": 5.807
+  },
+  {
+   "problemId": "LC190",
+   "priorDifficulty": 3.06,
+   "trueDifficultyLogit": -1.139,
+   "trueDifficulty0to10": 3.576
+  },
+  {
+   "problemId": "LC191",
+   "priorDifficulty": 2.7,
+   "trueDifficultyLogit": -1.9355,
+   "trueDifficulty0to10": 2.581
+  },
+  {
+   "problemId": "LC198",
+   "priorDifficulty": 5.1,
+   "trueDifficultyLogit": -0.0178,
+   "trueDifficulty0to10": 4.978
+  },
+  {
+   "problemId": "LC199",
+   "priorDifficulty": 4.42,
+   "trueDifficultyLogit": -1.1211,
+   "trueDifficulty0to10": 3.599
+  },
+  {
+   "problemId": "LC200",
+   "priorDifficulty": 4.67,
+   "trueDifficultyLogit": 0.0893,
+   "trueDifficulty0to10": 5.112
+  },
+  {
+   "problemId": "LC201",
+   "priorDifficulty": 5.26,
+   "trueDifficultyLogit": 0.126,
+   "trueDifficulty0to10": 5.157
+  },
+  {
+   "problemId": "LC202",
+   "priorDifficulty": 3.41,
+   "trueDifficultyLogit": -1.2958,
+   "trueDifficulty0to10": 3.38
+  },
+  {
+   "problemId": "LC203",
+   "priorDifficulty": 3.58,
+   "trueDifficultyLogit": -1.3,
+   "trueDifficulty0to10": 3.375
+  },
+  {
+   "problemId": "LC204",
+   "priorDifficulty": 5.75,
+   "trueDifficultyLogit": 0.4599,
+   "trueDifficulty0to10": 5.575
+  },
+  {
+   "problemId": "LC205",
+   "priorDifficulty": 3.8,
+   "trueDifficultyLogit": -0.3646,
+   "trueDifficulty0to10": 4.544
+  },
+  {
+   "problemId": "LC206",
+   "priorDifficulty": 2.51,
+   "trueDifficultyLogit": -2.0239,
+   "trueDifficulty0to10": 2.47
+  },
+  {
+   "problemId": "LC207",
+   "priorDifficulty": 5.15,
+   "trueDifficultyLogit": 0.7553,
+   "trueDifficulty0to10": 5.944
+  },
+  {
+   "problemId": "LC208",
+   "priorDifficulty": 4.47,
+   "trueDifficultyLogit": -0.4567,
+   "trueDifficulty0to10": 4.429
+  },
+  {
+   "problemId": "LC209",
+   "priorDifficulty": 5.12,
+   "trueDifficultyLogit": 0.6446,
+   "trueDifficulty0to10": 5.806
+  },
+  {
+   "problemId": "LC210",
+   "priorDifficulty": 5.0,
+   "trueDifficultyLogit": 0.0619,
+   "trueDifficulty0to10": 5.077
+  },
+  {
+   "problemId": "LC211",
+   "priorDifficulty": 5.26,
+   "trueDifficultyLogit": 0.1808,
+   "trueDifficulty0to10": 5.226
+  },
+  {
+   "problemId": "LC212",
+   "priorDifficulty": 7.24,
+   "trueDifficultyLogit": 1.7292,
+   "trueDifficulty0to10": 7.162
+  },
+  {
+   "problemId": "LC213",
+   "priorDifficulty": 5.39,
+   "trueDifficultyLogit": 0.3415,
+   "trueDifficulty0to10": 5.427
+  },
+  {
+   "problemId": "LC214",
+   "priorDifficulty": 7.08,
+   "trueDifficultyLogit": 2.0653,
+   "trueDifficulty0to10": 7.582
+  },
+  {
+   "problemId": "LC215",
+   "priorDifficulty": 4.5,
+   "trueDifficultyLogit": -0.4427,
+   "trueDifficulty0to10": 4.447
+  },
+  {
+   "problemId": "LC216",
+   "priorDifficulty": 4.3,
+   "trueDifficultyLogit": -0.6727,
+   "trueDifficulty0to10": 4.159
+  },
+  {
+   "problemId": "LC217",
+   "priorDifficulty": 3.25,
+   "trueDifficultyLogit": -1.7851,
+   "trueDifficulty0to10": 2.769
+  },
+  {
+   "problemId": "LC218",
+   "priorDifficulty": 6.97,
+   "trueDifficultyLogit": 0.9247,
+   "trueDifficulty0to10": 6.156
+  },
+  {
+   "problemId": "LC219",
+   "priorDifficulty": 3.7,
+   "trueDifficultyLogit": -1.4339,
+   "trueDifficulty0to10": 3.208
+  },
+  {
+   "problemId": "LC221",
+   "priorDifficulty": 5.2,
+   "trueDifficultyLogit": -0.0388,
+   "trueDifficulty0to10": 4.951
+  },
+  {
+   "problemId": "LC222",
+   "priorDifficulty": 4.37,
+   "trueDifficultyLogit": -0.2427,
+   "trueDifficulty0to10": 4.697
+  },
+  {
+   "problemId": "LC223",
+   "priorDifficulty": 5.21,
+   "trueDifficultyLogit": 0.3587,
+   "trueDifficulty0to10": 5.448
+  },
+  {
+   "problemId": "LC224",
+   "priorDifficulty": 6.93,
+   "trueDifficultyLogit": 0.9796,
+   "trueDifficulty0to10": 6.224
+  },
+  {
+   "problemId": "LC225",
+   "priorDifficulty": 3.02,
+   "trueDifficultyLogit": -1.5162,
+   "trueDifficulty0to10": 3.105
+  },
+  {
+   "problemId": "LC226",
+   "priorDifficulty": 2.55,
+   "trueDifficultyLogit": -2.0044,
+   "trueDifficulty0to10": 2.494
+  },
+  {
+   "problemId": "LC227",
+   "priorDifficulty": 5.33,
+   "trueDifficultyLogit": 0.3514,
+   "trueDifficulty0to10": 5.439
+  },
+  {
+   "problemId": "LC228",
+   "priorDifficulty": 3.61,
+   "trueDifficultyLogit": -0.5777,
+   "trueDifficulty0to10": 4.278
+  },
+  {
+   "problemId": "LC229",
+   "priorDifficulty": 4.98,
+   "trueDifficultyLogit": -0.1878,
+   "trueDifficulty0to10": 4.765
+  },
+  {
+   "problemId": "LC230",
+   "priorDifficulty": 4.13,
+   "trueDifficultyLogit": -0.3549,
+   "trueDifficulty0to10": 4.556
+  },
+  {
+   "problemId": "LC231",
+   "priorDifficulty": 3.75,
+   "trueDifficultyLogit": -1.0199,
+   "trueDifficulty0to10": 3.725
+  },
+  {
+   "problemId": "LC232",
+   "priorDifficulty": 3.03,
+   "trueDifficultyLogit": -1.5641,
+   "trueDifficulty0to10": 3.045
+  },
+  {
+   "problemId": "LC233",
+   "priorDifficulty": 7.2,
+   "trueDifficultyLogit": 0.9734,
+   "trueDifficulty0to10": 6.217
+  },
+  {
+   "problemId": "LC234",
+   "priorDifficulty": 3.46,
+   "trueDifficultyLogit": -1.2139,
+   "trueDifficulty0to10": 3.483
+  },
+  {
+   "problemId": "LC235",
+   "priorDifficulty": 4.41,
+   "trueDifficultyLogit": -0.586,
+   "trueDifficulty0to10": 4.268
+  },
+  {
+   "problemId": "LC236",
+   "priorDifficulty": 4.47,
+   "trueDifficultyLogit": -0.1111,
+   "trueDifficulty0to10": 4.861
+  },
+  {
+   "problemId": "LC237",
+   "priorDifficulty": 3.8,
+   "trueDifficultyLogit": -1.7455,
+   "trueDifficulty0to10": 2.818
+  },
+  {
+   "problemId": "LC238",
+   "priorDifficulty": 4.5,
+   "trueDifficultyLogit": -0.1937,
+   "trueDifficulty0to10": 4.758
+  },
+  {
+   "problemId": "LC239",
+   "priorDifficulty": 6.85,
+   "trueDifficultyLogit": 1.6503,
+   "trueDifficulty0to10": 7.063
+  },
+  {
+   "problemId": "LC240",
+   "priorDifficulty": 4.94,
+   "trueDifficultyLogit": -0.3048,
+   "trueDifficulty0to10": 4.619
+  },
+  {
+   "problemId": "LC241",
+   "priorDifficulty": 4.31,
+   "trueDifficultyLogit": -0.4228,
+   "trueDifficulty0to10": 4.472
+  },
+  {
+   "problemId": "LC242",
+   "priorDifficulty": 3.09,
+   "trueDifficultyLogit": -1.745,
+   "trueDifficulty0to10": 2.819
+  },
+  {
+   "problemId": "LC257",
+   "priorDifficulty": 3.06,
+   "trueDifficultyLogit": -1.7398,
+   "trueDifficulty0to10": 2.825
+  },
+  {
+   "problemId": "LC258",
+   "priorDifficulty": 3.07,
+   "trueDifficultyLogit": -1.0691,
+   "trueDifficulty0to10": 3.664
+  },
+  {
+   "problemId": "LC260",
+   "priorDifficulty": 4.47,
+   "trueDifficultyLogit": -0.1904,
+   "trueDifficulty0to10": 4.762
+  },
+  {
+   "problemId": "LC263",
+   "priorDifficulty": 3.97,
+   "trueDifficultyLogit": -1.216,
+   "trueDifficulty0to10": 3.48
+  },
+  {
+   "problemId": "LC264",
+   "priorDifficulty": 5.24,
+   "trueDifficultyLogit": -0.1789,
+   "trueDifficulty0to10": 4.776
+  },
+  {
+   "problemId": "LC268",
+   "priorDifficulty": 2.92,
+   "trueDifficultyLogit": -1.5614,
+   "trueDifficulty0to10": 3.048
+  },
+  {
+   "problemId": "LC273",
+   "priorDifficulty": 7.38,
+   "trueDifficultyLogit": 2.2775,
+   "trueDifficulty0to10": 7.847
+  },
+  {
+   "problemId": "LC274",
+   "priorDifficulty": 5.52,
+   "trueDifficultyLogit": 0.5625,
+   "trueDifficulty0to10": 5.703
+  },
+  {
+   "problemId": "LC278",
+   "priorDifficulty": 3.85,
+   "trueDifficultyLogit": -1.2368,
+   "trueDifficulty0to10": 3.454
+  },
+  {
+   "problemId": "LC279",
+   "priorDifficulty": 4.98,
+   "trueDifficultyLogit": -0.4128,
+   "trueDifficulty0to10": 4.484
+  },
+  {
+   "problemId": "LC282",
+   "priorDifficulty": 7.05,
+   "trueDifficultyLogit": 1.9551,
+   "trueDifficulty0to10": 7.444
+  },
+  {
+   "problemId": "LC283",
+   "priorDifficulty": 3.26,
+   "trueDifficultyLogit": -1.3484,
+   "trueDifficulty0to10": 3.314
+  },
+  {
+   "problemId": "LC284",
+   "priorDifficulty": 4.79,
+   "trueDifficultyLogit": -0.1867,
+   "trueDifficulty0to10": 4.767
+  },
+  {
+   "problemId": "LC287",
+   "priorDifficulty": 4.68,
+   "trueDifficultyLogit": -0.2546,
+   "trueDifficulty0to10": 4.682
+  },
+  {
+   "problemId": "LC289",
+   "priorDifficulty": 4.34,
+   "trueDifficultyLogit": -0.7237,
+   "trueDifficulty0to10": 4.095
+  },
+  {
+   "problemId": "LC290",
+   "priorDifficulty": 3.96,
+   "trueDifficultyLogit": -0.4936,
+   "trueDifficulty0to10": 4.383
+  },
+  {
+   "problemId": "LC292",
+   "priorDifficulty": 3.4,
+   "trueDifficultyLogit": -1.3241,
+   "trueDifficulty0to10": 3.345
+  },
+  {
+   "problemId": "LC295",
+   "priorDifficulty": 6.64,
+   "trueDifficultyLogit": 1.4012,
+   "trueDifficulty0to10": 6.752
+  },
+  {
+   "problemId": "LC297",
+   "priorDifficulty": 6.41,
+   "trueDifficultyLogit": 1.1005,
+   "trueDifficulty0to10": 6.376
+  },
+  {
+   "problemId": "LC299",
+   "priorDifficulty": 5.12,
+   "trueDifficultyLogit": 0.0066,
+   "trueDifficulty0to10": 5.008
+  },
+  {
+   "problemId": "LC300",
+   "priorDifficulty": 4.87,
+   "trueDifficultyLogit": 0.5877,
+   "trueDifficulty0to10": 5.735
+  },
+  {
+   "problemId": "LC301",
+   "priorDifficulty": 6.82,
+   "trueDifficultyLogit": 1.2224,
+   "trueDifficulty0to10": 6.528
+  },
+  {
+   "problemId": "LC303",
+   "priorDifficulty": 2.89,
+   "trueDifficultyLogit": -1.5679,
+   "trueDifficulty0to10": 3.04
+  },
+  {
+   "problemId": "LC304",
+   "priorDifficulty": 4.9,
+   "trueDifficultyLogit": 0.4444,
+   "trueDifficulty0to10": 5.556
+  },
+  {
+   "problemId": "LC307",
+   "priorDifficulty": 5.45,
+   "trueDifficultyLogit": 0.7227,
+   "trueDifficulty0to10": 5.903
+  },
+  {
+   "problemId": "LC309",
+   "priorDifficulty": 4.76,
+   "trueDifficultyLogit": -0.5974,
+   "trueDifficulty0to10": 4.253
+  },
+  {
+   "problemId": "LC310",
+   "priorDifficulty": 5.49,
+   "trueDifficultyLogit": 0.8048,
+   "trueDifficulty0to10": 6.006
+  },
+  {
+   "problemId": "LC312",
+   "priorDifficulty": 6.28,
+   "trueDifficultyLogit": 1.5316,
+   "trueDifficulty0to10": 6.915
+  },
+  {
+   "problemId": "LC313",
+   "priorDifficulty": 5.35,
+   "trueDifficultyLogit": 0.9556,
+   "trueDifficulty0to10": 6.194
+  },
+  {
+   "problemId": "LC315",
+   "priorDifficulty": 7.04,
+   "trueDifficultyLogit": 1.9231,
+   "trueDifficulty0to10": 7.404
+  },
+  {
+   "problemId": "LC316",
+   "priorDifficulty": 5.07,
+   "trueDifficultyLogit": -0.2114,
+   "trueDifficulty0to10": 4.736
+  },
+  {
+   "problemId": "LC318",
+   "priorDifficulty": 4.81,
+   "trueDifficultyLogit": -0.3924,
+   "trueDifficulty0to10": 4.509
+  },
+  {
+   "problemId": "LC319",
+   "priorDifficulty": 4.99,
+   "trueDifficultyLogit": 0.5794,
+   "trueDifficulty0to10": 5.724
+  },
+  {
+   "problemId": "LC321",
+   "priorDifficulty": 7.31,
+   "trueDifficultyLogit": 1.6134,
+   "trueDifficulty0to10": 7.017
+  },
+  {
+   "problemId": "LC322",
+   "priorDifficulty": 5.26,
+   "trueDifficultyLogit": 0.3122,
+   "trueDifficulty0to10": 5.39
+  },
+  {
+   "problemId": "LC324",
+   "priorDifficulty": 5.65,
+   "trueDifficultyLogit": 0.7613,
+   "trueDifficulty0to10": 5.952
+  },
+  {
+   "problemId": "LC326",
+   "priorDifficulty": 3.72,
+   "trueDifficultyLogit": -0.9567,
+   "trueDifficulty0to10": 3.804
+  },
+  {
+   "problemId": "LC327",
+   "priorDifficulty": 7.2,
+   "trueDifficultyLogit": 1.1977,
+   "trueDifficulty0to10": 6.497
+  },
+  {
+   "problemId": "LC328",
+   "priorDifficulty": 4.76,
+   "trueDifficultyLogit": 0.3293,
+   "trueDifficulty0to10": 5.412
+  },
+  {
+   "problemId": "LC329",
+   "priorDifficulty": 6.57,
+   "trueDifficultyLogit": 1.1908,
+   "trueDifficulty0to10": 6.489
+  },
+  {
+   "problemId": "LC330",
+   "priorDifficulty": 6.65,
+   "trueDifficultyLogit": 1.3426,
+   "trueDifficulty0to10": 6.678
+  },
+  {
+   "problemId": "LC331",
+   "priorDifficulty": 5.3,
+   "trueDifficultyLogit": 0.2301,
+   "trueDifficulty0to10": 5.288
+  },
+  {
+   "problemId": "LC332",
+   "priorDifficulty": 7.01,
+   "trueDifficultyLogit": 1.077,
+   "trueDifficulty0to10": 6.346
+  },
+  {
+   "problemId": "LC334",
+   "priorDifficulty": 5.6,
+   "trueDifficultyLogit": 0.1147,
+   "trueDifficulty0to10": 5.143
+  },
+  {
+   "problemId": "LC336",
+   "priorDifficulty": 7.29,
+   "trueDifficultyLogit": 2.6334,
+   "trueDifficulty0to10": 8.292
+  },
+  {
+   "problemId": "LC337",
+   "priorDifficulty": 5.0,
+   "trueDifficultyLogit": 0.2592,
+   "trueDifficulty0to10": 5.324
+  },
+  {
+   "problemId": "LC338",
+   "priorDifficulty": 2.53,
+   "trueDifficultyLogit": -2.3499,
+   "trueDifficulty0to10": 2.063
+  },
+  {
+   "problemId": "LC341",
+   "priorDifficulty": 4.64,
+   "trueDifficultyLogit": -0.6223,
+   "trueDifficulty0to10": 4.222
+  },
+  {
+   "problemId": "LC342",
+   "priorDifficulty": 3.68,
+   "trueDifficultyLogit": -1.5206,
+   "trueDifficulty0to10": 3.099
+  },
+  {
+   "problemId": "LC343",
+   "priorDifficulty": 4.76,
+   "trueDifficultyLogit": -0.2432,
+   "trueDifficulty0to10": 4.696
+  },
+  {
+   "problemId": "LC344",
+   "priorDifficulty": 2.5,
+   "trueDifficultyLogit": -2.5339,
+   "trueDifficulty0to10": 1.833
+  },
+  {
+   "problemId": "LC345",
+   "priorDifficulty": 3.33,
+   "trueDifficultyLogit": -1.9335,
+   "trueDifficulty0to10": 2.583
+  },
+  {
+   "problemId": "LC347",
+   "priorDifficulty": 4.58,
+   "trueDifficultyLogit": -0.6942,
+   "trueDifficulty0to10": 4.132
+  },
+  {
+   "problemId": "LC349",
+   "priorDifficulty": 2.66,
+   "trueDifficultyLogit": -1.7555,
+   "trueDifficulty0to10": 2.806
+  },
+  {
+   "problemId": "LC350",
+   "priorDifficulty": 3.41,
+   "trueDifficultyLogit": -1.0072,
+   "trueDifficulty0to10": 3.741
+  },
+  {
+   "problemId": "LC354",
+   "priorDifficulty": 7.27,
+   "trueDifficultyLogit": 2.2922,
+   "trueDifficulty0to10": 7.865
+  },
+  {
+   "problemId": "LC355",
+   "priorDifficulty": 5.39,
+   "trueDifficultyLogit": 0.6967,
+   "trueDifficulty0to10": 5.871
+  },
+  {
+   "problemId": "LC363",
+   "priorDifficulty": 6.97,
+   "trueDifficultyLogit": 0.8798,
+   "trueDifficulty0to10": 6.1
+  },
+  {
+   "problemId": "LC367",
+   "priorDifficulty": 3.94,
+   "trueDifficultyLogit": -1.0152,
+   "trueDifficulty0to10": 3.731
+  },
+  {
+   "problemId": "LC368",
+   "priorDifficulty": 5.22,
+   "trueDifficultyLogit": 0.198,
+   "trueDifficulty0to10": 5.247
+  },
+  {
+   "problemId": "LC371",
+   "priorDifficulty": 5.02,
+   "trueDifficultyLogit": 0.0217,
+   "trueDifficulty0to10": 5.027
+  },
+  {
+   "problemId": "LC373",
+   "priorDifficulty": 5.5,
+   "trueDifficultyLogit": 0.667,
+   "trueDifficulty0to10": 5.834
+  },
+  {
+   "problemId": "LC374",
+   "priorDifficulty": 3.48,
+   "trueDifficultyLogit": -1.2833,
+   "trueDifficulty0to10": 3.396
+  },
+  {
+   "problemId": "LC375",
+   "priorDifficulty": 5.1,
+   "trueDifficultyLogit": -0.641,
+   "trueDifficulty0to10": 4.199
+  },
+  {
+   "problemId": "LC376",
+   "priorDifficulty": 5.24,
+   "trueDifficultyLogit": 0.6475,
+   "trueDifficulty0to10": 5.809
+  },
+  {
+   "problemId": "LC377",
+   "priorDifficulty": 5.04,
+   "trueDifficultyLogit": 0.1283,
+   "trueDifficulty0to10": 5.16
+  },
+  {
+   "problemId": "LC378",
+   "priorDifficulty": 4.67,
+   "trueDifficultyLogit": -0.3684,
+   "trueDifficulty0to10": 4.539
+  },
+  {
+   "problemId": "LC380",
+   "priorDifficulty": 5.03,
+   "trueDifficultyLogit": -0.391,
+   "trueDifficulty0to10": 4.511
+  },
+  {
+   "problemId": "LC381",
+   "priorDifficulty": 7.31,
+   "trueDifficultyLogit": 2.2389,
+   "trueDifficulty0to10": 7.799
+  },
+  {
+   "problemId": "LC382",
+   "priorDifficulty": 4.67,
+   "trueDifficultyLogit": -0.3104,
+   "trueDifficulty0to10": 4.612
+  },
+  {
+   "problemId": "LC383",
+   "priorDifficulty": 3.18,
+   "trueDifficultyLogit": -1.6403,
+   "trueDifficulty0to10": 2.95
+  },
+  {
+   "problemId": "LC386",
+   "priorDifficulty": 4.18,
+   "trueDifficultyLogit": -0.5348,
+   "trueDifficulty0to10": 4.331
+  },
+  {
+   "problemId": "LC387",
+   "priorDifficulty": 3.18,
+   "trueDifficultyLogit": -2.0612,
+   "trueDifficulty0to10": 2.424
+  },
+  {
+   "problemId": "LC389",
+   "priorDifficulty": 3.4,
+   "trueDifficultyLogit": -0.9982,
+   "trueDifficulty0to10": 3.752
+  },
+  {
+   "problemId": "LC392",
+   "priorDifficulty": 3.79,
+   "trueDifficultyLogit": -1.8219,
+   "trueDifficulty0to10": 2.723
+  },
+  {
+   "problemId": "LC394",
+   "priorDifficulty": 4.74,
+   "trueDifficultyLogit": -0.7337,
+   "trueDifficulty0to10": 4.083
+  },
+  {
+   "problemId": "LC395",
+   "priorDifficulty": 5.34,
+   "trueDifficultyLogit": 0.7505,
+   "trueDifficulty0to10": 5.938
+  },
+  {
+   "problemId": "LC396",
+   "priorDifficulty": 5.08,
+   "trueDifficultyLogit": -0.0154,
+   "trueDifficulty0to10": 4.981
+  },
+  {
+   "problemId": "LC399",
+   "priorDifficulty": 4.69,
+   "trueDifficultyLogit": -0.1465,
+   "trueDifficulty0to10": 4.817
+  },
+  {
+   "problemId": "LC401",
+   "priorDifficulty": 3.19,
+   "trueDifficultyLogit": -2.0526,
+   "trueDifficulty0to10": 2.434
+  },
+  {
+   "problemId": "LC402",
+   "priorDifficulty": 5.68,
+   "trueDifficultyLogit": 0.787,
+   "trueDifficulty0to10": 5.984
+  },
+  {
+   "problemId": "LC403",
+   "priorDifficulty": 6.91,
+   "trueDifficultyLogit": 0.7838,
+   "trueDifficulty0to10": 5.98
+  },
+  {
+   "problemId": "LC404",
+   "priorDifficulty": 3.31,
+   "trueDifficultyLogit": -1.2287,
+   "trueDifficulty0to10": 3.464
+  },
+  {
+   "problemId": "LC406",
+   "priorDifficulty": 4.24,
+   "trueDifficultyLogit": -0.7508,
+   "trueDifficulty0to10": 4.061
+  },
+  {
+   "problemId": "LC407",
+   "priorDifficulty": 6.29,
+   "trueDifficultyLogit": 1.1322,
+   "trueDifficulty0to10": 6.415
+  },
+  {
+   "problemId": "LC409",
+   "priorDifficulty": 3.56,
+   "trueDifficultyLogit": -2.0519,
+   "trueDifficulty0to10": 2.435
+  },
+  {
+   "problemId": "LC410",
+   "priorDifficulty": 6.4,
+   "trueDifficultyLogit": 2.0649,
+   "trueDifficulty0to10": 7.581
+  },
+  {
+   "problemId": "LC412",
+   "priorDifficulty": 2.78,
+   "trueDifficultyLogit": -1.2291,
+   "trueDifficulty0to10": 3.464
+  },
+  {
+   "problemId": "LC413",
+   "priorDifficulty": 4.68,
+   "trueDifficultyLogit": 0.2849,
+   "trueDifficulty0to10": 5.356
+  },
+  {
+   "problemId": "LC414",
+   "priorDifficulty": 4.11,
+   "trueDifficultyLogit": -0.9423,
+   "trueDifficulty0to10": 3.822
+  },
+  {
+   "problemId": "LC415",
+   "priorDifficulty": 3.7,
+   "trueDifficultyLogit": -0.7856,
+   "trueDifficulty0to10": 4.018
+  },
+  {
+   "problemId": "LC416",
+   "priorDifficulty": 5.23,
+   "trueDifficultyLogit": 0.1906,
+   "trueDifficulty0to10": 5.238
+  },
+  {
+   "problemId": "LC417",
+   "priorDifficulty": 4.81,
+   "trueDifficultyLogit": -0.0329,
+   "trueDifficulty0to10": 4.959
+  },
+  {
+   "problemId": "LC419",
+   "priorDifficulty": 4.11,
+   "trueDifficultyLogit": -1.2249,
+   "trueDifficulty0to10": 3.469
+  },
+  {
+   "problemId": "LC421",
+   "priorDifficulty": 5.09,
+   "trueDifficultyLogit": -0.262,
+   "trueDifficulty0to10": 4.672
+  },
+  {
+   "problemId": "LC424",
+   "priorDifficulty": 4.84,
+   "trueDifficultyLogit": -0.5772,
+   "trueDifficulty0to10": 4.278
+  },
+  {
+   "problemId": "LC429",
+   "priorDifficulty": 4.4,
+   "trueDifficultyLogit": -0.4039,
+   "trueDifficulty0to10": 4.495
+  },
+  {
+   "problemId": "LC430",
+   "priorDifficulty": 4.74,
+   "trueDifficultyLogit": 0.3916,
+   "trueDifficulty0to10": 5.49
+  },
+  {
+   "problemId": "LC432",
+   "priorDifficulty": 7.03,
+   "trueDifficultyLogit": 2.1028,
+   "trueDifficulty0to10": 7.628
+  },
+  {
+   "problemId": "LC433",
+   "priorDifficulty": 4.97,
+   "trueDifficultyLogit": -0.0623,
+   "trueDifficulty0to10": 4.922
+  },
+  {
+   "problemId": "LC435",
+   "priorDifficulty": 4.95,
+   "trueDifficultyLogit": 0.7067,
+   "trueDifficulty0to10": 5.883
+  },
+  {
+   "problemId": "LC436",
+   "priorDifficulty": 4.99,
+   "trueDifficultyLogit": -0.5158,
+   "trueDifficulty0to10": 4.355
+  },
+  {
+   "problemId": "LC437",
+   "priorDifficulty": 5.35,
+   "trueDifficultyLogit": 0.4071,
+   "trueDifficulty0to10": 5.509
+  },
+  {
+   "problemId": "LC438",
+   "priorDifficulty": 5.06,
+   "trueDifficultyLogit": 0.3058,
+   "trueDifficulty0to10": 5.382
+  },
+  {
+   "problemId": "LC441",
+   "priorDifficulty": 3.82,
+   "trueDifficultyLogit": -2.0453,
+   "trueDifficulty0to10": 2.443
+  },
+  {
+   "problemId": "LC442",
+   "priorDifficulty": 4.14,
+   "trueDifficultyLogit": -0.7402,
+   "trueDifficulty0to10": 4.075
+  },
+  {
+   "problemId": "LC443",
+   "priorDifficulty": 4.84,
+   "trueDifficultyLogit": -0.5925,
+   "trueDifficulty0to10": 4.259
+  },
+  {
+   "problemId": "LC445",
+   "priorDifficulty": 4.75,
+   "trueDifficultyLogit": -0.5395,
+   "trueDifficulty0to10": 4.326
+  },
+  {
+   "problemId": "LC446",
+   "priorDifficulty": 6.63,
+   "trueDifficultyLogit": 1.5917,
+   "trueDifficulty0to10": 6.99
+  },
+  {
+   "problemId": "LC448",
+   "priorDifficulty": 3.25,
+   "trueDifficultyLogit": -1.4208,
+   "trueDifficulty0to10": 3.224
+  },
+  {
+   "problemId": "LC449",
+   "priorDifficulty": 4.86,
+   "trueDifficultyLogit": 0.0477,
+   "trueDifficulty0to10": 5.06
+  },
+  {
+   "problemId": "LC450",
+   "priorDifficulty": 5.03,
+   "trueDifficultyLogit": 0.3294,
+   "trueDifficulty0to10": 5.412
+  },
+  {
+   "problemId": "LC451",
+   "priorDifficulty": 4.21,
+   "trueDifficultyLogit": -0.6836,
+   "trueDifficulty0to10": 4.145
+  },
+  {
+   "problemId": "LC452",
+   "priorDifficulty": 4.79,
+   "trueDifficultyLogit": -0.2798,
+   "trueDifficulty0to10": 4.65
+  },
+  {
+   "problemId": "LC453",
+   "priorDifficulty": 4.9,
+   "trueDifficultyLogit": -0.0807,
+   "trueDifficulty0to10": 4.899
+  },
+  {
+   "problemId": "LC454",
+   "priorDifficulty": 4.93,
+   "trueDifficultyLogit": -0.1318,
+   "trueDifficulty0to10": 4.835
+  },
+  {
+   "problemId": "LC455",
+   "priorDifficulty": 3.58,
+   "trueDifficultyLogit": -1.5042,
+   "trueDifficulty0to10": 3.12
+  },
+  {
+   "problemId": "LC456",
+   "priorDifficulty": 5.78,
+   "trueDifficultyLogit": 0.6523,
+   "trueDifficulty0to10": 5.815
+  },
+  {
+   "problemId": "LC458",
+   "priorDifficulty": 6.48,
+   "trueDifficultyLogit": 0.5181,
+   "trueDifficulty0to10": 5.648
+  },
+  {
+   "problemId": "LC459",
+   "priorDifficulty": 3.81,
+   "trueDifficultyLogit": -0.6991,
+   "trueDifficulty0to10": 4.126
+  },
+  {
+   "problemId": "LC460",
+   "priorDifficulty": 6.81,
+   "trueDifficultyLogit": 1.1009,
+   "trueDifficulty0to10": 6.376
+  },
+  {
+   "problemId": "LC461",
+   "priorDifficulty": 2.72,
+   "trueDifficultyLogit": -1.9486,
+   "trueDifficulty0to10": 2.564
+  },
+  {
+   "problemId": "LC462",
+   "priorDifficulty": 4.77,
+   "trueDifficultyLogit": -0.1014,
+   "trueDifficulty0to10": 4.873
+  },
+  {
+   "problemId": "LC463",
+   "priorDifficulty": 2.85,
+   "trueDifficultyLogit": -1.6599,
+   "trueDifficulty0to10": 2.925
+  },
+  {
+   "problemId": "LC464",
+   "priorDifficulty": 5.91,
+   "trueDifficultyLogit": 0.3354,
+   "trueDifficulty0to10": 5.419
+  },
+  {
+   "problemId": "LC472",
+   "priorDifficulty": 6.83,
+   "trueDifficultyLogit": 1.6603,
+   "trueDifficulty0to10": 7.075
+  },
+  {
+   "problemId": "LC473",
+   "priorDifficulty": 5.51,
+   "trueDifficultyLogit": -0.1513,
+   "trueDifficulty0to10": 4.811
+  },
+  {
+   "problemId": "LC474",
+   "priorDifficulty": 5.09,
+   "trueDifficultyLogit": -0.6738,
+   "trueDifficulty0to10": 4.158
+  },
+  {
+   "problemId": "LC475",
+   "priorDifficulty": 5.49,
+   "trueDifficultyLogit": 0.237,
+   "trueDifficulty0to10": 5.296
+  },
+  {
+   "problemId": "LC476",
+   "priorDifficulty": 3.01,
+   "trueDifficultyLogit": -1.4754,
+   "trueDifficulty0to10": 3.156
+  },
+  {
+   "problemId": "LC477",
+   "priorDifficulty": 5.03,
+   "trueDifficultyLogit": 0.4678,
+   "trueDifficulty0to10": 5.585
+  },
+  {
+   "problemId": "LC480",
+   "priorDifficulty": 7.23,
+   "trueDifficultyLogit": 1.5596,
+   "trueDifficulty0to10": 6.949
+  },
+  {
+   "problemId": "LC485",
+   "priorDifficulty": 3.19,
+   "trueDifficultyLogit": -1.2519,
+   "trueDifficulty0to10": 3.435
+  },
+  {
+   "problemId": "LC486",
+   "priorDifficulty": 4.87,
+   "trueDifficultyLogit": 0.2426,
+   "trueDifficulty0to10": 5.303
+  },
+  {
+   "problemId": "LC491",
+   "priorDifficulty": 4.75,
+   "trueDifficultyLogit": -0.2923,
+   "trueDifficulty0to10": 4.635
+  },
+  {
+   "problemId": "LC493",
+   "priorDifficulty": 7.38,
+   "trueDifficultyLogit": 2.4465,
+   "trueDifficulty0to10": 8.058
+  },
+  {
+   "problemId": "LC494",
+   "priorDifficulty": 5.12,
+   "trueDifficultyLogit": -0.3369,
+   "trueDifficulty0to10": 4.579
+  },
+  {
+   "problemId": "LC496",
+   "priorDifficulty": 2.73,
+   "trueDifficultyLogit": -1.8474,
+   "trueDifficulty0to10": 2.691
+  },
+  {
+   "problemId": "LC498",
+   "priorDifficulty": 4.58,
+   "trueDifficultyLogit": -0.7871,
+   "trueDifficulty0to10": 4.016
+  },
+  {
+   "problemId": "LC501",
+   "priorDifficulty": 3.44,
+   "trueDifficultyLogit": -1.3242,
+   "trueDifficulty0to10": 3.345
+  },
+  {
+   "problemId": "LC502",
+   "priorDifficulty": 6.69,
+   "trueDifficultyLogit": 1.1373,
+   "trueDifficulty0to10": 6.422
+  },
+  {
+   "problemId": "LC503",
+   "priorDifficulty": 4.51,
+   "trueDifficultyLogit": -0.9716,
+   "trueDifficulty0to10": 3.786
+  },
+  {
+   "problemId": "LC506",
+   "priorDifficulty": 2.81,
+   "trueDifficultyLogit": -1.4748,
+   "trueDifficulty0to10": 3.157
+  },
+  {
+   "problemId": "LC508",
+   "priorDifficulty": 4.48,
+   "trueDifficultyLogit": -0.8934,
+   "trueDifficulty0to10": 3.883
+  },
+  {
+   "problemId": "LC509",
+   "priorDifficulty": 2.84,
+   "trueDifficultyLogit": -1.6185,
+   "trueDifficulty0to10": 2.977
+  },
+  {
+   "problemId": "LC513",
+   "priorDifficulty": 4.36,
+   "trueDifficultyLogit": -0.28,
+   "trueDifficulty0to10": 4.65
+  },
+  {
+   "problemId": "LC515",
+   "priorDifficulty": 4.62,
+   "trueDifficultyLogit": -0.3604,
+   "trueDifficulty0to10": 4.549
+  },
+  {
+   "problemId": "LC516",
+   "priorDifficulty": 4.64,
+   "trueDifficultyLogit": 0.4148,
+   "trueDifficulty0to10": 5.518
+  },
+  {
+   "problemId": "LC518",
+   "priorDifficulty": 4.9,
+   "trueDifficultyLogit": -0.4007,
+   "trueDifficulty0to10": 4.499
+  },
+  {
+   "problemId": "LC520",
+   "priorDifficulty": 3.53,
+   "trueDifficultyLogit": -1.7129,
+   "trueDifficulty0to10": 2.859
+  },
+  {
+   "problemId": "LC523",
+   "priorDifficulty": 5.92,
+   "trueDifficultyLogit": 0.7778,
+   "trueDifficulty0to10": 5.972
+  },
+  {
+   "problemId": "LC525",
+   "priorDifficulty": 5.14,
+   "trueDifficultyLogit": -0.6239,
+   "trueDifficulty0to10": 4.22
+  },
+  {
+   "problemId": "LC526",
+   "priorDifficulty": 4.68,
+   "trueDifficultyLogit": -0.3213,
+   "trueDifficulty0to10": 4.598
+  },
+  {
+   "problemId": "LC528",
+   "priorDifficulty": 5.26,
+   "trueDifficultyLogit": -0.1313,
+   "trueDifficulty0to10": 4.836
+  },
+  {
+   "problemId": "LC529",
+   "priorDifficulty": 4.52,
+   "trueDifficultyLogit": -0.1713,
+   "trueDifficulty0to10": 4.786
+  },
+  {
+   "problemId": "LC530",
+   "priorDifficulty": 3.43,
+   "trueDifficultyLogit": -1.3663,
+   "trueDifficulty0to10": 3.292
+  },
+  {
+   "problemId": "LC532",
+   "priorDifficulty": 5.36,
+   "trueDifficultyLogit": 0.2596,
+   "trueDifficulty0to10": 5.325
+  },
+  {
+   "problemId": "LC535",
+   "priorDifficulty": 3.8,
+   "trueDifficultyLogit": -0.6323,
+   "trueDifficulty0to10": 4.21
+  },
+  {
+   "problemId": "LC538",
+   "priorDifficulty": 4.39,
+   "trueDifficultyLogit": -0.7851,
+   "trueDifficulty0to10": 4.019
+  },
+  {
+   "problemId": "LC539",
+   "priorDifficulty": 4.76,
+   "trueDifficultyLogit": 0.5883,
+   "trueDifficulty0to10": 5.735
+  },
+  {
+   "problemId": "LC540",
+   "priorDifficulty": 4.89,
+   "trueDifficultyLogit": -0.6693,
+   "trueDifficulty0to10": 4.163
+  },
+  {
+   "problemId": "LC541",
+   "priorDifficulty": 3.61,
+   "trueDifficultyLogit": -0.9533,
+   "trueDifficulty0to10": 3.808
+  },
+  {
+   "problemId": "LC542",
+   "priorDifficulty": 5.05,
+   "trueDifficultyLogit": -0.2234,
+   "trueDifficulty0to10": 4.721
+  },
+  {
+   "problemId": "LC543",
+   "priorDifficulty": 3.19,
+   "trueDifficultyLogit": -1.2215,
+   "trueDifficulty0to10": 3.473
+  },
+  {
+   "problemId": "LC546",
+   "priorDifficulty": 6.83,
+   "trueDifficultyLogit": 1.2614,
+   "trueDifficulty0to10": 6.577
+  },
+  {
+   "problemId": "LC547",
+   "priorDifficulty": 4.42,
+   "trueDifficultyLogit": -0.5316,
+   "trueDifficulty0to10": 4.336
+  },
+  {
+   "problemId": "LC552",
+   "priorDifficulty": 6.57,
+   "trueDifficultyLogit": 1.5299,
+   "trueDifficulty0to10": 6.912
+  },
+  {
+   "problemId": "LC554",
+   "priorDifficulty": 5.01,
+   "trueDifficultyLogit": 0.0163,
+   "trueDifficulty0to10": 5.02
+  },
+  {
+   "problemId": "LC556",
+   "priorDifficulty": 5.76,
+   "trueDifficultyLogit": 0.1647,
+   "trueDifficulty0to10": 5.206
+  },
+  {
+   "problemId": "LC557",
+   "priorDifficulty": 2.32,
+   "trueDifficultyLogit": -1.662,
+   "trueDifficulty0to10": 2.922
+  },
+  {
+   "problemId": "LC559",
+   "priorDifficulty": 2.87,
+   "trueDifficultyLogit": -1.7878,
+   "trueDifficulty0to10": 2.765
+  },
+  {
+   "problemId": "LC560",
+   "priorDifficulty": 5.29,
+   "trueDifficultyLogit": -0.8167,
+   "trueDifficulty0to10": 3.979
+  },
+  {
+   "problemId": "LC561",
+   "priorDifficulty": 2.45,
+   "trueDifficultyLogit": -2.2788,
+   "trueDifficulty0to10": 2.152
+  },
+  {
+   "problemId": "LC563",
+   "priorDifficulty": 3.18,
+   "trueDifficultyLogit": -1.4537,
+   "trueDifficulty0to10": 3.183
+  },
+  {
+   "problemId": "LC565",
+   "priorDifficulty": 4.99,
+   "trueDifficultyLogit": -0.0636,
+   "trueDifficulty0to10": 4.921
+  },
+  {
+   "problemId": "LC566",
+   "priorDifficulty": 3.22,
+   "trueDifficultyLogit": -1.253,
+   "trueDifficulty0to10": 3.434
+  },
+  {
+   "problemId": "LC567",
+   "priorDifficulty": 5.24,
+   "trueDifficultyLogit": 0.4091,
+   "trueDifficulty0to10": 5.511
+  },
+  {
+   "problemId": "LC572",
+   "priorDifficulty": 3.7,
+   "trueDifficultyLogit": -1.6746,
+   "trueDifficulty0to10": 2.907
+  },
+  {
+   "problemId": "LC576",
+   "priorDifficulty": 5.28,
+   "trueDifficultyLogit": 0.5589,
+   "trueDifficulty0to10": 5.699
+  },
+  {
+   "problemId": "LC581",
+   "priorDifficulty": 5.64,
+   "trueDifficultyLogit": -0.3662,
+   "trueDifficulty0to10": 4.542
+  },
+  {
+   "problemId": "LC583",
+   "priorDifficulty": 4.63,
+   "trueDifficultyLogit": -0.7423,
+   "trueDifficulty0to10": 4.072
+  },
+  {
+   "problemId": "LC589",
+   "priorDifficulty": 2.73,
+   "trueDifficultyLogit": -1.843,
+   "trueDifficulty0to10": 2.696
+  },
+  {
+   "problemId": "LC590",
+   "priorDifficulty": 2.5,
+   "trueDifficultyLogit": -1.8994,
+   "trueDifficulty0to10": 2.626
+  },
+  {
+   "problemId": "LC594",
+   "priorDifficulty": 3.23,
+   "trueDifficultyLogit": -0.8304,
+   "trueDifficulty0to10": 3.962
+  },
+  {
+   "problemId": "LC599",
+   "priorDifficulty": 3.4,
+   "trueDifficultyLogit": -0.7559,
+   "trueDifficulty0to10": 4.055
+  },
+  {
+   "problemId": "LC605",
+   "priorDifficulty": 4.2,
+   "trueDifficultyLogit": -0.7043,
+   "trueDifficulty0to10": 4.12
+  },
+  {
+   "problemId": "LC611",
+   "priorDifficulty": 4.97,
+   "trueDifficultyLogit": 0.1317,
+   "trueDifficulty0to10": 5.165
+  },
+  {
+   "problemId": "LC617",
+   "priorDifficulty": 2.62,
+   "trueDifficultyLogit": -1.9329,
+   "trueDifficulty0to10": 2.584
+  },
+  {
+   "problemId": "LC621",
+   "priorDifficulty": 4.72,
+   "trueDifficultyLogit": -0.3555,
+   "trueDifficulty0to10": 4.556
+  },
+  {
+   "problemId": "LC622",
+   "priorDifficulty": 5.03,
+   "trueDifficultyLogit": 0.0065,
+   "trueDifficulty0to10": 5.008
+  },
+  {
+   "problemId": "LC623",
+   "priorDifficulty": 4.71,
+   "trueDifficultyLogit": -0.1148,
+   "trueDifficulty0to10": 4.856
+  },
+  {
+   "problemId": "LC628",
+   "priorDifficulty": 3.83,
+   "trueDifficultyLogit": -1.3972,
+   "trueDifficulty0to10": 3.254
+  },
+  {
+   "problemId": "LC629",
+   "priorDifficulty": 6.86,
+   "trueDifficultyLogit": 1.2404,
+   "trueDifficulty0to10": 6.55
+  },
+  {
+   "problemId": "LC630",
+   "priorDifficulty": 7.11,
+   "trueDifficultyLogit": 1.4349,
+   "trueDifficulty0to10": 6.794
+  },
+  {
+   "problemId": "LC632",
+   "priorDifficulty": 6.03,
+   "trueDifficultyLogit": 1.1438,
+   "trueDifficulty0to10": 6.43
+  },
+  {
+   "problemId": "LC633",
+   "priorDifficulty": 5.7,
+   "trueDifficultyLogit": 0.2464,
+   "trueDifficulty0to10": 5.308
+  },
+  {
+   "problemId": "LC636",
+   "priorDifficulty": 4.63,
+   "trueDifficultyLogit": 0.4753,
+   "trueDifficulty0to10": 5.594
+  },
+  {
+   "problemId": "LC637",
+   "priorDifficulty": 2.81,
+   "trueDifficultyLogit": -1.3298,
+   "trueDifficulty0to10": 3.338
+  },
+  {
+   "problemId": "LC643",
+   "priorDifficulty": 3.8,
+   "trueDifficultyLogit": -0.9276,
+   "trueDifficulty0to10": 3.84
+  },
+  {
+   "problemId": "LC645",
+   "priorDifficulty": 4.01,
+   "trueDifficultyLogit": -0.0863,
+   "trueDifficulty0to10": 4.892
+  },
+  {
+   "problemId": "LC646",
+   "priorDifficulty": 4.78,
+   "trueDifficultyLogit": 0.2294,
+   "trueDifficulty0to10": 5.287
+  },
+  {
+   "problemId": "LC647",
+   "priorDifficulty": 4.33,
+   "trueDifficultyLogit": -0.3038,
+   "trueDifficulty0to10": 4.62
+  },
+  {
+   "problemId": "LC648",
+   "priorDifficulty": 4.51,
+   "trueDifficultyLogit": -0.2823,
+   "trueDifficulty0to10": 4.647
+  },
+  {
+   "problemId": "LC649",
+   "priorDifficulty": 5.21,
+   "trueDifficultyLogit": 0.6347,
+   "trueDifficulty0to10": 5.793
+  },
+  {
+   "problemId": "LC650",
+   "priorDifficulty": 4.89,
+   "trueDifficultyLogit": -0.56,
+   "trueDifficulty0to10": 4.3
+  },
+  {
+   "problemId": "LC652",
+   "priorDifficulty": 4.83,
+   "trueDifficultyLogit": -0.1177,
+   "trueDifficulty0to10": 4.853
+  },
+  {
+   "problemId": "LC653",
+   "priorDifficulty": 3.28,
+   "trueDifficultyLogit": -1.4841,
+   "trueDifficulty0to10": 3.145
+  },
+  {
+   "problemId": "LC654",
+   "priorDifficulty": 3.8,
+   "trueDifficultyLogit": -0.7835,
+   "trueDifficulty0to10": 4.021
+  },
+  {
+   "problemId": "LC657",
+   "priorDifficulty": 2.67,
+   "trueDifficultyLogit": -1.8611,
+   "trueDifficulty0to10": 2.674
+  },
+  {
+   "problemId": "LC658",
+   "priorDifficulty": 5.22,
+   "trueDifficultyLogit": -0.3638,
+   "trueDifficulty0to10": 4.545
+  },
+  {
+   "problemId": "LC659",
+   "priorDifficulty": 5.14,
+   "trueDifficultyLogit": 0.0969,
+   "trueDifficulty0to10": 5.121
+  },
+  {
+   "problemId": "LC662",
+   "priorDifficulty": 5.37,
+   "trueDifficultyLogit": 0.292,
+   "trueDifficulty0to10": 5.365
+  },
+  {
+   "problemId": "LC664",
+   "priorDifficulty": 6.42,
+   "trueDifficultyLogit": 1.1739,
+   "trueDifficulty0to10": 6.467
+  },
+  {
+   "problemId": "LC665",
+   "priorDifficulty": 6.18,
+   "trueDifficultyLogit": 0.3828,
+   "trueDifficulty0to10": 5.478
+  },
+  {
+   "problemId": "LC668",
+   "priorDifficulty": 6.64,
+   "trueDifficultyLogit": 1.3344,
+   "trueDifficulty0to10": 6.668
+  },
+  {
+   "problemId": "LC669",
+   "priorDifficulty": 4.6,
+   "trueDifficultyLogit": 0.0711,
+   "trueDifficulty0to10": 5.089
+  },
+  {
+   "problemId": "LC670",
+   "priorDifficulty": 5.15,
+   "trueDifficultyLogit": 0.3499,
+   "trueDifficulty0to10": 5.437
+  },
+  {
+   "problemId": "LC671",
+   "priorDifficulty": 3.9,
+   "trueDifficultyLogit": -0.5767,
+   "trueDifficulty0to10": 4.279
+  },
+  {
+   "problemId": "LC673",
+   "priorDifficulty": 5.13,
+   "trueDifficultyLogit": -0.2255,
+   "trueDifficulty0to10": 4.718
+  },
+  {
+   "problemId": "LC674",
+   "priorDifficulty": 3.69,
+   "trueDifficultyLogit": -1.148,
+   "trueDifficulty0to10": 3.565
+  },
+  {
+   "problemId": "LC678",
+   "priorDifficulty": 5.57,
+   "trueDifficultyLogit": 0.5194,
+   "trueDifficulty0to10": 5.649
+  },
+  {
+   "problemId": "LC679",
+   "priorDifficulty": 6.47,
+   "trueDifficultyLogit": 1.3703,
+   "trueDifficulty0to10": 6.713
+  },
+  {
+   "problemId": "LC680",
+   "priorDifficulty": 3.95,
+   "trueDifficultyLogit": -0.1253,
+   "trueDifficulty0to10": 4.843
+  },
+  {
+   "problemId": "LC682",
+   "priorDifficulty": 2.51,
+   "trueDifficultyLogit": -1.9519,
+   "trueDifficulty0to10": 2.56
+  },
+  {
+   "problemId": "LC684",
+   "priorDifficulty": 4.54,
+   "trueDifficultyLogit": -0.2202,
+   "trueDifficulty0to10": 4.725
+  },
+  {
+   "problemId": "LC685",
+   "priorDifficulty": 7.33,
+   "trueDifficultyLogit": 1.7416,
+   "trueDifficulty0to10": 7.177
+  },
+  {
+   "problemId": "LC686",
+   "priorDifficulty": 5.6,
+   "trueDifficultyLogit": 0.4699,
+   "trueDifficulty0to10": 5.587
+  },
+  {
+   "problemId": "LC687",
+   "priorDifficulty": 5.43,
+   "trueDifficultyLogit": -0.5992,
+   "trueDifficulty0to10": 4.251
+  },
+  {
+   "problemId": "LC688",
+   "priorDifficulty": 4.97,
+   "trueDifficultyLogit": 0.0455,
+   "trueDifficulty0to10": 5.057
+  },
+  {
+   "problemId": "LC689",
+   "priorDifficulty": 6.45,
+   "trueDifficultyLogit": 1.1226,
+   "trueDifficulty0to10": 6.403
+  },
+  {
+   "problemId": "LC690",
+   "priorDifficulty": 4.48,
+   "trueDifficultyLogit": -0.994,
+   "trueDifficulty0to10": 3.758
+  },
+  {
+   "problemId": "LC692",
+   "priorDifficulty": 4.84,
+   "trueDifficultyLogit": -0.1925,
+   "trueDifficulty0to10": 4.759
+  },
+  {
+   "problemId": "LC695",
+   "priorDifficulty": 4.28,
+   "trueDifficultyLogit": -0.7827,
+   "trueDifficulty0to10": 4.022
+  },
+  {
+   "problemId": "LC696",
+   "priorDifficulty": 3.01,
+   "trueDifficultyLogit": -1.3218,
+   "trueDifficulty0to10": 3.348
+  },
+  {
+   "problemId": "LC697",
+   "priorDifficulty": 3.47,
+   "trueDifficultyLogit": -0.2917,
+   "trueDifficulty0to10": 4.635
+  },
+  {
+   "problemId": "LC698",
+   "priorDifficulty": 5.63,
+   "trueDifficultyLogit": -0.3087,
+   "trueDifficulty0to10": 4.614
+  },
+  {
+   "problemId": "LC700",
+   "priorDifficulty": 2.39,
+   "trueDifficultyLogit": -2.0251,
+   "trueDifficulty0to10": 2.469
+  },
+  {
+   "problemId": "LC701",
+   "priorDifficulty": 4.31,
+   "trueDifficultyLogit": -0.1631,
+   "trueDifficulty0to10": 4.796
+  },
+  {
+   "problemId": "LC703",
+   "priorDifficulty": 3.36,
+   "trueDifficultyLogit": -1.3887,
+   "trueDifficulty0to10": 3.264
+  },
+  {
+   "problemId": "LC704",
+   "priorDifficulty": 3.37,
+   "trueDifficultyLogit": -1.0362,
+   "trueDifficulty0to10": 3.705
+  },
+  {
+   "problemId": "LC705",
+   "priorDifficulty": 3.1,
+   "trueDifficultyLogit": -1.3479,
+   "trueDifficulty0to10": 3.315
+  },
+  {
+   "problemId": "LC706",
+   "priorDifficulty": 3.17,
+   "trueDifficultyLogit": -0.7861,
+   "trueDifficulty0to10": 4.017
+  },
+  {
+   "problemId": "LC707",
+   "priorDifficulty": 5.95,
+   "trueDifficultyLogit": 0.9759,
+   "trueDifficulty0to10": 6.22
+  },
+  {
+   "problemId": "LC709",
+   "priorDifficulty": 2.26,
+   "trueDifficultyLogit": -2.5051,
+   "trueDifficulty0to10": 1.869
+  },
+  {
+   "problemId": "LC712",
+   "priorDifficulty": 4.42,
+   "trueDifficultyLogit": -0.2612,
+   "trueDifficulty0to10": 4.674
+  },
+  {
+   "problemId": "LC713",
+   "priorDifficulty": 5.05,
+   "trueDifficultyLogit": 0.2991,
+   "trueDifficulty0to10": 5.374
+  },
+  {
+   "problemId": "LC714",
+   "priorDifficulty": 4.36,
+   "trueDifficultyLogit": -0.6094,
+   "trueDifficulty0to10": 4.238
+  },
+  {
+   "problemId": "LC718",
+   "priorDifficulty": 5.17,
+   "trueDifficultyLogit": -0.0198,
+   "trueDifficulty0to10": 4.975
+  },
+  {
+   "problemId": "LC719",
+   "priorDifficulty": 6.94,
+   "trueDifficultyLogit": 1.7854,
+   "trueDifficulty0to10": 7.232
+  },
+  {
+   "problemId": "LC720",
+   "priorDifficulty": 5.03,
+   "trueDifficultyLogit": 0.5642,
+   "trueDifficulty0to10": 5.705
+  },
+  {
+   "problemId": "LC721",
+   "priorDifficulty": 4.79,
+   "trueDifficultyLogit": -0.4865,
+   "trueDifficulty0to10": 4.392
+  },
+  {
+   "problemId": "LC724",
+   "priorDifficulty": 3.28,
+   "trueDifficultyLogit": -1.8803,
+   "trueDifficulty0to10": 2.65
+  },
+  {
+   "problemId": "LC725",
+   "priorDifficulty": 4.44,
+   "trueDifficultyLogit": -0.8463,
+   "trueDifficulty0to10": 3.942
+  },
+  {
+   "problemId": "LC726",
+   "priorDifficulty": 6.25,
+   "trueDifficultyLogit": 1.0362,
+   "trueDifficulty0to10": 6.295
+  },
+  {
+   "problemId": "LC728",
+   "priorDifficulty": 2.5,
+   "trueDifficultyLogit": -2.1882,
+   "trueDifficulty0to10": 2.265
+  },
+  {
+   "problemId": "LC729",
+   "priorDifficulty": 4.93,
+   "trueDifficultyLogit": 0.0025,
+   "trueDifficulty0to10": 5.003
+  },
+  {
+   "problemId": "LC730",
+   "priorDifficulty": 6.89,
+   "trueDifficultyLogit": 1.1294,
+   "trueDifficulty0to10": 6.412
+  },
+  {
+   "problemId": "LC731",
+   "priorDifficulty": 4.73,
+   "trueDifficultyLogit": -0.6235,
+   "trueDifficulty0to10": 4.221
+  },
+  {
+   "problemId": "LC732",
+   "priorDifficulty": 5.95,
+   "trueDifficultyLogit": 1.055,
+   "trueDifficulty0to10": 6.319
+  },
+  {
+   "problemId": "LC733",
+   "priorDifficulty": 3.08,
+   "trueDifficultyLogit": -1.9951,
+   "trueDifficulty0to10": 2.506
+  },
+  {
+   "problemId": "LC735",
+   "priorDifficulty": 5.26,
+   "trueDifficultyLogit": -0.404,
+   "trueDifficulty0to10": 4.495
+  },
+  {
+   "problemId": "LC739",
+   "priorDifficulty": 4.51,
+   "trueDifficultyLogit": -0.3888,
+   "trueDifficulty0to10": 4.514
+  },
+  {
+   "problemId": "LC740",
+   "priorDifficulty": 4.96,
+   "trueDifficultyLogit": 0.0466,
+   "trueDifficulty0to10": 5.058
+  },
+  {
+   "problemId": "LC741",
+   "priorDifficulty": 7.18,
+   "trueDifficultyLogit": 1.0002,
+   "trueDifficulty0to10": 6.25
+  },
+  {
+   "problemId": "LC743",
+   "priorDifficulty": 4.8,
+   "trueDifficultyLogit": 0.216,
+   "trueDifficulty0to10": 5.27
+  },
+  {
+   "problemId": "LC744",
+   "priorDifficulty": 3.43,
+   "trueDifficultyLogit": -1.259,
+   "trueDifficulty0to10": 3.426
+  },
+  {
+   "problemId": "LC745",
+   "priorDifficulty": 7.15,
+   "trueDifficultyLogit": 1.9825,
+   "trueDifficulty0to10": 7.478
+  },
+  {
+   "problemId": "LC746",
+   "priorDifficulty": 3.09,
+   "trueDifficultyLogit": -1.4045,
+   "trueDifficulty0to10": 3.244
+  },
+  {
+   "problemId": "LC752",
+   "priorDifficulty": 4.81,
+   "trueDifficultyLogit": -0.8467,
+   "trueDifficulty0to10": 3.942
+  },
+  {
+   "problemId": "LC754",
+   "priorDifficulty": 5.38,
+   "trueDifficultyLogit": 0.2522,
+   "trueDifficulty0to10": 5.315
+  },
+  {
+   "problemId": "LC763",
+   "priorDifficulty": 3.87,
+   "trueDifficultyLogit": -0.7627,
+   "trueDifficulty0to10": 4.047
+  },
+  {
+   "problemId": "LC765",
+   "priorDifficulty": 6.46,
+   "trueDifficultyLogit": 1.0325,
+   "trueDifficulty0to10": 6.291
+  },
+  {
+   "problemId": "LC766",
+   "priorDifficulty": 3.04,
+   "trueDifficultyLogit": -1.7366,
+   "trueDifficulty0to10": 2.829
+  },
+  {
+   "problemId": "LC767",
+   "priorDifficulty": 4.96,
+   "trueDifficultyLogit": 0.3117,
+   "trueDifficulty0to10": 5.39
+  },
+  {
+   "problemId": "LC768",
+   "priorDifficulty": 6.64,
+   "trueDifficultyLogit": 1.5603,
+   "trueDifficulty0to10": 6.95
+  },
+  {
+   "problemId": "LC769",
+   "priorDifficulty": 4.7,
+   "trueDifficultyLogit": -0.1017,
+   "trueDifficulty0to10": 4.873
+  },
+  {
+   "problemId": "LC771",
+   "priorDifficulty": 1.9,
+   "trueDifficultyLogit": -2.7357,
+   "trueDifficulty0to10": 1.58
+  },
+  {
+   "problemId": "LC773",
+   "priorDifficulty": 5.84,
+   "trueDifficultyLogit": 0.146,
+   "trueDifficulty0to10": 5.182
+  },
+  {
+   "problemId": "LC778",
+   "priorDifficulty": 6.13,
+   "trueDifficultyLogit": 1.0565,
+   "trueDifficulty0to10": 6.321
+  },
+  {
+   "problemId": "LC779",
+   "priorDifficulty": 5.27,
+   "trueDifficultyLogit": -0.1638,
+   "trueDifficulty0to10": 4.795
+  },
+  {
+   "problemId": "LC781",
+   "priorDifficulty": 4.94,
+   "trueDifficultyLogit": 0.3,
+   "trueDifficulty0to10": 5.375
+  },
+  {
+   "problemId": "LC783",
+   "priorDifficulty": 3.35,
+   "trueDifficultyLogit": -1.3969,
+   "trueDifficulty0to10": 3.254
+  },
+  {
+   "problemId": "LC784",
+   "priorDifficulty": 4.19,
+   "trueDifficultyLogit": -0.1771,
+   "trueDifficulty0to10": 4.779
+  },
+  {
+   "problemId": "LC785",
+   "priorDifficulty": 4.87,
+   "trueDifficultyLogit": -0.0884,
+   "trueDifficulty0to10": 4.89
+  },
+  {
+   "problemId": "LC786",
+   "priorDifficulty": 4.5,
+   "trueDifficultyLogit": -0.0297,
+   "trueDifficulty0to10": 4.963
+  },
+  {
+   "problemId": "LC787",
+   "priorDifficulty": 5.49,
+   "trueDifficultyLogit": 0.6542,
+   "trueDifficulty0to10": 5.818
+  },
+  {
+   "problemId": "LC790",
+   "priorDifficulty": 5.19,
+   "trueDifficultyLogit": 0.1413,
+   "trueDifficulty0to10": 5.177
+  },
+  {
+   "problemId": "LC791",
+   "priorDifficulty": 4.37,
+   "trueDifficultyLogit": -0.5342,
+   "trueDifficulty0to10": 4.332
+  },
+  {
+   "problemId": "LC792",
+   "priorDifficulty": 5.21,
+   "trueDifficultyLogit": 0.517,
+   "trueDifficulty0to10": 5.646
+  },
+  {
+   "problemId": "LC795",
+   "priorDifficulty": 5.03,
+   "trueDifficultyLogit": -0.0331,
+   "trueDifficulty0to10": 4.959
+  },
+  {
+   "problemId": "LC796",
+   "priorDifficulty": 3.18,
+   "trueDifficultyLogit": -2.0585,
+   "trueDifficulty0to10": 2.427
+  },
+  {
+   "problemId": "LC797",
+   "priorDifficulty": 3.8,
+   "trueDifficultyLogit": -1.1105,
+   "trueDifficulty0to10": 3.612
+  },
+  {
+   "problemId": "LC799",
+   "priorDifficulty": 4.72,
+   "trueDifficultyLogit": 0.0049,
+   "trueDifficulty0to10": 5.006
+  },
+  {
+   "problemId": "LC801",
+   "priorDifficulty": 7.12,
+   "trueDifficultyLogit": 2.6601,
+   "trueDifficulty0to10": 8.325
+  },
+  {
+   "problemId": "LC802",
+   "priorDifficulty": 4.4,
+   "trueDifficultyLogit": -0.9733,
+   "trueDifficulty0to10": 3.783
+  },
+  {
+   "problemId": "LC804",
+   "priorDifficulty": 2.35,
+   "trueDifficultyLogit": -1.856,
+   "trueDifficulty0to10": 2.68
+  },
+  {
+   "problemId": "LC807",
+   "priorDifficulty": 3.8,
+   "trueDifficultyLogit": -0.8251,
+   "trueDifficulty0to10": 3.969
+  },
+  {
+   "problemId": "LC813",
+   "priorDifficulty": 5.03,
+   "trueDifficultyLogit": 0.5186,
+   "trueDifficulty0to10": 5.648
+  },
+  {
+   "problemId": "LC814",
+   "priorDifficulty": 4.36,
+   "trueDifficultyLogit": -0.4395,
+   "trueDifficulty0to10": 4.451
+  },
+  {
+   "problemId": "LC815",
+   "priorDifficulty": 6.92,
+   "trueDifficultyLogit": 2.0678,
+   "trueDifficulty0to10": 7.585
+  },
+  {
+   "problemId": "LC818",
+   "priorDifficulty": 7.01,
+   "trueDifficultyLogit": 0.6462,
+   "trueDifficulty0to10": 5.808
+  },
+  {
+   "problemId": "LC821",
+   "priorDifficulty": 2.91,
+   "trueDifficultyLogit": -1.6366,
+   "trueDifficulty0to10": 2.954
+  },
+  {
+   "problemId": "LC823",
+   "priorDifficulty": 5.11,
+   "trueDifficultyLogit": 0.2305,
+   "trueDifficulty0to10": 5.288
+  },
+  {
+   "problemId": "LC826",
+   "priorDifficulty": 5.0,
+   "trueDifficultyLogit": 0.1909,
+   "trueDifficulty0to10": 5.239
+  },
+  {
+   "problemId": "LC827",
+   "priorDifficulty": 6.56,
+   "trueDifficultyLogit": 0.9941,
+   "trueDifficulty0to10": 6.243
+  },
+  {
+   "problemId": "LC828",
+   "priorDifficulty": 6.68,
+   "trueDifficultyLogit": 1.1168,
+   "trueDifficulty0to10": 6.396
+  },
+  {
+   "problemId": "LC832",
+   "priorDifficulty": 2.33,
+   "trueDifficultyLogit": -2.3769,
+   "trueDifficulty0to10": 2.029
+  },
+  {
+   "problemId": "LC834",
+   "priorDifficulty": 6.23,
+   "trueDifficultyLogit": 0.8059,
+   "trueDifficulty0to10": 6.007
+  },
+  {
+   "problemId": "LC836",
+   "priorDifficulty": 3.66,
+   "trueDifficultyLogit": -1.0573,
+   "trueDifficulty0to10": 3.678
+  },
+  {
+   "problemId": "LC837",
+   "priorDifficulty": 5.16,
+   "trueDifficultyLogit": 0.5701,
+   "trueDifficulty0to10": 5.713
+  },
+  {
+   "problemId": "LC838",
+   "priorDifficulty": 4.75,
+   "trueDifficultyLogit": 0.5616,
+   "trueDifficulty0to10": 5.702
+  },
+  {
+   "problemId": "LC839",
+   "priorDifficulty": 6.58,
+   "trueDifficultyLogit": 1.6511,
+   "trueDifficulty0to10": 7.064
+  },
+  {
+   "problemId": "LC841",
+   "priorDifficulty": 4.19,
+   "trueDifficultyLogit": -0.7883,
+   "trueDifficulty0to10": 4.015
+  },
+  {
+   "problemId": "LC844",
+   "priorDifficulty": 3.76,
+   "trueDifficultyLogit": -1.1268,
+   "trueDifficulty0to10": 3.591
+  },
+  {
+   "problemId": "LC845",
+   "priorDifficulty": 5.5,
+   "trueDifficultyLogit": 0.2545,
+   "trueDifficulty0to10": 5.318
+  },
+  {
+   "problemId": "LC846",
+   "priorDifficulty": 4.93,
+   "trueDifficultyLogit": -0.4262,
+   "trueDifficulty0to10": 4.467
+  },
+  {
+   "problemId": "LC847",
+   "priorDifficulty": 6.2,
+   "trueDifficultyLogit": 1.1436,
+   "trueDifficulty0to10": 6.429
+  },
+  {
+   "problemId": "LC849",
+   "priorDifficulty": 5.23,
+   "trueDifficultyLogit": 0.1282,
+   "trueDifficulty0to10": 5.16
+  },
+  {
+   "problemId": "LC852",
+   "priorDifficulty": 4.61,
+   "trueDifficultyLogit": -0.3501,
+   "trueDifficulty0to10": 4.562
+  },
+  {
+   "problemId": "LC853",
+   "priorDifficulty": 5.02,
+   "trueDifficultyLogit": 0.5558,
+   "trueDifficulty0to10": 5.695
+  },
+  {
+   "problemId": "LC856",
+   "priorDifficulty": 4.74,
+   "trueDifficultyLogit": -0.5082,
+   "trueDifficulty0to10": 4.365
+  },
+  {
+   "problemId": "LC857",
+   "priorDifficulty": 6.31,
+   "trueDifficultyLogit": 1.3481,
+   "trueDifficulty0to10": 6.685
+  },
+  {
+   "problemId": "LC859",
+   "priorDifficulty": 4.2,
+   "trueDifficultyLogit": -0.6529,
+   "trueDifficulty0to10": 4.184
+  },
+  {
+   "problemId": "LC860",
+   "priorDifficulty": 3.44,
+   "trueDifficultyLogit": -1.1006,
+   "trueDifficulty0to10": 3.624
+  },
+  {
+   "problemId": "LC861",
+   "priorDifficulty": 3.98,
+   "trueDifficultyLogit": -0.7729,
+   "trueDifficulty0to10": 4.034
+  },
+  {
+   "problemId": "LC862",
+   "priorDifficulty": 7.47,
+   "trueDifficultyLogit": 2.7254,
+   "trueDifficulty0to10": 8.407
+  },
+  {
+   "problemId": "LC863",
+   "priorDifficulty": 4.55,
+   "trueDifficultyLogit": -1.2552,
+   "trueDifficulty0to10": 3.431
+  },
+  {
+   "problemId": "LC864",
+   "priorDifficulty": 6.64,
+   "trueDifficultyLogit": 1.6369,
+   "trueDifficulty0to10": 7.046
+  },
+  {
+   "problemId": "LC865",
+   "priorDifficulty": 4.11,
+   "trueDifficultyLogit": -0.7465,
+   "trueDifficulty0to10": 4.067
+  },
+  {
+   "problemId": "LC867",
+   "priorDifficulty": 2.71,
+   "trueDifficultyLogit": -1.7322,
+   "trueDifficulty0to10": 2.835
+  },
+  {
+   "problemId": "LC869",
+   "priorDifficulty": 4.64,
+   "trueDifficultyLogit": -0.1909,
+   "trueDifficulty0to10": 4.761
+  },
+  {
+   "problemId": "LC871",
+   "priorDifficulty": 7.12,
+   "trueDifficultyLogit": 1.8063,
+   "trueDifficulty0to10": 7.258
+  },
+  {
+   "problemId": "LC872",
+   "priorDifficulty": 3.02,
+   "trueDifficultyLogit": -2.302,
+   "trueDifficulty0to10": 2.122
+  },
+  {
+   "problemId": "LC873",
+   "priorDifficulty": 4.96,
+   "trueDifficultyLogit": -0.4665,
+   "trueDifficulty0to10": 4.417
+  },
+  {
+   "problemId": "LC875",
+   "priorDifficulty": 5.21,
+   "trueDifficultyLogit": 0.5969,
+   "trueDifficulty0to10": 5.746
+  },
+  {
+   "problemId": "LC876",
+   "priorDifficulty": 2.43,
+   "trueDifficultyLogit": -2.0378,
+   "trueDifficulty0to10": 2.453
+  },
+  {
+   "problemId": "LC877",
+   "priorDifficulty": 4.15,
+   "trueDifficultyLogit": -0.6084,
+   "trueDifficulty0to10": 4.24
+  },
+  {
+   "problemId": "LC879",
+   "priorDifficulty": 6.88,
+   "trueDifficultyLogit": 1.4147,
+   "trueDifficulty0to10": 6.768
+  },
+  {
+   "problemId": "LC880",
+   "priorDifficulty": 5.68,
+   "trueDifficultyLogit": 1.0412,
+   "trueDifficulty0to10": 6.301
+  },
+  {
+   "problemId": "LC881",
+   "priorDifficulty": 4.77,
+   "trueDifficultyLogit": -0.1175,
+   "trueDifficulty0to10": 4.853
+  },
+  {
+   "problemId": "LC884",
+   "priorDifficulty": 2.78,
+   "trueDifficultyLogit": -1.3723,
+   "trueDifficulty0to10": 3.285
+  },
+  {
+   "problemId": "LC886",
+   "priorDifficulty": 5.12,
+   "trueDifficultyLogit": 0.4103,
+   "trueDifficulty0to10": 5.513
+  },
+  {
+   "problemId": "LC887",
+   "priorDifficulty": 7.56,
+   "trueDifficultyLogit": 2.4065,
+   "trueDifficulty0to10": 8.008
+  },
+  {
+   "problemId": "LC888",
+   "priorDifficulty": 3.21,
+   "trueDifficultyLogit": -1.9097,
+   "trueDifficulty0to10": 2.613
+  },
+  {
+   "problemId": "LC889",
+   "priorDifficulty": 4.09,
+   "trueDifficultyLogit": -1.5625,
+   "trueDifficulty0to10": 3.047
+  },
+  {
+   "problemId": "LC890",
+   "priorDifficulty": 4.14,
+   "trueDifficultyLogit": -1.2949,
+   "trueDifficulty0to10": 3.381
+  },
+  {
+   "problemId": "LC894",
+   "priorDifficulty": 3.83,
+   "trueDifficultyLogit": -0.8592,
+   "trueDifficulty0to10": 3.926
+  },
+  {
+   "problemId": "LC895",
+   "priorDifficulty": 6.17,
+   "trueDifficultyLogit": 1.2735,
+   "trueDifficulty0to10": 6.592
+  },
+  {
+   "problemId": "LC896",
+   "priorDifficulty": 3.32,
+   "trueDifficultyLogit": -2.132,
+   "trueDifficulty0to10": 2.335
+  },
+  {
+   "problemId": "LC897",
+   "priorDifficulty": 2.62,
+   "trueDifficultyLogit": -2.5666,
+   "trueDifficulty0to10": 1.792
+  },
+  {
+   "problemId": "LC898",
+   "priorDifficulty": 4.98,
+   "trueDifficultyLogit": -0.8288,
+   "trueDifficulty0to10": 3.964
+  },
+  {
+   "problemId": "LC901",
+   "priorDifficulty": 4.48,
+   "trueDifficultyLogit": -0.4812,
+   "trueDifficulty0to10": 4.399
+  },
+  {
+   "problemId": "LC904",
+   "priorDifficulty": 5.14,
+   "trueDifficultyLogit": 0.9723,
+   "trueDifficulty0to10": 6.215
+  },
+  {
+   "problemId": "LC905",
+   "priorDifficulty": 2.74,
+   "trueDifficultyLogit": -2.0538,
+   "trueDifficulty0to10": 2.433
+  },
+  {
+   "problemId": "LC907",
+   "priorDifficulty": 5.63,
+   "trueDifficultyLogit": 0.5318,
+   "trueDifficulty0to10": 5.665
+  },
+  {
+   "problemId": "LC909",
+   "priorDifficulty": 5.29,
+   "trueDifficultyLogit": 0.8593,
+   "trueDifficulty0to10": 6.074
+  },
+  {
+   "problemId": "LC912",
+   "priorDifficulty": 5.03,
+   "trueDifficultyLogit": -0.1246,
+   "trueDifficulty0to10": 4.844
+  },
+  {
+   "problemId": "LC914",
+   "priorDifficulty": 4.2,
+   "trueDifficultyLogit": -1.4274,
+   "trueDifficulty0to10": 3.216
+  },
+  {
+   "problemId": "LC916",
+   "priorDifficulty": 5.01,
+   "trueDifficultyLogit": 0.0508,
+   "trueDifficulty0to10": 5.063
+  },
+  {
+   "problemId": "LC917",
+   "priorDifficulty": 3.07,
+   "trueDifficultyLogit": -1.2989,
+   "trueDifficulty0to10": 3.376
+  },
+  {
+   "problemId": "LC918",
+   "priorDifficulty": 5.17,
+   "trueDifficultyLogit": 0.0818,
+   "trueDifficulty0to10": 5.102
+  },
+  {
+   "problemId": "LC920",
+   "priorDifficulty": 6.45,
+   "trueDifficultyLogit": 0.7063,
+   "trueDifficulty0to10": 5.883
+  },
+  {
+   "problemId": "LC921",
+   "priorDifficulty": 4.28,
+   "trueDifficultyLogit": -0.5967,
+   "trueDifficulty0to10": 4.254
+  },
+  {
+   "problemId": "LC922",
+   "priorDifficulty": 2.98,
+   "trueDifficultyLogit": -2.2276,
+   "trueDifficulty0to10": 2.215
+  },
+  {
+   "problemId": "LC923",
+   "priorDifficulty": 5.35,
+   "trueDifficultyLogit": 0.2487,
+   "trueDifficulty0to10": 5.311
+  },
+  {
+   "problemId": "LC925",
+   "priorDifficulty": 4.2,
+   "trueDifficultyLogit": -0.8535,
+   "trueDifficulty0to10": 3.933
+  },
+  {
+   "problemId": "LC926",
+   "priorDifficulty": 4.79,
+   "trueDifficultyLogit": -0.3356,
+   "trueDifficulty0to10": 4.58
+  },
+  {
+   "problemId": "LC929",
+   "priorDifficulty": 3.12,
+   "trueDifficultyLogit": -1.936,
+   "trueDifficulty0to10": 2.58
+  },
+  {
+   "problemId": "LC930",
+   "priorDifficulty": 4.48,
+   "trueDifficultyLogit": -0.7091,
+   "trueDifficulty0to10": 4.114
+  },
+  {
+   "problemId": "LC931",
+   "priorDifficulty": 4.84,
+   "trueDifficultyLogit": -0.0235,
+   "trueDifficulty0to10": 4.971
+  },
+  {
+   "problemId": "LC934",
+   "priorDifficulty": 4.87,
+   "trueDifficultyLogit": -0.4085,
+   "trueDifficulty0to10": 4.489
+  },
+  {
+   "problemId": "LC935",
+   "priorDifficulty": 4.78,
+   "trueDifficultyLogit": -0.1805,
+   "trueDifficulty0to10": 4.774
+  },
+  {
+   "problemId": "LC937",
+   "priorDifficulty": 4.99,
+   "trueDifficultyLogit": -0.4833,
+   "trueDifficulty0to10": 4.396
+  },
+  {
+   "problemId": "LC938",
+   "priorDifficulty": 2.08,
+   "trueDifficultyLogit": -1.9409,
+   "trueDifficulty0to10": 2.574
+  },
+  {
+   "problemId": "LC939",
+   "priorDifficulty": 5.03,
+   "trueDifficultyLogit": 0.2839,
+   "trueDifficulty0to10": 5.355
+  },
+  {
+   "problemId": "LC940",
+   "priorDifficulty": 6.58,
+   "trueDifficultyLogit": 0.6224,
+   "trueDifficulty0to10": 5.778
+  },
+  {
+   "problemId": "LC941",
+   "priorDifficulty": 4.2,
+   "trueDifficultyLogit": -0.5148,
+   "trueDifficulty0to10": 4.357
+  },
+  {
+   "problemId": "LC942",
+   "priorDifficulty": 2.5,
+   "trueDifficultyLogit": -2.422,
+   "trueDifficulty0to10": 1.972
+  },
+  {
+   "problemId": "LC944",
+   "priorDifficulty": 2.67,
+   "trueDifficultyLogit": -2.0805,
+   "trueDifficulty0to10": 2.399
+  },
+  {
+   "problemId": "LC945",
+   "priorDifficulty": 4.84,
+   "trueDifficultyLogit": -0.1736,
+   "trueDifficulty0to10": 4.783
+  },
+  {
+   "problemId": "LC946",
+   "priorDifficulty": 4.44,
+   "trueDifficultyLogit": -0.5239,
+   "trueDifficulty0to10": 4.345
+  },
+  {
+   "problemId": "LC947",
+   "priorDifficulty": 4.73,
+   "trueDifficultyLogit": -0.6259,
+   "trueDifficulty0to10": 4.218
+  },
+  {
+   "problemId": "LC948",
+   "priorDifficulty": 4.87,
+   "trueDifficultyLogit": -0.4476,
+   "trueDifficulty0to10": 4.441
+  },
+  {
+   "problemId": "LC950",
+   "priorDifficulty": 3.8,
+   "trueDifficultyLogit": -1.3809,
+   "trueDifficulty0to10": 3.274
+  },
+  {
+   "problemId": "LC951",
+   "priorDifficulty": 4.49,
+   "trueDifficultyLogit": -0.2599,
+   "trueDifficulty0to10": 4.675
+  },
+  {
+   "problemId": "LC953",
+   "priorDifficulty": 3.56,
+   "trueDifficultyLogit": -0.6387,
+   "trueDifficulty0to10": 4.202
+  },
+  {
+   "problemId": "LC956",
+   "priorDifficulty": 6.76,
+   "trueDifficultyLogit": 1.533,
+   "trueDifficulty0to10": 6.916
+  },
+  {
+   "problemId": "LC958",
+   "priorDifficulty": 4.88,
+   "trueDifficultyLogit": -0.6472,
+   "trueDifficulty0to10": 4.191
+  },
+  {
+   "problemId": "LC959",
+   "priorDifficulty": 4.12,
+   "trueDifficultyLogit": -0.4704,
+   "trueDifficulty0to10": 4.412
+  },
+  {
+   "problemId": "LC962",
+   "priorDifficulty": 5.02,
+   "trueDifficultyLogit": 0.0781,
+   "trueDifficulty0to10": 5.098
+  },
+  {
+   "problemId": "LC965",
+   "priorDifficulty": 2.89,
+   "trueDifficultyLogit": -1.4803,
+   "trueDifficulty0to10": 3.15
+  },
+  {
+   "problemId": "LC967",
+   "priorDifficulty": 4.89,
+   "trueDifficultyLogit": -0.4788,
+   "trueDifficulty0to10": 4.401
+  },
+  {
+   "problemId": "LC968",
+   "priorDifficulty": 6.89,
+   "trueDifficultyLogit": 1.0988,
+   "trueDifficulty0to10": 6.374
+  },
+  {
+   "problemId": "LC973",
+   "priorDifficulty": 4.5,
+   "trueDifficultyLogit": -0.6219,
+   "trueDifficulty0to10": 4.223
+  },
+  {
+   "problemId": "LC974",
+   "priorDifficulty": 4.98,
+   "trueDifficultyLogit": -0.2723,
+   "trueDifficulty0to10": 4.66
+  },
+  {
+   "problemId": "LC975",
+   "priorDifficulty": 7.14,
+   "trueDifficultyLogit": 1.4855,
+   "trueDifficulty0to10": 6.857
+  },
+  {
+   "problemId": "LC976",
+   "priorDifficulty": 3.33,
+   "trueDifficultyLogit": -1.206,
+   "trueDifficulty0to10": 3.492
+  },
+  {
+   "problemId": "LC977",
+   "priorDifficulty": 2.86,
+   "trueDifficultyLogit": -1.9173,
+   "trueDifficulty0to10": 2.603
+  },
+  {
+   "problemId": "LC978",
+   "priorDifficulty": 5.25,
+   "trueDifficultyLogit": 0.156,
+   "trueDifficulty0to10": 5.195
+  },
+  {
+   "problemId": "LC979",
+   "priorDifficulty": 4.13,
+   "trueDifficultyLogit": -0.8993,
+   "trueDifficulty0to10": 3.876
+  },
+  {
+   "problemId": "LC980",
+   "priorDifficulty": 5.8,
+   "trueDifficultyLogit": 0.6546,
+   "trueDifficulty0to10": 5.818
+  },
+  {
+   "problemId": "LC981",
+   "priorDifficulty": 5.22,
+   "trueDifficultyLogit": 0.7027,
+   "trueDifficulty0to10": 5.878
+  },
+  {
+   "problemId": "LC983",
+   "priorDifficulty": 4.58,
+   "trueDifficultyLogit": -0.9541,
+   "trueDifficulty0to10": 3.807
+  },
+  {
+   "problemId": "LC985",
+   "priorDifficulty": 4.51,
+   "trueDifficultyLogit": 0.0925,
+   "trueDifficulty0to10": 5.116
+  },
+  {
+   "problemId": "LC986",
+   "priorDifficulty": 4.33,
+   "trueDifficultyLogit": -0.2501,
+   "trueDifficulty0to10": 4.687
+  },
+  {
+   "problemId": "LC987",
+   "priorDifficulty": 6.65,
+   "trueDifficultyLogit": 0.5822,
+   "trueDifficulty0to10": 5.728
+  },
+  {
+   "problemId": "LC988",
+   "priorDifficulty": 4.81,
+   "trueDifficultyLogit": -0.0789,
+   "trueDifficulty0to10": 4.901
+  },
+  {
+   "problemId": "LC989",
+   "priorDifficulty": 3.92,
+   "trueDifficultyLogit": -1.0389,
+   "trueDifficulty0to10": 3.701
+  },
+  {
+   "problemId": "LC990",
+   "priorDifficulty": 5.15,
+   "trueDifficultyLogit": -0.8824,
+   "trueDifficulty0to10": 3.897
+  },
+  {
+   "problemId": "LC991",
+   "priorDifficulty": 5.0,
+   "trueDifficultyLogit": 0.1106,
+   "trueDifficulty0to10": 5.138
+  },
+  {
+   "problemId": "LC992",
+   "priorDifficulty": 6.09,
+   "trueDifficultyLogit": 1.0089,
+   "trueDifficulty0to10": 6.261
+  },
+  {
+   "problemId": "LC993",
+   "priorDifficulty": 3.43,
+   "trueDifficultyLogit": -1.4504,
+   "trueDifficulty0to10": 3.187
+  },
+  {
+   "problemId": "LC994",
+   "priorDifficulty": 4.89,
+   "trueDifficultyLogit": 0.2045,
+   "trueDifficulty0to10": 5.256
+  },
+  {
+   "problemId": "LC995",
+   "priorDifficulty": 6.36,
+   "trueDifficultyLogit": 1.0507,
+   "trueDifficulty0to10": 6.313
+  },
+  {
+   "problemId": "LC997",
+   "priorDifficulty": 3.73,
+   "trueDifficultyLogit": -0.5906,
+   "trueDifficulty0to10": 4.262
+  },
+  {
+   "problemId": "LC1000",
+   "priorDifficulty": 6.93,
+   "trueDifficultyLogit": 0.8768,
+   "trueDifficulty0to10": 6.096
+  },
+  {
+   "problemId": "LC1002",
+   "priorDifficulty": 2.83,
+   "trueDifficultyLogit": -1.7859,
+   "trueDifficulty0to10": 2.768
+  },
+  {
+   "problemId": "LC1004",
+   "priorDifficulty": 4.53,
+   "trueDifficultyLogit": -0.2875,
+   "trueDifficulty0to10": 4.641
+  },
+  {
+   "problemId": "LC1007",
+   "priorDifficulty": 5.0,
+   "trueDifficultyLogit": -0.1159,
+   "trueDifficulty0to10": 4.855
+  },
+  {
+   "problemId": "LC1008",
+   "priorDifficulty": 3.8,
+   "trueDifficultyLogit": -1.3806,
+   "trueDifficulty0to10": 3.274
+  },
+  {
+   "problemId": "LC1009",
+   "priorDifficulty": 3.3,
+   "trueDifficultyLogit": -1.7271,
+   "trueDifficulty0to10": 2.841
+  },
+  {
+   "problemId": "LC1010",
+   "priorDifficulty": 5.1,
+   "trueDifficultyLogit": 0.078,
+   "trueDifficulty0to10": 5.097
+  },
+  {
+   "problemId": "LC1011",
+   "priorDifficulty": 4.26,
+   "trueDifficultyLogit": -0.1174,
+   "trueDifficulty0to10": 4.853
+  },
+  {
+   "problemId": "LC1014",
+   "priorDifficulty": 4.76,
+   "trueDifficultyLogit": -0.0596,
+   "trueDifficulty0to10": 4.925
+  },
+  {
+   "problemId": "LC1019",
+   "priorDifficulty": 4.68,
+   "trueDifficultyLogit": -0.1121,
+   "trueDifficulty0to10": 4.86
+  },
+  {
+   "problemId": "LC1020",
+   "priorDifficulty": 4.37,
+   "trueDifficultyLogit": -0.4032,
+   "trueDifficulty0to10": 4.496
+  },
+  {
+   "problemId": "LC1021",
+   "priorDifficulty": 2.09,
+   "trueDifficultyLogit": -2.9949,
+   "trueDifficulty0to10": 1.256
+  },
+  {
+   "problemId": "LC1022",
+   "priorDifficulty": 2.74,
+   "trueDifficultyLogit": -1.9305,
+   "trueDifficulty0to10": 2.587
+  },
+  {
+   "problemId": "LC1025",
+   "priorDifficulty": 2.93,
+   "trueDifficultyLogit": -1.7065,
+   "trueDifficulty0to10": 2.867
+  },
+  {
+   "problemId": "LC1026",
+   "priorDifficulty": 4.09,
+   "trueDifficultyLogit": -0.5477,
+   "trueDifficulty0to10": 4.315
+  },
+  {
+   "problemId": "LC1027",
+   "priorDifficulty": 5.22,
+   "trueDifficultyLogit": 0.3856,
+   "trueDifficulty0to10": 5.482
+  },
+  {
+   "problemId": "LC1028",
+   "priorDifficulty": 5.8,
+   "trueDifficultyLogit": 0.1397,
+   "trueDifficulty0to10": 5.175
+  },
+  {
+   "problemId": "LC1029",
+   "priorDifficulty": 4.51,
+   "trueDifficultyLogit": -0.1657,
+   "trueDifficulty0to10": 4.793
+  },
+  {
+   "problemId": "LC1031",
+   "priorDifficulty": 4.81,
+   "trueDifficultyLogit": 0.0998,
+   "trueDifficulty0to10": 5.125
+  },
+  {
+   "problemId": "LC1032",
+   "priorDifficulty": 6.72,
+   "trueDifficultyLogit": 1.5147,
+   "trueDifficulty0to10": 6.893
+  },
+  {
+   "problemId": "LC1035",
+   "priorDifficulty": 4.65,
+   "trueDifficultyLogit": -0.1152,
+   "trueDifficulty0to10": 4.856
+  },
+  {
+   "problemId": "LC1038",
+   "priorDifficulty": 3.8,
+   "trueDifficultyLogit": -0.3479,
+   "trueDifficulty0to10": 4.565
+  },
+  {
+   "problemId": "LC1039",
+   "priorDifficulty": 4.57,
+   "trueDifficultyLogit": -0.3075,
+   "trueDifficulty0to10": 4.616
+  },
+  {
+   "problemId": "LC1041",
+   "priorDifficulty": 4.99,
+   "trueDifficultyLogit": -0.353,
+   "trueDifficulty0to10": 4.559
+  },
+  {
+   "problemId": "LC1043",
+   "priorDifficulty": 4.12,
+   "trueDifficultyLogit": -0.5593,
+   "trueDifficulty0to10": 4.301
+  },
+  {
+   "problemId": "LC1044",
+   "priorDifficulty": 7.54,
+   "trueDifficultyLogit": 1.9353,
+   "trueDifficulty0to10": 7.419
+  },
+  {
+   "problemId": "LC1046",
+   "priorDifficulty": 3.17,
+   "trueDifficultyLogit": -1.8983,
+   "trueDifficulty0to10": 2.627
+  },
+  {
+   "problemId": "LC1047",
+   "priorDifficulty": 2.86,
+   "trueDifficultyLogit": -1.531,
+   "trueDifficulty0to10": 3.086
+  },
+  {
+   "problemId": "LC1048",
+   "priorDifficulty": 4.73,
+   "trueDifficultyLogit": -0.5422,
+   "trueDifficulty0to10": 4.322
+  },
+  {
+   "problemId": "LC1049",
+   "priorDifficulty": 4.83,
+   "trueDifficultyLogit": -0.3657,
+   "trueDifficulty0to10": 4.543
+  },
+  {
+   "problemId": "LC1052",
+   "priorDifficulty": 4.71,
+   "trueDifficultyLogit": 0.1357,
+   "trueDifficulty0to10": 5.17
+  },
+  {
+   "problemId": "LC1061",
+   "priorDifficulty": 3.93,
+   "trueDifficultyLogit": -0.6561,
+   "trueDifficulty0to10": 4.18
+  },
+  {
+   "problemId": "LC1071",
+   "priorDifficulty": 3.62,
+   "trueDifficultyLogit": -1.5195,
+   "trueDifficulty0to10": 3.101
+  },
+  {
+   "problemId": "LC1074",
+   "priorDifficulty": 5.84,
+   "trueDifficultyLogit": 0.9679,
+   "trueDifficulty0to10": 6.21
+  },
+  {
+   "problemId": "LC1079",
+   "priorDifficulty": 3.8,
+   "trueDifficultyLogit": -0.9536,
+   "trueDifficulty0to10": 3.808
+  },
+  {
+   "problemId": "LC1081",
+   "priorDifficulty": 4.44,
+   "trueDifficultyLogit": -0.4174,
+   "trueDifficulty0to10": 4.478
+  },
+  {
+   "problemId": "LC1089",
+   "priorDifficulty": 3.63,
+   "trueDifficultyLogit": -0.6697,
+   "trueDifficulty0to10": 4.163
+  },
+  {
+   "problemId": "LC1091",
+   "priorDifficulty": 5.15,
+   "trueDifficultyLogit": -0.4237,
+   "trueDifficulty0to10": 4.47
+  },
+  {
+   "problemId": "LC1092",
+   "priorDifficulty": 6.37,
+   "trueDifficultyLogit": 1.339,
+   "trueDifficulty0to10": 6.674
+  },
+  {
+   "problemId": "LC1094",
+   "priorDifficulty": 4.99,
+   "trueDifficultyLogit": -0.0412,
+   "trueDifficulty0to10": 4.948
+  },
+  {
+   "problemId": "LC1095",
+   "priorDifficulty": 7.12,
+   "trueDifficultyLogit": 2.0005,
+   "trueDifficulty0to10": 7.501
+  },
+  {
+   "problemId": "LC1105",
+   "priorDifficulty": 4.53,
+   "trueDifficultyLogit": -0.5799,
+   "trueDifficulty0to10": 4.275
+  },
+  {
+   "problemId": "LC1106",
+   "priorDifficulty": 6.06,
+   "trueDifficultyLogit": 0.5341,
+   "trueDifficulty0to10": 5.668
+  },
+  {
+   "problemId": "LC1108",
+   "priorDifficulty": 1.85,
+   "trueDifficultyLogit": -2.3627,
+   "trueDifficulty0to10": 2.047
+  },
+  {
+   "problemId": "LC1109",
+   "priorDifficulty": 4.52,
+   "trueDifficultyLogit": -0.4812,
+   "trueDifficulty0to10": 4.398
+  },
+  {
+   "problemId": "LC1110",
+   "priorDifficulty": 4.36,
+   "trueDifficultyLogit": -0.7875,
+   "trueDifficulty0to10": 4.016
+  },
+  {
+   "problemId": "LC1122",
+   "priorDifficulty": 2.8,
+   "trueDifficultyLogit": -2.021,
+   "trueDifficulty0to10": 2.474
+  },
+  {
+   "problemId": "LC1123",
+   "priorDifficulty": 4.02,
+   "trueDifficultyLogit": -0.9039,
+   "trueDifficulty0to10": 3.87
+  },
+  {
+   "problemId": "LC1125",
+   "priorDifficulty": 6.61,
+   "trueDifficultyLogit": 1.1074,
+   "trueDifficulty0to10": 6.384
+  },
+  {
+   "problemId": "LC1129",
+   "priorDifficulty": 5.29,
+   "trueDifficultyLogit": 0.5729,
+   "trueDifficulty0to10": 5.716
+  },
+  {
+   "problemId": "LC1130",
+   "priorDifficulty": 4.56,
+   "trueDifficultyLogit": -0.1296,
+   "trueDifficulty0to10": 4.838
+  },
+  {
+   "problemId": "LC1137",
+   "priorDifficulty": 3.31,
+   "trueDifficultyLogit": -1.8032,
+   "trueDifficulty0to10": 2.746
+  },
+  {
+   "problemId": "LC1140",
+   "priorDifficulty": 4.22,
+   "trueDifficultyLogit": -0.7222,
+   "trueDifficulty0to10": 4.097
+  },
+  {
+   "problemId": "LC1143",
+   "priorDifficulty": 4.88,
+   "trueDifficultyLogit": -0.2267,
+   "trueDifficulty0to10": 4.717
+  },
+  {
+   "problemId": "LC1146",
+   "priorDifficulty": 5.71,
+   "trueDifficultyLogit": 0.9819,
+   "trueDifficulty0to10": 6.227
+  },
+  {
+   "problemId": "LC1155",
+   "priorDifficulty": 4.77,
+   "trueDifficultyLogit": -0.5472,
+   "trueDifficulty0to10": 4.316
+  },
+  {
+   "problemId": "LC1160",
+   "priorDifficulty": 2.96,
+   "trueDifficultyLogit": -2.081,
+   "trueDifficulty0to10": 2.399
+  },
+  {
+   "problemId": "LC1161",
+   "priorDifficulty": 4.47,
+   "trueDifficultyLogit": 0.1452,
+   "trueDifficulty0to10": 5.182
+  },
+  {
+   "problemId": "LC1162",
+   "priorDifficulty": 5.14,
+   "trueDifficultyLogit": -0.2086,
+   "trueDifficulty0to10": 4.739
+  },
+  {
+   "problemId": "LC1171",
+   "priorDifficulty": 5.11,
+   "trueDifficultyLogit": -0.4024,
+   "trueDifficulty0to10": 4.497
+  },
+  {
+   "problemId": "LC1186",
+   "priorDifficulty": 5.24,
+   "trueDifficultyLogit": 0.1701,
+   "trueDifficulty0to10": 5.213
+  },
+  {
+   "problemId": "LC1187",
+   "priorDifficulty": 6.52,
+   "trueDifficultyLogit": 1.192,
+   "trueDifficulty0to10": 6.49
+  },
+  {
+   "problemId": "LC1189",
+   "priorDifficulty": 3.26,
+   "trueDifficultyLogit": -1.31,
+   "trueDifficulty0to10": 3.363
+  },
+  {
+   "problemId": "LC1190",
+   "priorDifficulty": 4.24,
+   "trueDifficultyLogit": -0.1935,
+   "trueDifficulty0to10": 4.758
+  },
+  {
+   "problemId": "LC1192",
+   "priorDifficulty": 6.43,
+   "trueDifficultyLogit": 1.3874,
+   "trueDifficulty0to10": 6.734
+  },
+  {
+   "problemId": "LC1200",
+   "priorDifficulty": 2.81,
+   "trueDifficultyLogit": -0.7585,
+   "trueDifficulty0to10": 4.052
+  },
+  {
+   "problemId": "LC1202",
+   "priorDifficulty": 4.83,
+   "trueDifficultyLogit": 0.1652,
+   "trueDifficulty0to10": 5.207
+  },
+  {
+   "problemId": "LC1203",
+   "priorDifficulty": 6.21,
+   "trueDifficultyLogit": 1.5158,
+   "trueDifficulty0to10": 6.895
+  },
+  {
+   "problemId": "LC1207",
+   "priorDifficulty": 2.63,
+   "trueDifficultyLogit": -2.1477,
+   "trueDifficulty0to10": 2.315
+  },
+  {
+   "problemId": "LC1208",
+   "priorDifficulty": 4.86,
+   "trueDifficultyLogit": 0.6894,
+   "trueDifficulty0to10": 5.862
+  },
+  {
+   "problemId": "LC1209",
+   "priorDifficulty": 4.79,
+   "trueDifficultyLogit": -0.7696,
+   "trueDifficulty0to10": 4.038
+  },
+  {
+   "problemId": "LC1217",
+   "priorDifficulty": 2.9,
+   "trueDifficultyLogit": -2.1408,
+   "trueDifficulty0to10": 2.324
+  },
+  {
+   "problemId": "LC1218",
+   "priorDifficulty": 5.07,
+   "trueDifficultyLogit": 0.3831,
+   "trueDifficulty0to10": 5.479
+  },
+  {
+   "problemId": "LC1219",
+   "priorDifficulty": 4.53,
+   "trueDifficultyLogit": -0.4977,
+   "trueDifficulty0to10": 4.378
+  },
+  {
+   "problemId": "LC1220",
+   "priorDifficulty": 6.4,
+   "trueDifficultyLogit": 1.1525,
+   "trueDifficulty0to10": 6.441
+  },
+  {
+   "problemId": "LC1221",
+   "priorDifficulty": 2.08,
+   "trueDifficultyLogit": -2.7196,
+   "trueDifficulty0to10": 1.6
+  },
+  {
+   "problemId": "LC1232",
+   "priorDifficulty": 4.11,
+   "trueDifficultyLogit": -0.6367,
+   "trueDifficulty0to10": 4.204
+  },
+  {
+   "problemId": "LC1235",
+   "priorDifficulty": 6.65,
+   "trueDifficultyLogit": 1.5724,
+   "trueDifficulty0to10": 6.966
+  },
+  {
+   "problemId": "LC1239",
+   "priorDifficulty": 5.05,
+   "trueDifficultyLogit": 0.0732,
+   "trueDifficulty0to10": 5.092
+  },
+  {
+   "problemId": "LC1248",
+   "priorDifficulty": 4.21,
+   "trueDifficultyLogit": -0.1307,
+   "trueDifficulty0to10": 4.837
+  },
+  {
+   "problemId": "LC1249",
+   "priorDifficulty": 4.4,
+   "trueDifficultyLogit": -0.8241,
+   "trueDifficulty0to10": 3.97
+  },
+  {
+   "problemId": "LC1254",
+   "priorDifficulty": 4.58,
+   "trueDifficultyLogit": -0.1795,
+   "trueDifficulty0to10": 4.776
+  },
+  {
+   "problemId": "LC1260",
+   "priorDifficulty": 2.84,
+   "trueDifficultyLogit": -2.0108,
+   "trueDifficulty0to10": 2.487
+  },
+  {
+   "problemId": "LC1262",
+   "priorDifficulty": 4.98,
+   "trueDifficultyLogit": -0.7706,
+   "trueDifficulty0to10": 4.037
+  },
+  {
+   "problemId": "LC1266",
+   "priorDifficulty": 2.28,
+   "trueDifficultyLogit": -1.9416,
+   "trueDifficulty0to10": 2.573
+  },
+  {
+   "problemId": "LC1267",
+   "priorDifficulty": 4.31,
+   "trueDifficultyLogit": -0.4851,
+   "trueDifficulty0to10": 4.394
+  },
+  {
+   "problemId": "LC1268",
+   "priorDifficulty": 4.67,
+   "trueDifficultyLogit": -0.6617,
+   "trueDifficulty0to10": 4.173
+  },
+  {
+   "problemId": "LC1277",
+   "priorDifficulty": 3.94,
+   "trueDifficultyLogit": -0.7578,
+   "trueDifficulty0to10": 4.053
+  },
+  {
+   "problemId": "LC1281",
+   "priorDifficulty": 2.15,
+   "trueDifficultyLogit": -2.3853,
+   "trueDifficulty0to10": 2.018
+  },
+  {
+   "problemId": "LC1282",
+   "priorDifficulty": 3.8,
+   "trueDifficultyLogit": -0.7738,
+   "trueDifficulty0to10": 4.033
+  },
+  {
+   "problemId": "LC1283",
+   "priorDifficulty": 4.6,
+   "trueDifficultyLogit": -0.7539,
+   "trueDifficulty0to10": 4.058
+  },
+  {
+   "problemId": "LC1288",
+   "priorDifficulty": 4.86,
+   "trueDifficultyLogit": -0.3666,
+   "trueDifficulty0to10": 4.542
+  },
+  {
+   "problemId": "LC1289",
+   "priorDifficulty": 6.34,
+   "trueDifficultyLogit": 1.3302,
+   "trueDifficulty0to10": 6.663
+  },
+  {
+   "problemId": "LC1290",
+   "priorDifficulty": 2.43,
+   "trueDifficultyLogit": -1.4617,
+   "trueDifficulty0to10": 3.173
+  },
+  {
+   "problemId": "LC1293",
+   "priorDifficulty": 6.95,
+   "trueDifficultyLogit": 1.2042,
+   "trueDifficulty0to10": 6.505
+  },
+  {
+   "problemId": "LC1295",
+   "priorDifficulty": 2.57,
+   "trueDifficultyLogit": -1.843,
+   "trueDifficulty0to10": 2.696
+  },
+  {
+   "problemId": "LC1296",
+   "priorDifficulty": 4.88,
+   "trueDifficultyLogit": -0.2891,
+   "trueDifficulty0to10": 4.639
+  },
+  {
+   "problemId": "LC1299",
+   "priorDifficulty": 2.93,
+   "trueDifficultyLogit": -1.2931,
+   "trueDifficulty0to10": 3.384
+  },
+  {
+   "problemId": "LC1302",
+   "priorDifficulty": 3.8,
+   "trueDifficultyLogit": -1.0388,
+   "trueDifficulty0to10": 3.701
+  },
+  {
+   "problemId": "LC1304",
+   "priorDifficulty": 2.65,
+   "trueDifficultyLogit": -1.3677,
+   "trueDifficulty0to10": 3.29
+  },
+  {
+   "problemId": "LC1305",
+   "priorDifficulty": 3.97,
+   "trueDifficultyLogit": -0.6986,
+   "trueDifficulty0to10": 4.127
+  },
+  {
+   "problemId": "LC1306",
+   "priorDifficulty": 4.45,
+   "trueDifficultyLogit": -0.8222,
+   "trueDifficulty0to10": 3.972
+  },
+  {
+   "problemId": "LC1310",
+   "priorDifficulty": 4.1,
+   "trueDifficultyLogit": -1.1039,
+   "trueDifficulty0to10": 3.62
+  },
+  {
+   "problemId": "LC1312",
+   "priorDifficulty": 5.85,
+   "trueDifficultyLogit": 0.4842,
+   "trueDifficulty0to10": 5.605
+  },
+  {
+   "problemId": "LC1314",
+   "priorDifficulty": 4.15,
+   "trueDifficultyLogit": -1.3885,
+   "trueDifficulty0to10": 3.264
+  },
+  {
+   "problemId": "LC1315",
+   "priorDifficulty": 3.8,
+   "trueDifficultyLogit": -0.5258,
+   "trueDifficulty0to10": 4.343
+  },
+  {
+   "problemId": "LC1318",
+   "priorDifficulty": 4.38,
+   "trueDifficultyLogit": -0.413,
+   "trueDifficulty0to10": 4.484
+  },
+  {
+   "problemId": "LC1319",
+   "priorDifficulty": 4.58,
+   "trueDifficultyLogit": -0.3029,
+   "trueDifficulty0to10": 4.621
+  },
+  {
+   "problemId": "LC1323",
+   "priorDifficulty": 2.3,
+   "trueDifficultyLogit": -2.6003,
+   "trueDifficulty0to10": 1.75
+  },
+  {
+   "problemId": "LC1325",
+   "priorDifficulty": 4.14,
+   "trueDifficultyLogit": -1.3171,
+   "trueDifficulty0to10": 3.354
+  },
+  {
+   "problemId": "LC1326",
+   "priorDifficulty": 6.79,
+   "trueDifficultyLogit": 1.7841,
+   "trueDifficulty0to10": 7.23
+  },
+  {
+   "problemId": "LC1328",
+   "priorDifficulty": 5.17,
+   "trueDifficultyLogit": 0.3857,
+   "trueDifficulty0to10": 5.482
+  },
+  {
+   "problemId": "LC1329",
+   "priorDifficulty": 3.8,
+   "trueDifficultyLogit": -1.0984,
+   "trueDifficulty0to10": 3.627
+  },
+  {
+   "problemId": "LC1331",
+   "priorDifficulty": 2.87,
+   "trueDifficultyLogit": -1.5513,
+   "trueDifficulty0to10": 3.061
+  },
+  {
+   "problemId": "LC1334",
+   "priorDifficulty": 4.3,
+   "trueDifficultyLogit": -0.1219,
+   "trueDifficulty0to10": 4.848
+  },
+  {
+   "problemId": "LC1335",
+   "priorDifficulty": 6.46,
+   "trueDifficultyLogit": 0.9132,
+   "trueDifficulty0to10": 6.141
+  },
+  {
+   "problemId": "LC1337",
+   "priorDifficulty": 2.84,
+   "trueDifficultyLogit": -1.8542,
+   "trueDifficulty0to10": 2.682
+  },
+  {
+   "problemId": "LC1338",
+   "priorDifficulty": 4.5,
+   "trueDifficultyLogit": -0.6826,
+   "trueDifficulty0to10": 4.147
+  },
+  {
+   "problemId": "LC1339",
+   "priorDifficulty": 5.02,
+   "trueDifficultyLogit": -0.0481,
+   "trueDifficulty0to10": 4.94
+  },
+  {
+   "problemId": "LC1342",
+   "priorDifficulty": 2.2,
+   "trueDifficultyLogit": -1.8766,
+   "trueDifficulty0to10": 2.654
+  },
+  {
+   "problemId": "LC1343",
+   "priorDifficulty": 4.27,
+   "trueDifficultyLogit": -0.1092,
+   "trueDifficulty0to10": 4.864
+  },
+  {
+   "problemId": "LC1345",
+   "priorDifficulty": 6.79,
+   "trueDifficultyLogit": 1.3548,
+   "trueDifficulty0to10": 6.694
+  },
+  {
+   "problemId": "LC1346",
+   "priorDifficulty": 4.05,
+   "trueDifficultyLogit": -1.0718,
+   "trueDifficulty0to10": 3.66
+  },
+  {
+   "problemId": "LC1347",
+   "priorDifficulty": 3.84,
+   "trueDifficultyLogit": -1.6979,
+   "trueDifficulty0to10": 2.878
+  },
+  {
+   "problemId": "LC1351",
+   "priorDifficulty": 2.58,
+   "trueDifficultyLogit": -2.338,
+   "trueDifficulty0to10": 2.078
+  },
+  {
+   "problemId": "LC1352",
+   "priorDifficulty": 4.75,
+   "trueDifficultyLogit": -0.1661,
+   "trueDifficulty0to10": 4.792
+  },
+  {
+   "problemId": "LC1353",
+   "priorDifficulty": 5.62,
+   "trueDifficultyLogit": 0.1485,
+   "trueDifficulty0to10": 5.186
+  },
+  {
+   "problemId": "LC1354",
+   "priorDifficulty": 7.31,
+   "trueDifficultyLogit": 2.9342,
+   "trueDifficulty0to10": 8.668
+  },
+  {
+   "problemId": "LC1356",
+   "priorDifficulty": 2.43,
+   "trueDifficultyLogit": -1.3353,
+   "trueDifficulty0to10": 3.331
+  },
+  {
+   "problemId": "LC1358",
+   "priorDifficulty": 4.27,
+   "trueDifficultyLogit": -0.1923,
+   "trueDifficulty0to10": 4.76
+  },
+  {
+   "problemId": "LC1359",
+   "priorDifficulty": 6.26,
+   "trueDifficultyLogit": 0.708,
+   "trueDifficulty0to10": 5.885
+  },
+  {
+   "problemId": "LC1361",
+   "priorDifficulty": 5.44,
+   "trueDifficultyLogit": -0.2229,
+   "trueDifficulty0to10": 4.721
+  },
+  {
+   "problemId": "LC1365",
+   "priorDifficulty": 2.09,
+   "trueDifficultyLogit": -2.1323,
+   "trueDifficulty0to10": 2.335
+  },
+  {
+   "problemId": "LC1367",
+   "priorDifficulty": 5.16,
+   "trueDifficultyLogit": -0.0292,
+   "trueDifficulty0to10": 4.963
+  },
+  {
+   "problemId": "LC1368",
+   "priorDifficulty": 6.0,
+   "trueDifficultyLogit": 0.8325,
+   "trueDifficulty0to10": 6.041
+  },
+  {
+   "problemId": "LC1371",
+   "priorDifficulty": 4.22,
+   "trueDifficultyLogit": -0.518,
+   "trueDifficulty0to10": 4.353
+  },
+  {
+   "problemId": "LC1372",
+   "priorDifficulty": 4.58,
+   "trueDifficultyLogit": -0.6337,
+   "trueDifficulty0to10": 4.208
+  },
+  {
+   "problemId": "LC1373",
+   "priorDifficulty": 6.86,
+   "trueDifficultyLogit": 0.8999,
+   "trueDifficulty0to10": 6.125
+  },
+  {
+   "problemId": "LC1376",
+   "priorDifficulty": 4.84,
+   "trueDifficultyLogit": -0.3239,
+   "trueDifficulty0to10": 4.595
+  },
+  {
+   "problemId": "LC1380",
+   "priorDifficulty": 2.56,
+   "trueDifficultyLogit": -1.3957,
+   "trueDifficulty0to10": 3.255
+  },
+  {
+   "problemId": "LC1381",
+   "priorDifficulty": 3.99,
+   "trueDifficultyLogit": -0.9805,
+   "trueDifficulty0to10": 3.774
+  },
+  {
+   "problemId": "LC1382",
+   "priorDifficulty": 3.8,
+   "trueDifficultyLogit": -0.7862,
+   "trueDifficulty0to10": 4.017
+  },
+  {
+   "problemId": "LC1383",
+   "priorDifficulty": 6.89,
+   "trueDifficultyLogit": 1.4058,
+   "trueDifficulty0to10": 6.757
+  },
+  {
+   "problemId": "LC1389",
+   "priorDifficulty": 2.15,
+   "trueDifficultyLogit": -2.1342,
+   "trueDifficulty0to10": 2.332
+  },
+  {
+   "problemId": "LC1395",
+   "priorDifficulty": 4.46,
+   "trueDifficultyLogit": 0.0837,
+   "trueDifficulty0to10": 5.105
+  },
+  {
+   "problemId": "LC1396",
+   "priorDifficulty": 4.26,
+   "trueDifficultyLogit": -0.337,
+   "trueDifficulty0to10": 4.579
+  },
+  {
+   "problemId": "LC1402",
+   "priorDifficulty": 5.8,
+   "trueDifficultyLogit": 0.9584,
+   "trueDifficulty0to10": 6.198
+  },
+  {
+   "problemId": "LC1405",
+   "priorDifficulty": 4.65,
+   "trueDifficultyLogit": -0.4701,
+   "trueDifficulty0to10": 4.412
+  },
+  {
+   "problemId": "LC1406",
+   "priorDifficulty": 6.14,
+   "trueDifficultyLogit": 1.3098,
+   "trueDifficulty0to10": 6.637
+  },
+  {
+   "problemId": "LC1422",
+   "priorDifficulty": 3.23,
+   "trueDifficultyLogit": -1.3554,
+   "trueDifficulty0to10": 3.306
+  },
+  {
+   "problemId": "LC1423",
+   "priorDifficulty": 4.92,
+   "trueDifficultyLogit": 0.1406,
+   "trueDifficulty0to10": 5.176
+  },
+  {
+   "problemId": "LC1424",
+   "priorDifficulty": 4.93,
+   "trueDifficultyLogit": 0.2102,
+   "trueDifficulty0to10": 5.263
+  },
+  {
+   "problemId": "LC1425",
+   "priorDifficulty": 6.59,
+   "trueDifficultyLogit": 1.2238,
+   "trueDifficulty0to10": 6.53
+  },
+  {
+   "problemId": "LC1431",
+   "priorDifficulty": 2.05,
+   "trueDifficultyLogit": -2.8548,
+   "trueDifficulty0to10": 1.431
+  },
+  {
+   "problemId": "LC1436",
+   "priorDifficulty": 2.6,
+   "trueDifficultyLogit": -1.4414,
+   "trueDifficulty0to10": 3.198
+  },
+  {
+   "problemId": "LC1438",
+   "priorDifficulty": 4.94,
+   "trueDifficultyLogit": 0.3781,
+   "trueDifficulty0to10": 5.473
+  },
+  {
+   "problemId": "LC1442",
+   "priorDifficulty": 3.8,
+   "trueDifficultyLogit": -1.2314,
+   "trueDifficulty0to10": 3.461
+  },
+  {
+   "problemId": "LC1443",
+   "priorDifficulty": 4.72,
+   "trueDifficultyLogit": -0.3257,
+   "trueDifficulty0to10": 4.593
+  },
+  {
+   "problemId": "LC1444",
+   "priorDifficulty": 6.39,
+   "trueDifficultyLogit": 1.1702,
+   "trueDifficulty0to10": 6.463
+  },
+  {
+   "problemId": "LC1448",
+   "priorDifficulty": 4.3,
+   "trueDifficultyLogit": -0.6834,
+   "trueDifficulty0to10": 4.146
+  },
+  {
+   "problemId": "LC1456",
+   "priorDifficulty": 4.75,
+   "trueDifficultyLogit": -0.5105,
+   "trueDifficulty0to10": 4.362
+  },
+  {
+   "problemId": "LC1457",
+   "priorDifficulty": 4.54,
+   "trueDifficultyLogit": -0.3786,
+   "trueDifficulty0to10": 4.527
+  },
+  {
+   "problemId": "LC1458",
+   "priorDifficulty": 6.08,
+   "trueDifficultyLogit": 0.3906,
+   "trueDifficulty0to10": 5.488
+  },
+  {
+   "problemId": "LC1461",
+   "priorDifficulty": 4.81,
+   "trueDifficultyLogit": -0.1187,
+   "trueDifficulty0to10": 4.852
+  },
+  {
+   "problemId": "LC1462",
+   "priorDifficulty": 4.85,
+   "trueDifficultyLogit": 0.056,
+   "trueDifficulty0to10": 5.07
+  },
+  {
+   "problemId": "LC1463",
+   "priorDifficulty": 5.93,
+   "trueDifficultyLogit": 0.8164,
+   "trueDifficulty0to10": 6.02
+  },
+  {
+   "problemId": "LC1464",
+   "priorDifficulty": 2.27,
+   "trueDifficultyLogit": -2.0471,
+   "trueDifficulty0to10": 2.441
+  },
+  {
+   "problemId": "LC1465",
+   "priorDifficulty": 5.53,
+   "trueDifficultyLogit": 1.1145,
+   "trueDifficulty0to10": 6.393
+  },
+  {
+   "problemId": "LC1466",
+   "priorDifficulty": 4.63,
+   "trueDifficultyLogit": -0.7954,
+   "trueDifficulty0to10": 4.006
+  },
+  {
+   "problemId": "LC1470",
+   "priorDifficulty": 1.99,
+   "trueDifficultyLogit": -1.9088,
+   "trueDifficulty0to10": 2.614
+  },
+  {
+   "problemId": "LC1472",
+   "priorDifficulty": 4.07,
+   "trueDifficultyLogit": 0.0998,
+   "trueDifficulty0to10": 5.125
+  },
+  {
+   "problemId": "LC1473",
+   "priorDifficulty": 6.4,
+   "trueDifficultyLogit": 1.2087,
+   "trueDifficulty0to10": 6.511
+  },
+  {
+   "problemId": "LC1475",
+   "priorDifficulty": 2.31,
+   "trueDifficultyLogit": -2.0463,
+   "trueDifficulty0to10": 2.442
+  },
+  {
+   "problemId": "LC1477",
+   "priorDifficulty": 5.24,
+   "trueDifficultyLogit": 0.7913,
+   "trueDifficulty0to10": 5.989
+  },
+  {
+   "problemId": "LC1480",
+   "priorDifficulty": 2.12,
+   "trueDifficultyLogit": -2.5576,
+   "trueDifficulty0to10": 1.803
+  },
+  {
+   "problemId": "LC1481",
+   "priorDifficulty": 4.72,
+   "trueDifficultyLogit": -0.1631,
+   "trueDifficulty0to10": 4.796
+  },
+  {
+   "problemId": "LC1482",
+   "priorDifficulty": 4.97,
+   "trueDifficultyLogit": 0.0054,
+   "trueDifficulty0to10": 5.007
+  },
+  {
+   "problemId": "LC1483",
+   "priorDifficulty": 7.21,
+   "trueDifficultyLogit": 1.9232,
+   "trueDifficulty0to10": 7.404
+  },
+  {
+   "problemId": "LC1488",
+   "priorDifficulty": 5.63,
+   "trueDifficultyLogit": 0.1219,
+   "trueDifficulty0to10": 5.152
+  },
+  {
+   "problemId": "LC1489",
+   "priorDifficulty": 6.19,
+   "trueDifficultyLogit": 1.1455,
+   "trueDifficulty0to10": 6.432
+  },
+  {
+   "problemId": "LC1491",
+   "priorDifficulty": 3.29,
+   "trueDifficultyLogit": -1.2208,
+   "trueDifficulty0to10": 3.474
+  },
+  {
+   "problemId": "LC1492",
+   "priorDifficulty": 4.44,
+   "trueDifficultyLogit": -0.9115,
+   "trueDifficulty0to10": 3.861
+  },
+  {
+   "problemId": "LC1493",
+   "priorDifficulty": 4.4,
+   "trueDifficultyLogit": -0.929,
+   "trueDifficulty0to10": 3.839
+  },
+  {
+   "problemId": "LC1497",
+   "priorDifficulty": 5.37,
+   "trueDifficultyLogit": -0.7543,
+   "trueDifficulty0to10": 4.057
+  },
+  {
+   "problemId": "LC1498",
+   "priorDifficulty": 5.27,
+   "trueDifficultyLogit": -0.6684,
+   "trueDifficulty0to10": 4.164
+  },
+  {
+   "problemId": "LC1502",
+   "priorDifficulty": 3.09,
+   "trueDifficultyLogit": -1.424,
+   "trueDifficulty0to10": 3.22
+  },
+  {
+   "problemId": "LC1504",
+   "priorDifficulty": 4.43,
+   "trueDifficultyLogit": -0.4434,
+   "trueDifficulty0to10": 4.446
+  },
+  {
+   "problemId": "LC1509",
+   "priorDifficulty": 4.9,
+   "trueDifficultyLogit": 0.5409,
+   "trueDifficulty0to10": 5.676
+  },
+  {
+   "problemId": "LC1512",
+   "priorDifficulty": 1.88,
+   "trueDifficultyLogit": -2.5256,
+   "trueDifficulty0to10": 1.843
+  },
+  {
+   "problemId": "LC1514",
+   "priorDifficulty": 4.64,
+   "trueDifficultyLogit": -0.111,
+   "trueDifficulty0to10": 4.861
+  },
+  {
+   "problemId": "LC1518",
+   "priorDifficulty": 2.93,
+   "trueDifficultyLogit": -1.3918,
+   "trueDifficulty0to10": 3.26
+  },
+  {
+   "problemId": "LC1519",
+   "priorDifficulty": 5.03,
+   "trueDifficultyLogit": 0.412,
+   "trueDifficulty0to10": 5.515
+  },
+  {
+   "problemId": "LC1523",
+   "priorDifficulty": 3.61,
+   "trueDifficultyLogit": -1.3341,
+   "trueDifficulty0to10": 3.332
+  },
+  {
+   "problemId": "LC1524",
+   "priorDifficulty": 5.03,
+   "trueDifficultyLogit": 0.2873,
+   "trueDifficulty0to10": 5.359
+  },
+  {
+   "problemId": "LC1525",
+   "priorDifficulty": 4.53,
+   "trueDifficultyLogit": -0.7469,
+   "trueDifficulty0to10": 4.066
+  },
+  {
+   "problemId": "LC1526",
+   "priorDifficulty": 5.8,
+   "trueDifficultyLogit": 0.7256,
+   "trueDifficulty0to10": 5.907
+  },
+  {
+   "problemId": "LC1528",
+   "priorDifficulty": 2.23,
+   "trueDifficultyLogit": -1.6139,
+   "trueDifficulty0to10": 2.983
+  },
+  {
+   "problemId": "LC1530",
+   "priorDifficulty": 4.4,
+   "trueDifficultyLogit": -0.6317,
+   "trueDifficulty0to10": 4.21
+  },
+  {
+   "problemId": "LC1531",
+   "priorDifficulty": 6.75,
+   "trueDifficultyLogit": 0.9021,
+   "trueDifficulty0to10": 6.128
+  },
+  {
+   "problemId": "LC1539",
+   "priorDifficulty": 3.28,
+   "trueDifficultyLogit": -0.9513,
+   "trueDifficulty0to10": 3.811
+  },
+  {
+   "problemId": "LC1544",
+   "priorDifficulty": 3.09,
+   "trueDifficultyLogit": -1.6246,
+   "trueDifficulty0to10": 2.969
+  },
+  {
+   "problemId": "LC1547",
+   "priorDifficulty": 6.32,
+   "trueDifficultyLogit": 0.6534,
+   "trueDifficulty0to10": 5.817
+  },
+  {
+   "problemId": "LC1552",
+   "priorDifficulty": 4.35,
+   "trueDifficultyLogit": -0.379,
+   "trueDifficulty0to10": 4.526
+  },
+  {
+   "problemId": "LC1557",
+   "priorDifficulty": 3.89,
+   "trueDifficultyLogit": -0.472,
+   "trueDifficulty0to10": 4.41
+  },
+  {
+   "problemId": "LC1561",
+   "priorDifficulty": 3.8,
+   "trueDifficultyLogit": -0.7713,
+   "trueDifficulty0to10": 4.036
+  },
+  {
+   "problemId": "LC1567",
+   "priorDifficulty": 5.41,
+   "trueDifficultyLogit": -0.0389,
+   "trueDifficulty0to10": 4.951
+  },
+  {
+   "problemId": "LC1572",
+   "priorDifficulty": 2.29,
+   "trueDifficultyLogit": -1.881,
+   "trueDifficulty0to10": 2.649
+  },
+  {
+   "problemId": "LC1574",
+   "priorDifficulty": 5.18,
+   "trueDifficultyLogit": 0.3212,
+   "trueDifficulty0to10": 5.401
+  },
+  {
+   "problemId": "LC1578",
+   "priorDifficulty": 4.67,
+   "trueDifficultyLogit": -0.4353,
+   "trueDifficulty0to10": 4.456
+  },
+  {
+   "problemId": "LC1579",
+   "priorDifficulty": 6.05,
+   "trueDifficultyLogit": 0.9191,
+   "trueDifficulty0to10": 6.149
+  },
+  {
+   "problemId": "LC1584",
+   "priorDifficulty": 4.39,
+   "trueDifficultyLogit": -0.2888,
+   "trueDifficulty0to10": 4.639
+  },
+  {
+   "problemId": "LC1588",
+   "priorDifficulty": 2.32,
+   "trueDifficultyLogit": -2.2352,
+   "trueDifficulty0to10": 2.206
+  },
+  {
+   "problemId": "LC1590",
+   "priorDifficulty": 5.5,
+   "trueDifficultyLogit": 0.8674,
+   "trueDifficulty0to10": 6.084
+  },
+  {
+   "problemId": "LC1603",
+   "priorDifficulty": 2.11,
+   "trueDifficultyLogit": -2.005,
+   "trueDifficulty0to10": 2.494
+  },
+  {
+   "problemId": "LC1605",
+   "priorDifficulty": 3.84,
+   "trueDifficultyLogit": -0.9103,
+   "trueDifficulty0to10": 3.862
+  },
+  {
+   "problemId": "LC1608",
+   "priorDifficulty": 3.16,
+   "trueDifficultyLogit": -2.2819,
+   "trueDifficulty0to10": 2.148
+  },
+  {
+   "problemId": "LC1609",
+   "priorDifficulty": 4.58,
+   "trueDifficultyLogit": -0.4659,
+   "trueDifficulty0to10": 4.418
+  },
+  {
+   "problemId": "LC1614",
+   "priorDifficulty": 2.2,
+   "trueDifficultyLogit": -2.3169,
+   "trueDifficulty0to10": 2.104
+  },
+  {
+   "problemId": "LC1615",
+   "priorDifficulty": 4.63,
+   "trueDifficultyLogit": 0.7142,
+   "trueDifficulty0to10": 5.893
+  },
+  {
+   "problemId": "LC1626",
+   "priorDifficulty": 5.2,
+   "trueDifficultyLogit": 0.038,
+   "trueDifficulty0to10": 5.048
+  },
+  {
+   "problemId": "LC1630",
+   "priorDifficulty": 3.8,
+   "trueDifficultyLogit": -0.1746,
+   "trueDifficulty0to10": 4.782
+  },
+  {
+   "problemId": "LC1631",
+   "priorDifficulty": 4.71,
+   "trueDifficultyLogit": 0.0557,
+   "trueDifficulty0to10": 5.07
+  },
+  {
+   "problemId": "LC1636",
+   "priorDifficulty": 2.51,
+   "trueDifficultyLogit": -2.0184,
+   "trueDifficulty0to10": 2.477
+  },
+  {
+   "problemId": "LC1639",
+   "priorDifficulty": 6.6,
+   "trueDifficultyLogit": 0.744,
+   "trueDifficulty0to10": 5.93
+  },
+  {
+   "problemId": "LC1641",
+   "priorDifficulty": 4.02,
+   "trueDifficultyLogit": -0.9115,
+   "trueDifficulty0to10": 3.861
+  },
+  {
+   "problemId": "LC1642",
+   "priorDifficulty": 5.19,
+   "trueDifficultyLogit": 0.3842,
+   "trueDifficulty0to10": 5.48
+  },
+  {
+   "problemId": "LC1647",
+   "priorDifficulty": 4.81,
+   "trueDifficultyLogit": -0.4347,
+   "trueDifficulty0to10": 4.457
+  },
+  {
+   "problemId": "LC1653",
+   "priorDifficulty": 4.55,
+   "trueDifficultyLogit": -0.9131,
+   "trueDifficulty0to10": 3.859
+  },
+  {
+   "problemId": "LC1657",
+   "priorDifficulty": 5.07,
+   "trueDifficultyLogit": 0.1887,
+   "trueDifficulty0to10": 5.236
+  },
+  {
+   "problemId": "LC1658",
+   "priorDifficulty": 5.41,
+   "trueDifficultyLogit": 0.8033,
+   "trueDifficulty0to10": 6.004
+  },
+  {
+   "problemId": "LC1662",
+   "priorDifficulty": 2.18,
+   "trueDifficultyLogit": -3.3449,
+   "trueDifficulty0to10": 0.819
+  },
+  {
+   "problemId": "LC1663",
+   "priorDifficulty": 4.57,
+   "trueDifficultyLogit": -0.5539,
+   "trueDifficulty0to10": 4.308
+  },
+  {
+   "problemId": "LC1669",
+   "priorDifficulty": 3.8,
+   "trueDifficultyLogit": -1.1267,
+   "trueDifficulty0to10": 3.592
+  },
+  {
+   "problemId": "LC1671",
+   "priorDifficulty": 6.65,
+   "trueDifficultyLogit": 1.8107,
+   "trueDifficulty0to10": 7.263
+  },
+  {
+   "problemId": "LC1672",
+   "priorDifficulty": 1.97,
+   "trueDifficultyLogit": -2.7407,
+   "trueDifficulty0to10": 1.574
+  },
+  {
+   "problemId": "LC1673",
+   "priorDifficulty": 5.1,
+   "trueDifficultyLogit": 0.5761,
+   "trueDifficulty0to10": 5.72
+  },
+  {
+   "problemId": "LC1675",
+   "priorDifficulty": 6.68,
+   "trueDifficultyLogit": 1.8065,
+   "trueDifficulty0to10": 7.258
+  },
+  {
+   "problemId": "LC1679",
+   "priorDifficulty": 4.96,
+   "trueDifficultyLogit": -0.0239,
+   "trueDifficulty0to10": 4.97
+  },
+  {
+   "problemId": "LC1684",
+   "priorDifficulty": 2.0,
+   "trueDifficultyLogit": -2.5706,
+   "trueDifficulty0to10": 1.787
+  },
+  {
+   "problemId": "LC1685",
+   "priorDifficulty": 4.53,
+   "trueDifficultyLogit": -1.0257,
+   "trueDifficulty0to10": 3.718
+  },
+  {
+   "problemId": "LC1688",
+   "priorDifficulty": 2.16,
+   "trueDifficultyLogit": -2.5467,
+   "trueDifficulty0to10": 1.817
+  },
+  {
+   "problemId": "LC1689",
+   "priorDifficulty": 3.8,
+   "trueDifficultyLogit": -1.0977,
+   "trueDifficulty0to10": 3.628
+  },
+  {
+   "problemId": "LC1695",
+   "priorDifficulty": 4.7,
+   "trueDifficultyLogit": 0.0499,
+   "trueDifficulty0to10": 5.062
+  },
+  {
+   "problemId": "LC1696",
+   "priorDifficulty": 5.35,
+   "trueDifficultyLogit": 0.1963,
+   "trueDifficulty0to10": 5.245
+  },
+  {
+   "problemId": "LC1697",
+   "priorDifficulty": 6.31,
+   "trueDifficultyLogit": 1.1068,
+   "trueDifficulty0to10": 6.384
+  },
+  {
+   "problemId": "LC1700",
+   "priorDifficulty": 2.57,
+   "trueDifficultyLogit": -1.6987,
+   "trueDifficulty0to10": 2.877
+  },
+  {
+   "problemId": "LC1704",
+   "priorDifficulty": 2.63,
+   "trueDifficultyLogit": -1.6856,
+   "trueDifficulty0to10": 2.893
+  },
+  {
+   "problemId": "LC1706",
+   "priorDifficulty": 4.37,
+   "trueDifficultyLogit": -0.5892,
+   "trueDifficulty0to10": 4.264
+  },
+  {
+   "problemId": "LC1710",
+   "priorDifficulty": 2.81,
+   "trueDifficultyLogit": -2.2395,
+   "trueDifficulty0to10": 2.201
+  },
+  {
+   "problemId": "LC1717",
+   "priorDifficulty": 4.62,
+   "trueDifficultyLogit": -0.3223,
+   "trueDifficulty0to10": 4.597
+  },
+  {
+   "problemId": "LC1721",
+   "priorDifficulty": 4.48,
+   "trueDifficultyLogit": -0.0465,
+   "trueDifficulty0to10": 4.942
+  },
+  {
+   "problemId": "LC1727",
+   "priorDifficulty": 3.98,
+   "trueDifficultyLogit": -1.1181,
+   "trueDifficulty0to10": 3.602
+  },
+  {
+   "problemId": "LC1732",
+   "priorDifficulty": 2.29,
+   "trueDifficultyLogit": -1.4951,
+   "trueDifficulty0to10": 3.131
+  },
+  {
+   "problemId": "LC1743",
+   "priorDifficulty": 4.24,
+   "trueDifficultyLogit": -0.7875,
+   "trueDifficulty0to10": 4.016
+  },
+  {
+   "problemId": "LC1749",
+   "priorDifficulty": 4.45,
+   "trueDifficultyLogit": 0.31,
+   "trueDifficulty0to10": 5.387
+  },
+  {
+   "problemId": "LC1751",
+   "priorDifficulty": 6.33,
+   "trueDifficultyLogit": 0.6264,
+   "trueDifficulty0to10": 5.783
+  },
+  {
+   "problemId": "LC1752",
+   "priorDifficulty": 3.5,
+   "trueDifficultyLogit": -0.5313,
+   "trueDifficulty0to10": 4.336
+  },
+  {
+   "problemId": "LC1760",
+   "priorDifficulty": 4.64,
+   "trueDifficultyLogit": -0.9025,
+   "trueDifficulty0to10": 3.872
+  },
+  {
+   "problemId": "LC1768",
+   "priorDifficulty": 2.45,
+   "trueDifficultyLogit": -2.0841,
+   "trueDifficulty0to10": 2.395
+  },
+  {
+   "problemId": "LC1769",
+   "priorDifficulty": 3.8,
+   "trueDifficultyLogit": -0.9385,
+   "trueDifficulty0to10": 3.827
+  },
+  {
+   "problemId": "LC1770",
+   "priorDifficulty": 7.06,
+   "trueDifficultyLogit": 0.9236,
+   "trueDifficulty0to10": 6.154
+  },
+  {
+   "problemId": "LC1773",
+   "priorDifficulty": 2.24,
+   "trueDifficultyLogit": -1.4359,
+   "trueDifficulty0to10": 3.205
+  },
+  {
+   "problemId": "LC1791",
+   "priorDifficulty": 2.16,
+   "trueDifficultyLogit": -2.3937,
+   "trueDifficulty0to10": 2.008
+  },
+  {
+   "problemId": "LC1792",
+   "priorDifficulty": 4.29,
+   "trueDifficultyLogit": -0.9585,
+   "trueDifficulty0to10": 3.802
+  },
+  {
+   "problemId": "LC1793",
+   "priorDifficulty": 6.29,
+   "trueDifficultyLogit": 0.5979,
+   "trueDifficulty0to10": 5.747
+  },
+  {
+   "problemId": "LC1802",
+   "priorDifficulty": 5.63,
+   "trueDifficultyLogit": 0.8804,
+   "trueDifficulty0to10": 6.1
+  },
+  {
+   "problemId": "LC1814",
+   "priorDifficulty": 5.28,
+   "trueDifficultyLogit": -0.2977,
+   "trueDifficulty0to10": 4.628
+  },
+  {
+   "problemId": "LC1822",
+   "priorDifficulty": 3.25,
+   "trueDifficultyLogit": -1.7095,
+   "trueDifficulty0to10": 2.863
+  },
+  {
+   "problemId": "LC1823",
+   "priorDifficulty": 3.85,
+   "trueDifficultyLogit": -0.6726,
+   "trueDifficulty0to10": 4.159
+  },
+  {
+   "problemId": "LC1832",
+   "priorDifficulty": 2.31,
+   "trueDifficultyLogit": -1.9667,
+   "trueDifficulty0to10": 2.542
+  },
+  {
+   "problemId": "LC1833",
+   "priorDifficulty": 4.14,
+   "trueDifficultyLogit": -1.0588,
+   "trueDifficulty0to10": 3.676
+  },
+  {
+   "problemId": "LC1834",
+   "priorDifficulty": 5.29,
+   "trueDifficultyLogit": -0.0896,
+   "trueDifficulty0to10": 4.888
+  },
+  {
+   "problemId": "LC1838",
+   "priorDifficulty": 5.4,
+   "trueDifficultyLogit": 0.433,
+   "trueDifficulty0to10": 5.541
+  },
+  {
+   "problemId": "LC1857",
+   "priorDifficulty": 6.56,
+   "trueDifficultyLogit": 2.1569,
+   "trueDifficulty0to10": 7.696
+  },
+  {
+   "problemId": "LC1859",
+   "priorDifficulty": 2.32,
+   "trueDifficultyLogit": -1.7913,
+   "trueDifficulty0to10": 2.761
+  },
+  {
+   "problemId": "LC1863",
+   "priorDifficulty": 1.86,
+   "trueDifficultyLogit": -3.0462,
+   "trueDifficulty0to10": 1.192
+  },
+  {
+   "problemId": "LC1870",
+   "priorDifficulty": 5.29,
+   "trueDifficultyLogit": 0.3763,
+   "trueDifficulty0to10": 5.47
+  },
+  {
+   "problemId": "LC1871",
+   "priorDifficulty": 5.76,
+   "trueDifficultyLogit": 0.7288,
+   "trueDifficulty0to10": 5.911
+  },
+  {
+   "problemId": "LC1877",
+   "priorDifficulty": 3.8,
+   "trueDifficultyLogit": -0.6546,
+   "trueDifficulty0to10": 4.182
+  },
+  {
+   "problemId": "LC1901",
+   "priorDifficulty": 5.03,
+   "trueDifficultyLogit": 0.4236,
+   "trueDifficulty0to10": 5.529
+  },
+  {
+   "problemId": "LC1903",
+   "priorDifficulty": 3.11,
+   "trueDifficultyLogit": -0.7756,
+   "trueDifficulty0to10": 4.03
+  },
+  {
+   "problemId": "LC1905",
+   "priorDifficulty": 4.34,
+   "trueDifficultyLogit": -0.3068,
+   "trueDifficulty0to10": 4.617
+  },
+  {
+   "problemId": "LC1910",
+   "priorDifficulty": 4.06,
+   "trueDifficultyLogit": -0.9595,
+   "trueDifficulty0to10": 3.801
+  },
+  {
+   "problemId": "LC1920",
+   "priorDifficulty": 1.8,
+   "trueDifficultyLogit": -2.1782,
+   "trueDifficulty0to10": 2.277
+  },
+  {
+   "problemId": "LC1922",
+   "priorDifficulty": 4.94,
+   "trueDifficultyLogit": 0.2041,
+   "trueDifficulty0to10": 5.255
+  },
+  {
+   "problemId": "LC1926",
+   "priorDifficulty": 5.26,
+   "trueDifficultyLogit": -0.0491,
+   "trueDifficulty0to10": 4.939
+  },
+  {
+   "problemId": "LC1929",
+   "priorDifficulty": 1.87,
+   "trueDifficultyLogit": -1.9771,
+   "trueDifficulty0to10": 2.529
+  },
+  {
+   "problemId": "LC1930",
+   "priorDifficulty": 4.31,
+   "trueDifficultyLogit": -1.1187,
+   "trueDifficulty0to10": 3.602
+  },
+  {
+   "problemId": "LC1937",
+   "priorDifficulty": 5.53,
+   "trueDifficultyLogit": 0.9845,
+   "trueDifficulty0to10": 6.231
+  },
+  {
+   "problemId": "LC1944",
+   "priorDifficulty": 5.89,
+   "trueDifficultyLogit": 1.1417,
+   "trueDifficulty0to10": 6.427
+  },
+  {
+   "problemId": "LC1962",
+   "priorDifficulty": 4.63,
+   "trueDifficultyLogit": -0.474,
+   "trueDifficulty0to10": 4.407
+  },
+  {
+   "problemId": "LC1963",
+   "priorDifficulty": 4.1,
+   "trueDifficultyLogit": -0.9415,
+   "trueDifficulty0to10": 3.823
+  },
+  {
+   "problemId": "LC1964",
+   "priorDifficulty": 6.36,
+   "trueDifficultyLogit": 0.9394,
+   "trueDifficulty0to10": 6.174
+  },
+  {
+   "problemId": "LC1970",
+   "priorDifficulty": 6.11,
+   "trueDifficultyLogit": 0.5674,
+   "trueDifficulty0to10": 5.709
+  },
+  {
+   "problemId": "LC1971",
+   "priorDifficulty": 3.57,
+   "trueDifficultyLogit": -0.3438,
+   "trueDifficulty0to10": 4.57
+  },
+  {
+   "problemId": "LC1976",
+   "priorDifficulty": 5.68,
+   "trueDifficultyLogit": 0.802,
+   "trueDifficulty0to10": 6.002
+  },
+  {
+   "problemId": "LC1980",
+   "priorDifficulty": 3.92,
+   "trueDifficultyLogit": -0.6042,
+   "trueDifficulty0to10": 4.245
+  },
+  {
+   "problemId": "LC1996",
+   "priorDifficulty": 5.42,
+   "trueDifficultyLogit": 0.8642,
+   "trueDifficulty0to10": 6.08
+  },
+  {
+   "problemId": "LC2007",
+   "priorDifficulty": 5.56,
+   "trueDifficultyLogit": 1.0092,
+   "trueDifficulty0to10": 6.261
+  },
+  {
+   "problemId": "LC2009",
+   "priorDifficulty": 6.76,
+   "trueDifficultyLogit": 1.1747,
+   "trueDifficulty0to10": 6.468
+  },
+  {
+   "problemId": "LC2011",
+   "priorDifficulty": 1.81,
+   "trueDifficultyLogit": -2.3081,
+   "trueDifficulty0to10": 2.115
+  },
+  {
+   "problemId": "LC2024",
+   "priorDifficulty": 4.45,
+   "trueDifficultyLogit": 0.0148,
+   "trueDifficulty0to10": 5.018
+  },
+  {
+   "problemId": "LC2035",
+   "priorDifficulty": 7.85,
+   "trueDifficultyLogit": 2.4166,
+   "trueDifficulty0to10": 8.021
+  },
+  {
+   "problemId": "LC2073",
+   "priorDifficulty": 2.9,
+   "trueDifficultyLogit": -1.5123,
+   "trueDifficulty0to10": 3.11
+  },
+  {
+   "problemId": "LC2089",
+   "priorDifficulty": 2.66,
+   "trueDifficultyLogit": -2.0905,
+   "trueDifficulty0to10": 2.387
+  },
+  {
+   "problemId": "LC2090",
+   "priorDifficulty": 5.35,
+   "trueDifficultyLogit": 0.1144,
+   "trueDifficulty0to10": 5.143
+  },
+  {
+   "problemId": "LC2092",
+   "priorDifficulty": 6.89,
+   "trueDifficultyLogit": 1.572,
+   "trueDifficulty0to10": 6.965
+  },
+  {
+   "problemId": "LC2095",
+   "priorDifficulty": 4.83,
+   "trueDifficultyLogit": 0.3098,
+   "trueDifficulty0to10": 5.387
+  },
+  {
+   "problemId": "LC2096",
+   "priorDifficulty": 5.0,
+   "trueDifficultyLogit": 0.0372,
+   "trueDifficulty0to10": 5.046
+  },
+  {
+   "problemId": "LC2101",
+   "priorDifficulty": 5.21,
+   "trueDifficultyLogit": 0.3322,
+   "trueDifficulty0to10": 5.415
+  },
+  {
+   "problemId": "LC2104",
+   "priorDifficulty": 4.79,
+   "trueDifficultyLogit": -0.6789,
+   "trueDifficulty0to10": 4.151
+  },
+  {
+   "problemId": "LC2114",
+   "priorDifficulty": 2.14,
+   "trueDifficultyLogit": -2.7742,
+   "trueDifficulty0to10": 1.532
+  },
+  {
+   "problemId": "LC2115",
+   "priorDifficulty": 4.97,
+   "trueDifficultyLogit": 0.0905,
+   "trueDifficulty0to10": 5.113
+  },
+  {
+   "problemId": "LC2116",
+   "priorDifficulty": 5.4,
+   "trueDifficultyLogit": 0.7657,
+   "trueDifficulty0to10": 5.957
+  },
+  {
+   "problemId": "LC2125",
+   "priorDifficulty": 3.8,
+   "trueDifficultyLogit": -0.9513,
+   "trueDifficulty0to10": 3.811
+  },
+  {
+   "problemId": "LC2130",
+   "priorDifficulty": 3.8,
+   "trueDifficultyLogit": -0.5759,
+   "trueDifficulty0to10": 4.28
+  },
+  {
+   "problemId": "LC2131",
+   "priorDifficulty": 5.11,
+   "trueDifficultyLogit": 0.3348,
+   "trueDifficulty0to10": 5.419
+  },
+  {
+   "problemId": "LC2134",
+   "priorDifficulty": 4.65,
+   "trueDifficultyLogit": 0.074,
+   "trueDifficulty0to10": 5.092
+  },
+  {
+   "problemId": "LC2140",
+   "priorDifficulty": 4.86,
+   "trueDifficultyLogit": 0.1711,
+   "trueDifficulty0to10": 5.214
+  },
+  {
+   "problemId": "LC2141",
+   "priorDifficulty": 6.59,
+   "trueDifficultyLogit": 1.2274,
+   "trueDifficulty0to10": 6.534
+  },
+  {
+   "problemId": "LC2149",
+   "priorDifficulty": 3.8,
+   "trueDifficultyLogit": -0.8596,
+   "trueDifficulty0to10": 3.926
+  },
+  {
+   "problemId": "LC2161",
+   "priorDifficulty": 3.8,
+   "trueDifficultyLogit": -0.806,
+   "trueDifficulty0to10": 3.992
+  },
+  {
+   "problemId": "LC2181",
+   "priorDifficulty": 3.8,
+   "trueDifficultyLogit": -0.2868,
+   "trueDifficulty0to10": 4.642
+  },
+  {
+   "problemId": "LC2187",
+   "priorDifficulty": 5.59,
+   "trueDifficultyLogit": 0.5425,
+   "trueDifficulty0to10": 5.678
+  },
+  {
+   "problemId": "LC2196",
+   "priorDifficulty": 3.8,
+   "trueDifficultyLogit": -1.3468,
+   "trueDifficulty0to10": 3.316
+  },
+  {
+   "problemId": "LC2215",
+   "priorDifficulty": 2.48,
+   "trueDifficultyLogit": -1.5284,
+   "trueDifficulty0to10": 3.09
+  },
+  {
+   "problemId": "LC2218",
+   "priorDifficulty": 6.44,
+   "trueDifficultyLogit": 0.5452,
+   "trueDifficulty0to10": 5.681
+  },
+  {
+   "problemId": "LC2225",
+   "priorDifficulty": 4.37,
+   "trueDifficultyLogit": -0.8841,
+   "trueDifficulty0to10": 3.895
+  },
+  {
+   "problemId": "LC2235",
+   "priorDifficulty": 2.04,
+   "trueDifficultyLogit": -2.7665,
+   "trueDifficulty0to10": 1.542
+  },
+  {
+   "problemId": "LC2244",
+   "priorDifficulty": 4.74,
+   "trueDifficultyLogit": 0.0524,
+   "trueDifficulty0to10": 5.066
+  },
+  {
+   "problemId": "LC2246",
+   "priorDifficulty": 6.68,
+   "trueDifficultyLogit": 1.0971,
+   "trueDifficulty0to10": 6.371
+  },
+  {
+   "problemId": "LC2265",
+   "priorDifficulty": 3.8,
+   "trueDifficultyLogit": -0.6916,
+   "trueDifficulty0to10": 4.136
+  },
+  {
+   "problemId": "LC2272",
+   "priorDifficulty": 6.97,
+   "trueDifficultyLogit": 0.9543,
+   "trueDifficulty0to10": 6.193
+  },
+  {
+   "problemId": "LC2300",
+   "priorDifficulty": 5.23,
+   "trueDifficultyLogit": -0.2818,
+   "trueDifficulty0to10": 4.648
+  },
+  {
+   "problemId": "LC2305",
+   "priorDifficulty": 4.47,
+   "trueDifficultyLogit": -0.0453,
+   "trueDifficulty0to10": 4.943
+  },
+  {
+   "problemId": "LC2306",
+   "priorDifficulty": 6.95,
+   "trueDifficultyLogit": 1.4064,
+   "trueDifficulty0to10": 6.758
+  },
+  {
+   "problemId": "LC2316",
+   "priorDifficulty": 5.22,
+   "trueDifficultyLogit": -0.153,
+   "trueDifficulty0to10": 4.809
+  },
+  {
+   "problemId": "LC2328",
+   "priorDifficulty": 6.56,
+   "trueDifficultyLogit": 1.4823,
+   "trueDifficulty0to10": 6.853
+  },
+  {
+   "problemId": "LC2348",
+   "priorDifficulty": 4.47,
+   "trueDifficultyLogit": -0.7089,
+   "trueDifficulty0to10": 4.114
+  },
+  {
+   "problemId": "LC2352",
+   "priorDifficulty": 4.41,
+   "trueDifficultyLogit": -0.1171,
+   "trueDifficulty0to10": 4.854
+  },
+  {
+   "problemId": "LC2353",
+   "priorDifficulty": 5.13,
+   "trueDifficultyLogit": -0.2361,
+   "trueDifficulty0to10": 4.705
+  },
+  {
+   "problemId": "LC2359",
+   "priorDifficulty": 5.12,
+   "trueDifficultyLogit": 0.3763,
+   "trueDifficulty0to10": 5.47
+  },
+  {
+   "problemId": "LC2360",
+   "priorDifficulty": 6.78,
+   "trueDifficultyLogit": 1.3293,
+   "trueDifficulty0to10": 6.662
+  },
+  {
+   "problemId": "LC2366",
+   "priorDifficulty": 6.72,
+   "trueDifficultyLogit": 0.6137,
+   "trueDifficulty0to10": 5.767
+  },
+  {
+   "problemId": "LC2369",
+   "priorDifficulty": 5.14,
+   "trueDifficultyLogit": -0.0678,
+   "trueDifficulty0to10": 4.915
+  },
+  {
+   "problemId": "LC2385",
+   "priorDifficulty": 4.63,
+   "trueDifficultyLogit": -0.0422,
+   "trueDifficulty0to10": 4.947
+  },
+  {
+   "problemId": "LC2389",
+   "priorDifficulty": 2.87,
+   "trueDifficultyLogit": -1.86,
+   "trueDifficulty0to10": 2.675
+  },
+  {
+   "problemId": "LC2390",
+   "priorDifficulty": 3.99,
+   "trueDifficultyLogit": -0.6117,
+   "trueDifficulty0to10": 4.235
+  },
+  {
+   "problemId": "LC2401",
+   "priorDifficulty": 4.68,
+   "trueDifficultyLogit": 0.0584,
+   "trueDifficulty0to10": 5.073
+  },
+  {
+   "problemId": "LC2402",
+   "priorDifficulty": 6.78,
+   "trueDifficultyLogit": 1.9289,
+   "trueDifficulty0to10": 7.411
+  },
+  {
+   "problemId": "LC2405",
+   "priorDifficulty": 4.07,
+   "trueDifficultyLogit": -0.8955,
+   "trueDifficulty0to10": 3.881
+  },
+  {
+   "problemId": "LC2418",
+   "priorDifficulty": 2.28,
+   "trueDifficultyLogit": -2.1298,
+   "trueDifficulty0to10": 2.338
+  },
+  {
+   "problemId": "LC2421",
+   "priorDifficulty": 6.58,
+   "trueDifficultyLogit": 1.4993,
+   "trueDifficulty0to10": 6.874
+  },
+  {
+   "problemId": "LC2439",
+   "priorDifficulty": 5.35,
+   "trueDifficultyLogit": 0.935,
+   "trueDifficulty0to10": 6.169
+  },
+  {
+   "problemId": "LC2444",
+   "priorDifficulty": 6.09,
+   "trueDifficultyLogit": 0.6845,
+   "trueDifficulty0to10": 5.856
+  },
+  {
+   "problemId": "LC2448",
+   "priorDifficulty": 6.94,
+   "trueDifficultyLogit": 1.6447,
+   "trueDifficulty0to10": 7.056
+  },
+  {
+   "problemId": "LC2461",
+   "priorDifficulty": 5.46,
+   "trueDifficultyLogit": 0.3957,
+   "trueDifficulty0to10": 5.495
+  },
+  {
+   "problemId": "LC2462",
+   "priorDifficulty": 5.45,
+   "trueDifficultyLogit": 0.247,
+   "trueDifficulty0to10": 5.309
+  },
+  {
+   "problemId": "LC2466",
+   "priorDifficulty": 4.91,
+   "trueDifficultyLogit": 0.2486,
+   "trueDifficulty0to10": 5.311
+  },
+  {
+   "problemId": "LC2477",
+   "priorDifficulty": 4.66,
+   "trueDifficultyLogit": -0.0485,
+   "trueDifficulty0to10": 4.939
+  },
+  {
+   "problemId": "LC2483",
+   "priorDifficulty": 4.42,
+   "trueDifficultyLogit": -1.0429,
+   "trueDifficulty0to10": 3.696
+  },
+  {
+   "problemId": "LC2487",
+   "priorDifficulty": 4.24,
+   "trueDifficultyLogit": -0.2328,
+   "trueDifficulty0to10": 4.709
+  },
+  {
+   "problemId": "LC2492",
+   "priorDifficulty": 4.63,
+   "trueDifficultyLogit": -0.0273,
+   "trueDifficulty0to10": 4.966
+  },
+  {
+   "problemId": "LC2542",
+   "priorDifficulty": 5.05,
+   "trueDifficultyLogit": 0.103,
+   "trueDifficulty0to10": 5.129
+  },
+  {
+   "problemId": "LC2551",
+   "priorDifficulty": 5.96,
+   "trueDifficultyLogit": 0.6252,
+   "trueDifficulty0to10": 5.781
+  },
+  {
+   "problemId": "LC2563",
+   "priorDifficulty": 5.14,
+   "trueDifficultyLogit": -0.0876,
+   "trueDifficulty0to10": 4.891
+  },
+  {
+   "problemId": "LC2616",
+   "priorDifficulty": 5.19,
+   "trueDifficultyLogit": -0.0708,
+   "trueDifficulty0to10": 4.912
+  },
+  {
+   "problemId": "LC2707",
+   "priorDifficulty": 4.97,
+   "trueDifficultyLogit": -0.3059,
+   "trueDifficulty0to10": 4.618
+  },
+  {
+   "problemId": "LC2812",
+   "priorDifficulty": 4.97,
+   "trueDifficultyLogit": 0.0257,
+   "trueDifficulty0to10": 5.032
+  }
+ ]
+}

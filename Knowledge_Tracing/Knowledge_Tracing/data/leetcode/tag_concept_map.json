@@ -1,0 +1,356 @@
+{
+ "tiers": {
+  "A": 1.0,
+  "B": 0.7,
+  "C": 0.5
+ },
+ "rules": {
+  "0-1 Knapsack": {
+   "concept": "DYNAMIC_PROGRAMMING",
+   "weight": 1.0
+  },
+  "Array": {
+   "concept": "ARRAYS",
+   "weight": 0.5
+  },
+  "Backtracking": {
+   "concept": "BACKTRACKING",
+   "weight": 1.0
+  },
+  "Biconnected Component": {
+   "concept": "GRAPHS",
+   "weight": 1.0
+  },
+  "Binary Indexed Tree": {
+   "concept": "SEGMENT_TREE",
+   "weight": 1.0
+  },
+  "Binary Lifting": {
+   "concept": "TREES",
+   "weight": 1.0
+  },
+  "Binary Search": {
+   "concept": "BINARY_SEARCH",
+   "weight": 1.0
+  },
+  "Binary Search Tree": {
+   "concept": "TREES",
+   "weight": 1.0
+  },
+  "Binary Tree": {
+   "concept": "TREES",
+   "weight": 1.0
+  },
+  "Bipartite Graph": {
+   "concept": "GRAPHS",
+   "weight": 1.0
+  },
+  "Bit Manipulation": {
+   "concept": "BIT_MANIPULATION",
+   "weight": 1.0
+  },
+  "Bitmask": {
+   "concept": "BIT_MANIPULATION",
+   "weight": 1.0
+  },
+  "Boyer–Moore String-Search Algorithm": {
+   "concept": "STRINGS",
+   "weight": 1.0
+  },
+  "Bracket Sequences": {
+   "concept": "STACKS_QUEUES",
+   "weight": 1.0
+  },
+  "Bucket Sort": {
+   "concept": "SORTING",
+   "weight": 0.7
+  },
+  "Combinatorics": {
+   "concept": "MATH",
+   "weight": 0.7
+  },
+  "Complete Knapsack": {
+   "concept": "DYNAMIC_PROGRAMMING",
+   "weight": 1.0
+  },
+  "Counting": {
+   "concept": "HASHING",
+   "weight": 0.7
+  },
+  "Counting Sort": {
+   "concept": "SORTING",
+   "weight": 0.7
+  },
+  "DP on Trees": {
+   "concept": "DYNAMIC_PROGRAMMING",
+   "weight": 1.0
+  },
+  "Data Stream": {
+   "concept": "DESIGN",
+   "weight": 1.0
+  },
+  "Design": {
+   "concept": "DESIGN",
+   "weight": 1.0
+  },
+  "Dijkstra's Algorithm": {
+   "concept": "GRAPHS",
+   "weight": 1.0
+  },
+  "Directed Acyclic Graph": {
+   "concept": "GRAPHS",
+   "weight": 1.0
+  },
+  "Divide and Conquer": {
+   "concept": "RECURSION",
+   "weight": 0.7
+  },
+  "Doubly-Linked List": {
+   "concept": "LINKED_LIST",
+   "weight": 1.0
+  },
+  "Dynamic Programming": {
+   "concept": "DYNAMIC_PROGRAMMING",
+   "weight": 1.0
+  },
+  "Euclidean Algorithm": {
+   "concept": "MATH",
+   "weight": 0.7
+  },
+  "Eulerian Circuit": {
+   "concept": "GRAPHS",
+   "weight": 1.0
+  },
+  "Fermat's Little Theorem": {
+   "concept": "MATH",
+   "weight": 0.7
+  },
+  "Floyd's Cycle Finding Algorithm": {
+   "concept": "TWO_POINTERS",
+   "weight": 1.0
+  },
+  "Geometry": {
+   "concept": "MATH",
+   "weight": 0.7
+  },
+  "Graph": {
+   "concept": "GRAPHS",
+   "weight": 1.0
+  },
+  "Graph Theory": {
+   "concept": "GRAPHS",
+   "weight": 1.0
+  },
+  "Greatest Common Divisor": {
+   "concept": "MATH",
+   "weight": 0.7
+  },
+  "Greedy": {
+   "concept": "GREEDY",
+   "weight": 1.0
+  },
+  "Hash Function": {
+   "concept": "HASHING",
+   "weight": 0.7
+  },
+  "Hash Table": {
+   "concept": "HASHING",
+   "weight": 0.7
+  },
+  "Heap (Priority Queue)": {
+   "concept": "HEAP",
+   "weight": 1.0
+  },
+  "Iterator": {
+   "concept": "DESIGN",
+   "weight": 1.0
+  },
+  "Knapsack Problem": {
+   "concept": "DYNAMIC_PROGRAMMING",
+   "weight": 1.0
+  },
+  "Knuth–Morris–Pratt Algorithm": {
+   "concept": "STRINGS",
+   "weight": 1.0
+  },
+  "Least Common Multiple": {
+   "concept": "MATH",
+   "weight": 0.7
+  },
+  "Linked List": {
+   "concept": "LINKED_LIST",
+   "weight": 1.0
+  },
+  "Longest Increasing Subsequence": {
+   "concept": "DYNAMIC_PROGRAMMING",
+   "weight": 1.0
+  },
+  "Math": {
+   "concept": "MATH",
+   "weight": 0.5
+  },
+  "Matrix": {
+   "concept": "MATRIX",
+   "weight": 0.7
+  },
+  "Memoization": {
+   "concept": "DYNAMIC_PROGRAMMING",
+   "weight": 1.0
+  },
+  "Merge Sort": {
+   "concept": "SORTING",
+   "weight": 0.7
+  },
+  "Minimum Spanning Tree": {
+   "concept": "GRAPHS",
+   "weight": 1.0
+  },
+  "Monotonic Queue": {
+   "concept": "MONOTONIC_STACK",
+   "weight": 1.0
+  },
+  "Monotonic Stack": {
+   "concept": "MONOTONIC_STACK",
+   "weight": 1.0
+  },
+  "Number Theory": {
+   "concept": "MATH",
+   "weight": 0.7
+  },
+  "Ordered Set": {
+   "concept": "SEGMENT_TREE",
+   "weight": 1.0
+  },
+  "Prefix Sum": {
+   "concept": "PREFIX_SUM",
+   "weight": 1.0
+  },
+  "Primality Test": {
+   "concept": "MATH",
+   "weight": 0.7
+  },
+  "Prime Factorization": {
+   "concept": "MATH",
+   "weight": 0.7
+  },
+  "Prime Number Sieve": {
+   "concept": "MATH",
+   "weight": 0.7
+  },
+  "Probability and Statistics": {
+   "concept": "MATH",
+   "weight": 0.7
+  },
+  "Queue": {
+   "concept": "STACKS_QUEUES",
+   "weight": 1.0
+  },
+  "Quickselect": {
+   "concept": "SORTING",
+   "weight": 0.7
+  },
+  "Quicksort": {
+   "concept": "SORTING",
+   "weight": 0.7
+  },
+  "Radix Sort": {
+   "concept": "SORTING",
+   "weight": 0.7
+  },
+  "Recursion": {
+   "concept": "RECURSION",
+   "weight": 1.0
+  },
+  "Rolling Hash": {
+   "concept": "STRINGS",
+   "weight": 1.0
+  },
+  "Segment Tree": {
+   "concept": "SEGMENT_TREE",
+   "weight": 1.0
+  },
+  "Shortest Path": {
+   "concept": "GRAPHS",
+   "weight": 1.0
+  },
+  "Sieve Theory": {
+   "concept": "MATH",
+   "weight": 0.7
+  },
+  "Sliding Window": {
+   "concept": "SLIDING_WINDOW",
+   "weight": 1.0
+  },
+  "Sorting": {
+   "concept": "SORTING",
+   "weight": 0.7
+  },
+  "Stack": {
+   "concept": "STACKS_QUEUES",
+   "weight": 1.0
+  },
+  "String": {
+   "concept": "STRINGS",
+   "weight": 0.5
+  },
+  "String Matching": {
+   "concept": "STRINGS",
+   "weight": 1.0
+  },
+  "Strongly Connected Component": {
+   "concept": "GRAPHS",
+   "weight": 1.0
+  },
+  "Suffix Array": {
+   "concept": "STRINGS",
+   "weight": 1.0
+  },
+  "Topological Sort": {
+   "concept": "GRAPHS",
+   "weight": 1.0
+  },
+  "Tree": {
+   "concept": "TREES",
+   "weight": 1.0
+  },
+  "Trie": {
+   "concept": "TRIE",
+   "weight": 1.0
+  },
+  "Two Pointers": {
+   "concept": "TWO_POINTERS",
+   "weight": 1.0
+  },
+  "Union-Find": {
+   "concept": "UNION_FIND",
+   "weight": 1.0
+  },
+  "Z Algorithm": {
+   "concept": "STRINGS",
+   "weight": 1.0
+  }
+ },
+ "contextual": {
+  "Depth-First Search / Breadth-First Search": "TREES if a tree tag is present; GRAPHS if a graph/matrix/union-find tag is present; otherwise DFS -> RECURSION (0.7), BFS -> GRAPHS (0.7)",
+  "Memoization": "also RECURSION (0.7)"
+ },
+ "treeTags": [
+  "Binary Lifting",
+  "Binary Search Tree",
+  "Binary Tree",
+  "DP on Trees",
+  "Tree"
+ ],
+ "graphContextTags": [
+  "Bipartite Graph",
+  "Directed Acyclic Graph",
+  "Graph",
+  "Graph Theory",
+  "Matrix",
+  "Minimum Spanning Tree",
+  "Shortest Path",
+  "Topological Sort",
+  "Union-Find"
+ ],
+ "maxConceptsPerProblem": 4
+}

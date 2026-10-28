@@ -1,0 +1,29 @@
+{
+  "agent": "api-layer",
+  "title": "FastAPI HTTP layer",
+  "status": "done",
+  "progress": 100,
+  "current_task": "Done: FastAPI package live, 263 tests green (39 new)",
+  "files": [
+    "knowledge_tracer/api/__init__.py",
+    "knowledge_tracer/api/app.py",
+    "knowledge_tracer/api/auth.py",
+    "knowledge_tracer/api/errors.py",
+    "knowledge_tracer/api/schemas.py",
+    "knowledge_tracer/api/routes_events.py",
+    "knowledge_tracer/api/routes_learners.py",
+    "knowledge_tracer/api/routes_problems.py",
+    "knowledge_tracer/api/routes_concepts.py",
+    "knowledge_tracer/api/routes_feedback.py",
+    "knowledge_tracer/api/routes_models.py",
+    "knowledge_tracer/api/routes_research.py",
+    "tests/test_api_contract.py"
+  ],
+  "tests": {
+    "passed": 263,
+    "failed": 0
+  },
+  "started_at": "2026-09-30T17:01:00+00:00",
+  "updated_at": "2026-09-30T17:55:34.463520+00:00",
+  "error": null
+}

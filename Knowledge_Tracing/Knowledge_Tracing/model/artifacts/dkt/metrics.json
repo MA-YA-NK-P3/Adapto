@@ -1,0 +1,17 @@
+{
+  "val": {
+    "accuracy": 0.7286,
+    "auc": 0.7175,
+    "logLoss": 0.5513,
+    "brier": 0.185,
+    "ece": 0.0102
+  },
+  "test": {
+    "accuracy": 0.7407,
+    "auc": 0.7308,
+    "logLoss": 0.5363,
+    "brier": 0.1786,
+    "ece": 0.0167
+  },
+  "trainedOn": "synthetic"
+}

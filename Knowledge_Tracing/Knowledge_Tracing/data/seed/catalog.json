@@ -1,0 +1,454 @@
+{
+  "_note": "Snapshot of the backend seed catalog (V3__seed_dev_data.sql). Static labels are priors.",
+  "concepts": [
+    {
+      "code": "ARRAYS",
+      "name": "Arrays",
+      "prerequisites": []
+    },
+    {
+      "code": "BACKTRACKING",
+      "name": "Backtracking",
+      "prerequisites": [
+        "RECURSION"
+      ]
+    },
+    {
+      "code": "BINARY_SEARCH",
+      "name": "Binary Search",
+      "prerequisites": [
+        "SORTING"
+      ]
+    },
+    {
+      "code": "DYNAMIC_PROGRAMMING",
+      "name": "Dynamic Programming",
+      "prerequisites": [
+        "RECURSION"
+      ]
+    },
+    {
+      "code": "GRAPHS",
+      "name": "Graphs",
+      "prerequisites": [
+        "TREES"
+      ]
+    },
+    {
+      "code": "GREEDY",
+      "name": "Greedy",
+      "prerequisites": []
+    },
+    {
+      "code": "HASHING",
+      "name": "Hashing",
+      "prerequisites": [
+        "ARRAYS"
+      ]
+    },
+    {
+      "code": "HEAP",
+      "name": "Heap / Priority Queue",
+      "prerequisites": []
+    },
+    {
+      "code": "LINKED_LIST",
+      "name": "Linked List",
+      "prerequisites": []
+    },
+    {
+      "code": "RECURSION",
+      "name": "Recursion",
+      "prerequisites": []
+    },
+    {
+      "code": "SLIDING_WINDOW",
+      "name": "Sliding Window",
+      "prerequisites": [
+        "TWO_POINTERS"
+      ]
+    },
+    {
+      "code": "SORTING",
+      "name": "Sorting",
+      "prerequisites": []
+    },
+    {
+      "code": "STACKS_QUEUES",
+      "name": "Stacks & Queues",
+      "prerequisites": []
+    },
+    {
+      "code": "TREES",
+      "name": "Trees",
+      "prerequisites": [
+        "LINKED_LIST",
+        "RECURSION"
+      ]
+    },
+    {
+      "code": "TWO_POINTERS",
+      "name": "Two Pointers",
+      "prerequisites": [
+        "ARRAYS",
+        "SORTING"
+      ]
+    }
+  ],
+  "problems": [
+    {
+      "problemId": "LC1",
+      "title": "Two Sum",
+      "staticDifficulty": "EASY",
+      "concepts": [
+        "ARRAYS",
+        "HASHING"
+      ],
+      "conceptWeights": {
+        "ARRAYS": 1.0,
+        "HASHING": 0.9
+      }
+    },
+    {
+      "problemId": "LC3",
+      "title": "Longest Substring Without Repeating Chars",
+      "staticDifficulty": "MEDIUM",
+      "concepts": [
+        "SLIDING_WINDOW",
+        "HASHING"
+      ],
+      "conceptWeights": {
+        "SLIDING_WINDOW": 1.0,
+        "HASHING": 0.7
+      }
+    },
+    {
+      "problemId": "LC15",
+      "title": "3Sum",
+      "staticDifficulty": "MEDIUM",
+      "concepts": [
+        "TWO_POINTERS",
+        "ARRAYS",
+        "SORTING"
+      ],
+      "conceptWeights": {
+        "TWO_POINTERS": 1.0,
+        "ARRAYS": 0.8,
+        "SORTING": 0.6
+      }
+    },
+    {
+      "problemId": "LC19",
+      "title": "Remove Nth Node From End of List",
+      "staticDifficulty": "MEDIUM",
+      "concepts": [
+        "LINKED_LIST",
+        "TWO_POINTERS"
+      ],
+      "conceptWeights": {
+        "LINKED_LIST": 1.0,
+        "TWO_POINTERS": 0.8
+      }
+    },
+    {
+      "problemId": "LC20",
+      "title": "Valid Parentheses",
+      "staticDifficulty": "EASY",
+      "concepts": [
+        "STACKS_QUEUES"
+      ],
+      "conceptWeights": {
+        "STACKS_QUEUES": 1.0
+      }
+    },
+    {
+      "problemId": "LC21",
+      "title": "Merge Two Sorted Lists",
+      "staticDifficulty": "EASY",
+      "concepts": [
+        "LINKED_LIST",
+        "RECURSION"
+      ],
+      "conceptWeights": {
+        "LINKED_LIST": 1.0,
+        "RECURSION": 0.6
+      }
+    },
+    {
+      "problemId": "LC23",
+      "title": "Merge k Sorted Lists",
+      "staticDifficulty": "HARD",
+      "concepts": [
+        "HEAP",
+        "LINKED_LIST"
+      ],
+      "conceptWeights": {
+        "HEAP": 1.0,
+        "LINKED_LIST": 0.9
+      }
+    },
+    {
+      "problemId": "LC26",
+      "title": "Remove Duplicates from Sorted Array",
+      "staticDifficulty": "EASY",
+      "concepts": [
+        "ARRAYS",
+        "TWO_POINTERS"
+      ],
+      "conceptWeights": {
+        "ARRAYS": 1.0,
+        "TWO_POINTERS": 0.9
+      }
+    },
+    {
+      "problemId": "LC53",
+      "title": "Maximum Subarray",
+      "staticDifficulty": "MEDIUM",
+      "concepts": [
+        "ARRAYS",
+        "DYNAMIC_PROGRAMMING"
+      ],
+      "conceptWeights": {
+        "ARRAYS": 0.8,
+        "DYNAMIC_PROGRAMMING": 0.8
+      }
+    },
+    {
+      "problemId": "LC70",
+      "title": "Climbing Stairs",
+      "staticDifficulty": "EASY",
+      "concepts": [
+        "DYNAMIC_PROGRAMMING",
+        "RECURSION"
+      ],
+      "conceptWeights": {
+        "DYNAMIC_PROGRAMMING": 1.0,
+        "RECURSION": 0.7
+      }
+    },
+    {
+      "problemId": "LC88",
+      "title": "Merge Sorted Array",
+      "staticDifficulty": "EASY",
+      "concepts": [
+        "ARRAYS",
+        "TWO_POINTERS"
+      ],
+      "conceptWeights": {
+        "ARRAYS": 1.0,
+        "TWO_POINTERS": 0.9
+      }
+    },
+    {
+      "problemId": "LC98",
+      "title": "Validate Binary Search Tree",
+      "staticDifficulty": "MEDIUM",
+      "concepts": [
+        "TREES",
+        "RECURSION"
+      ],
+      "conceptWeights": {
+        "TREES": 1.0,
+        "RECURSION": 0.7
+      }
+    },
+    {
+      "problemId": "LC102",
+      "title": "Binary Tree Level Order Traversal",
+      "staticDifficulty": "MEDIUM",
+      "concepts": [
+        "TREES",
+        "STACKS_QUEUES"
+      ],
+      "conceptWeights": {
+        "TREES": 1.0,
+        "STACKS_QUEUES": 0.5
+      }
+    },
+    {
+      "problemId": "LC104",
+      "title": "Maximum Depth of Binary Tree",
+      "staticDifficulty": "EASY",
+      "concepts": [
+        "TREES",
+        "RECURSION"
+      ],
+      "conceptWeights": {
+        "TREES": 1.0,
+        "RECURSION": 0.8
+      }
+    },
+    {
+      "problemId": "LC133",
+      "title": "Clone Graph",
+      "staticDifficulty": "MEDIUM",
+      "concepts": [
+        "GRAPHS",
+        "HASHING"
+      ],
+      "conceptWeights": {
+        "GRAPHS": 1.0,
+        "HASHING": 0.6
+      }
+    },
+    {
+      "problemId": "LC141",
+      "title": "Linked List Cycle",
+      "staticDifficulty": "EASY",
+      "concepts": [
+        "LINKED_LIST",
+        "TWO_POINTERS"
+      ],
+      "conceptWeights": {
+        "LINKED_LIST": 1.0,
+        "TWO_POINTERS": 0.8
+      }
+    },
+    {
+      "problemId": "LC198",
+      "title": "House Robber",
+      "staticDifficulty": "MEDIUM",
+      "concepts": [
+        "DYNAMIC_PROGRAMMING",
+        "ARRAYS"
+      ],
+      "conceptWeights": {
+        "DYNAMIC_PROGRAMMING": 1.0,
+        "ARRAYS": 0.4
+      }
+    },
+    {
+      "problemId": "LC200",
+      "title": "Number of Islands",
+      "staticDifficulty": "MEDIUM",
+      "concepts": [
+        "GRAPHS"
+      ],
+      "conceptWeights": {
+        "GRAPHS": 1.0
+      }
+    },
+    {
+      "problemId": "LC206",
+      "title": "Reverse Linked List",
+      "staticDifficulty": "EASY",
+      "concepts": [
+        "LINKED_LIST",
+        "RECURSION"
+      ],
+      "conceptWeights": {
+        "LINKED_LIST": 1.0,
+        "RECURSION": 0.6
+      }
+    },
+    {
+      "problemId": "LC207",
+      "title": "Course Schedule",
+      "staticDifficulty": "MEDIUM",
+      "concepts": [
+        "GRAPHS"
+      ],
+      "conceptWeights": {
+        "GRAPHS": 1.0
+      }
+    },
+    {
+      "problemId": "LC209",
+      "title": "Minimum Size Subarray Sum",
+      "staticDifficulty": "MEDIUM",
+      "concepts": [
+        "SLIDING_WINDOW",
+        "ARRAYS"
+      ],
+      "conceptWeights": {
+        "SLIDING_WINDOW": 1.0,
+        "ARRAYS": 0.6
+      }
+    },
+    {
+      "problemId": "LC215",
+      "title": "Kth Largest Element in an Array",
+      "staticDifficulty": "MEDIUM",
+      "concepts": [
+        "HEAP",
+        "SORTING"
+      ],
+      "conceptWeights": {
+        "HEAP": 1.0,
+        "SORTING": 0.5
+      }
+    },
+    {
+      "problemId": "LC217",
+      "title": "Contains Duplicate",
+      "staticDifficulty": "EASY",
+      "concepts": [
+        "ARRAYS",
+        "HASHING"
+      ],
+      "conceptWeights": {
+        "ARRAYS": 1.0,
+        "HASHING": 0.8
+      }
+    },
+    {
+      "problemId": "LC226",
+      "title": "Invert Binary Tree",
+      "staticDifficulty": "EASY",
+      "concepts": [
+        "TREES",
+        "RECURSION"
+      ],
+      "conceptWeights": {
+        "TREES": 1.0,
+        "RECURSION": 0.8
+      }
+    },
+    {
+      "problemId": "LC242",
+      "title": "Valid Anagram",
+      "staticDifficulty": "EASY",
+      "concepts": [
+        "HASHING",
+        "SORTING"
+      ],
+      "conceptWeights": {
+        "HASHING": 1.0,
+        "SORTING": 0.4
+      }
+    },
+    {
+      "problemId": "LC295",
+      "title": "Find Median from Data Stream",
+      "staticDifficulty": "HARD",
+      "concepts": [
+        "HEAP"
+      ],
+      "conceptWeights": {
+        "HEAP": 1.0
+      }
+    },
+    {
+      "problemId": "LC322",
+      "title": "Coin Change",
+      "staticDifficulty": "MEDIUM",
+      "concepts": [
+        "DYNAMIC_PROGRAMMING"
+      ],
+      "conceptWeights": {
+        "DYNAMIC_PROGRAMMING": 1.0
+      }
+    },
+    {
+      "problemId": "LC704",
+      "title": "Binary Search",
+      "staticDifficulty": "EASY",
+      "concepts": [
+        "BINARY_SEARCH"
+      ],
+      "conceptWeights": {
+        "BINARY_SEARCH": 1.0
+      }
+    }
+  ]
+}

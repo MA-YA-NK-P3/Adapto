@@ -1,0 +1,74 @@
+/* Adapto — Focus Mode styles injected into LeetCode */
+
+[data-adapto-hidden="1"] {
+  display: none !important;
+}
+
+#adapto-focus-badge {
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  z-index: 2147483647;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #0b0f0c;
+  background: #a8e619;
+  padding: 8px 16px;
+  border-radius: 999px;
+  box-shadow: 0 4px 24px rgba(168, 230, 25, 0.4);
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+#adapto-focus-badge:hover {
+  transform: translateY(-2px);
+  background: #bbf030;
+  box-shadow: 0 6px 28px rgba(168, 230, 25, 0.6);
+}
+
+#adapto-empty-state {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2147483646;
+  max-width: 440px;
+  width: 90%;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #eef2ea;
+  background: rgba(15, 20, 16, 0.96);
+  border: 1px solid rgba(168, 230, 25, 0.4);
+  border-radius: 18px;
+  padding: 26px 30px;
+  text-align: center;
+  backdrop-filter: blur(18px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7);
+}
+
+.adapto-rec-btn {
+  display: inline-block;
+  margin-top: 14px;
+  background: #a8e619;
+  color: #0b0f0c !important;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  text-decoration: none !important;
+  transition: all 0.2s;
+  box-shadow: 0 4px 18px rgba(168, 230, 25, 0.35);
+}
+
+.adapto-rec-btn:hover {
+  background: #bbf030;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 26px rgba(168, 230, 25, 0.55);
+}

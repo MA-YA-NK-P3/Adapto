@@ -1,0 +1,56 @@
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+**/.venv/
+**/venv/
+
+# Python pre-bundled / binary libraries and caches
+pylib/
+**/pylib/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+**/.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# SQLite databases & runtime data
+*.db
+*.sqlite
+*.sqlite3
+data/real/
+**/data/real/
+data/leetcode/raw/
+**/data/leetcode/raw/
+
+# Build artifacts (Java, Node, etc.)
+backend/target/
+**/target/
+build/
+**/build/
+node_modules/
+**/node_modules/
+
+# OS and IDE files
+.DS_Store
+**/.DS_Store
+__MACOSX/
+**/__MACOSX/
+Thumbs.db
+.idea/
+**/.idea/
+.vscode/
+**/.vscode/
+*.iml
+*.suo
+*.user
+
+# Environment variables & secrets
+.env
+.env.*
+*.log

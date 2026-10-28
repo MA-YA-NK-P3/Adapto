@@ -1,0 +1,28 @@
+# Build output
+backend/target/
+
+# Python: project-local torch/numpy/matplotlib install and caches
+model/pylib/
+**/__pycache__/
+*.pyc
+.venv/
+venv/
+model/.venv/
+.ipynb_checkpoints/
+
+# Node
+node_modules/
+
+# Data that must not be committed: the downloaded LeetCode mirror and real learner exports.
+# data/synthetic/, data/seed/ and data/leetcode/*.json|csv are shipped deliverables and stay tracked,
+# as does model/artifacts/.
+data/leetcode/raw/
+data/real/
+
+# Local secrets
+.env
+
+# IDE / OS
+.idea/
+*.iml
+.DS_Store

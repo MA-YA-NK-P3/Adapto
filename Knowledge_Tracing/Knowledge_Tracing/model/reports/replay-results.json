@@ -1,0 +1,17 @@
+{
+  "banner": "SYNTHETIC / DEVELOPMENT DATA",
+  "run": "87901A",
+  "learners": 30,
+  "eventsPerLearner": 20,
+  "abilitySpearman": 0.947,
+  "abilityMAE": 0.759,
+  "meanUncertainty": 0.669,
+  "weakConceptFlaggedByBackend": "1/30",
+  "gapTypes": {
+    "CONCEPT_GAP": 15,
+    "NONE": 11,
+    "MULTIPLE_ATTEMPTS": 2,
+    "TIME_PRESSURE": 1,
+    "PREREQUISITE_GAP": 1
+  }
+}

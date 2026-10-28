@@ -1,0 +1,7 @@
+# DKT training + evaluation figures. The rest of model/ (IRT, mastery, simulator, tests
+# without torch) is standard-library only. Tested with Python 3.9-3.12.
+#   python3 -m pip install --target model/pylib -r model/requirements-dkt.txt   (project-local)
+#   PYTHONPATH=model/pylib python3 model/dkt/train_dkt.py --allow-synthetic
+torch>=2.2
+numpy>=1.26
+matplotlib>=3.8

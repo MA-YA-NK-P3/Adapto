@@ -1,0 +1,9 @@
+# Knowledge Tracer — Python replica. Tested with CPython 3.9.6 (macOS system Python);
+# any Python >= 3.9 works. Install into the project-local pylib/ (same convention as model/):
+#   python3 -m pip install --target pylib -r requirements.txt
+fastapi>=0.110
+uvicorn[standard]>=0.29
+SQLAlchemy>=2.0
+numpy>=1.26
+pytest>=8.0
+httpx>=0.27

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Knowledge Tracer — Options</title>
+  <style>
+    body { font: 14px/1.5 system-ui, sans-serif; max-width: 560px; margin: 24px auto; color: #1f2328; }
+    label { display: block; margin-top: 12px; font-weight: 600; }
+    input[type=text], input[type=password] { width: 100%; padding: 6px; box-sizing: border-box; }
+    .muted { color: #656d76; font-weight: normal; }
+    .notice { background: #f6f8fa; border: 1px solid #d0d7de; border-radius: 6px; padding: 10px; }
+  </style>
+</head>
+<body>
+  <h1>Knowledge Tracer options</h1>
+  <div class="notice">
+    <strong>What is collected</strong> (only when tracking is enabled): LeetCode problem number,
+    title, difficulty label, topic tags, submission verdict, attempt number, time on page, whether
+    a hint was opened and whether a solutions/editorial page was opened. Code, account names and page
+    content are <em>not</em> collected.
+    Data is sent only to the API URL below.
+  </div>
+  <label><input type="checkbox" id="trackingEnabled"> Enable tracking <span class="muted">(off by default)</span></label>
+  <label for="apiBaseUrl">API base URL</label>
+  <input type="text" id="apiBaseUrl" placeholder="http://localhost:8080">
+  <label for="apiKey">API key <span class="muted">(only if the backend sets KT_API_KEY)</span></label>
+  <input type="password" id="apiKey">
+  <label for="userId">Pseudonymous user ID <span class="muted">(generated; change to reset history)</span></label>
+  <input type="text" id="userId">
+  <p><button id="save">Save</button> <span id="saved" class="muted"></span></p>
+  <script src="options.js"></script>
+</body>
+</html>

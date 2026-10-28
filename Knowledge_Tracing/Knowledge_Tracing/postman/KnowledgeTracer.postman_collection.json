@@ -1,0 +1,1839 @@
+{
+  "info": {
+    "name": "Knowledge Tracer API",
+    "_postman_id": "6f6b2d8e-3c1a-4f55-9d0c-7a1e2b3c4d5e",
+    "description": "Research prototype API. Run folders in order (Collection Runner) - folder 2 tells one learner's story end to end. A fresh random userId is generated per run. Set apiKey in the environment only if the server runs with KT_API_KEY. See docs/api-flow.md.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "if (!pm.collectionVariables.get('userId')) {",
+          "  pm.collectionVariables.set('userId', 'U-' + Math.random().toString(36).slice(2, 10));",
+          "}"
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "userId",
+      "value": ""
+    },
+    {
+      "key": "dupEventId",
+      "value": ""
+    },
+    {
+      "key": "recommendedProblem",
+      "value": ""
+    },
+    {
+      "key": "recommendationId",
+      "value": ""
+    },
+    {
+      "key": "newConcept",
+      "value": ""
+    },
+    {
+      "key": "newProblem",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "0. Health",
+      "item": [
+        {
+          "name": "Health",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/actuator/health",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "actuator",
+                "health"
+              ]
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 200', () => pm.response.to.have.status(200));",
+                  "pm.test('UP', () => pm.expect(pm.response.json().status).to.eql('UP'));"
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// Each full run starts a brand-new learner.",
+                  "pm.collectionVariables.set('userId', 'U-' + Math.random().toString(36).slice(2, 10));"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "1. Catalog (problems, concepts, prerequisite graph)",
+      "item": [
+        {
+          "name": "List problems",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/problems",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "problems"
+              ]
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 200', () => pm.response.to.have.status(200));",
+                  "pm.test('seeded pool present', () => pm.expect(pm.response.json().length).to.be.above(20));",
+                  "pm.test('difficulty is continuous, label is prior', () => {",
+                  "  const p = pm.response.json().find(x => x.problemId === 'LC21');",
+                  "  pm.expect(p.staticDifficulty).to.eql('EASY');",
+                  "  pm.expect(p.estimatedDifficulty).to.be.a('number');",
+                  "  pm.expect(p.difficultyUncertainty).to.be.above(0);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Get problem LC21",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/problems/LC21",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "problems",
+                "LC21"
+              ]
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 200', () => pm.response.to.have.status(200));",
+                  "pm.test('tagged with LINKED_LIST', () => pm.expect(pm.response.json().concepts).to.include('LINKED_LIST'));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Get concept GRAPHS (transitive prerequisites)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/concepts/GRAPHS",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "concepts",
+                "GRAPHS"
+              ]
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 200', () => pm.response.to.have.status(200));",
+                  "pm.test('transitive prerequisites', () => pm.expect(pm.response.json().allPrerequisites).to.include.members(['TREES','LINKED_LIST','RECURSION']));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "List concepts",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/concepts",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "concepts"
+              ]
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 200', () => pm.response.to.have.status(200));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Create concept",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/concepts",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "concepts"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"code\": \"{{newConcept}}\",\n  \"name\": \"Tries\",\n  \"description\": \"Prefix trees\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 201', () => pm.response.to.have.status(201));"
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.set('newConcept', 'TRIE_' + Math.floor(Math.random()*1e6));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Add prerequisite (new concept requires TREES)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/concepts/{{newConcept}}/prerequisites",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "concepts",
+                "{{newConcept}}",
+                "prerequisites"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"prerequisiteCode\": \"TREES\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 201', () => pm.response.to.have.status(201));",
+                  "pm.test('edge stored', () => pm.expect(pm.response.json().directPrerequisites).to.include('TREES'));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Create problem",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/problems",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "problems"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"problemKey\": \"{{newProblem}}\",\n  \"title\": \"Implement Trie (Prefix Tree)\",\n  \"url\": \"https://leetcode.com/problems/implement-trie-prefix-tree/\",\n  \"staticDifficulty\": \"MEDIUM\",\n  \"concepts\": [\n    {\n      \"conceptCode\": \"{{newConcept}}\",\n      \"weight\": 1.0\n    },\n    {\n      \"conceptCode\": \"HASHING\",\n      \"weight\": 0.5\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 201', () => pm.response.to.have.status(201));",
+                  "pm.test('prior difficulty from label', () => pm.expect(pm.response.json().estimatedDifficulty).to.eql(5));"
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.set('newProblem', 'LCP' + Math.floor(Math.random()*1e6));"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "2. Learning loop (observe -> estimate -> gap -> recommend)",
+      "item": [
+        {
+          "name": "Register learner (201 new / 200 existing)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/learners",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "learners"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"externalRef\": \"{{userId}}\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('201 or 200', () => pm.expect(pm.response.code).to.be.oneOf([200,201]));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "State: cold start",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/learners/{{userId}}/state",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "learners",
+                "{{userId}}",
+                "state"
+              ]
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 200', () => pm.response.to.have.status(200));",
+                  "pm.test('prior state', () => {",
+                  "  const s = pm.response.json();",
+                  "  pm.expect(s.totalEvents).to.eql(0);",
+                  "  pm.expect(s.calibrated).to.eql(false);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Next action: cold start -> calibration",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/learners/{{userId}}/next-action",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "learners",
+                "{{userId}}",
+                "next-action"
+              ]
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 200', () => pm.response.to.have.status(200));",
+                  "pm.test('calibration item', () => pm.expect(pm.response.json().recommendation.type).to.eql('CALIBRATION_PROBLEM'));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Event: LC1 Two Sum ACCEPTED",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/events",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "events"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"{{userId}}\",\n  \"problemId\": \"LC1\",\n  \"eventId\": \"{{dupEventId}}\",\n  \"timestamp\": \"{{$isoTimestamp}}\",\n  \"attemptNumber\": 1,\n  \"result\": \"ACCEPTED\",\n  \"timeSpentSeconds\": 900,\n  \"hintUsed\": false,\n  \"solutionViewed\": false,\n  \"confidence\": 4,\n  \"perceivedDifficulty\": 2\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 201', () => pm.response.to.have.status(201));",
+                  "pm.test('not a duplicate', () => pm.expect(pm.response.json().duplicate).to.eql(false));"
+                ]
+              }
+            },
+            {
+              "listen": "prerequest",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.collectionVariables.set('dupEventId', pm.variables.replaceIn('{{$guid}}'));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Event: SAME eventId again (idempotent replay)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/events",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "events"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"{{userId}}\",\n  \"problemId\": \"LC1\",\n  \"eventId\": \"{{dupEventId}}\",\n  \"timestamp\": \"{{$isoTimestamp}}\",\n  \"attemptNumber\": 1,\n  \"result\": \"ACCEPTED\",\n  \"timeSpentSeconds\": 900,\n  \"hintUsed\": false,\n  \"solutionViewed\": false\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 200', () => pm.response.to.have.status(200));",
+                  "pm.test('flagged duplicate, state untouched', () => pm.expect(pm.response.json().duplicate).to.eql(true));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Event: LC217 Contains Duplicate ACCEPTED",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/events",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "events"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"{{userId}}\",\n  \"problemId\": \"LC217\",\n  \"eventId\": \"{{$guid}}\",\n  \"timestamp\": \"{{$isoTimestamp}}\",\n  \"attemptNumber\": 1,\n  \"result\": \"ACCEPTED\",\n  \"timeSpentSeconds\": 900,\n  \"hintUsed\": false,\n  \"solutionViewed\": false\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 201', () => pm.response.to.have.status(201));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Event: LC21 Merge Two Sorted Lists WRONG_ANSWER (1)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/events",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "events"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"{{userId}}\",\n  \"problemId\": \"LC21\",\n  \"eventId\": \"{{$guid}}\",\n  \"timestamp\": \"{{$isoTimestamp}}\",\n  \"attemptNumber\": 1,\n  \"result\": \"WRONG_ANSWER\",\n  \"timeSpentSeconds\": 900,\n  \"hintUsed\": false,\n  \"solutionViewed\": false,\n  \"blocker\": \"LINKED_LIST_CONCEPT\",\n  \"confidence\": 2\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 201', () => pm.response.to.have.status(201));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Event: LC21 WRONG_ANSWER (2, hint used)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/events",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "events"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"{{userId}}\",\n  \"problemId\": \"LC21\",\n  \"eventId\": \"{{$guid}}\",\n  \"timestamp\": \"{{$isoTimestamp}}\",\n  \"attemptNumber\": 2,\n  \"result\": \"WRONG_ANSWER\",\n  \"timeSpentSeconds\": 900,\n  \"hintUsed\": true,\n  \"solutionViewed\": false,\n  \"blocker\": \"LINKED_LIST_CONCEPT\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 201', () => pm.response.to.have.status(201));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Event: LC206 Reverse Linked List WRONG_ANSWER",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/events",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "events"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"{{userId}}\",\n  \"problemId\": \"LC206\",\n  \"eventId\": \"{{$guid}}\",\n  \"timestamp\": \"{{$isoTimestamp}}\",\n  \"attemptNumber\": 1,\n  \"result\": \"WRONG_ANSWER\",\n  \"timeSpentSeconds\": 900,\n  \"hintUsed\": false,\n  \"solutionViewed\": false,\n  \"blocker\": \"LINKED_LIST_CONCEPT\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 201', () => pm.response.to.have.status(201));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "State: after evidence",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/learners/{{userId}}/state",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "learners",
+                "{{userId}}",
+                "state"
+              ]
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 200', () => pm.response.to.have.status(200));",
+                  "pm.test('5 events counted (duplicate ignored)', () => pm.expect(pm.response.json().totalEvents).to.eql(5));",
+                  "pm.test('linked list weak, arrays strong', () => {",
+                  "  const c = pm.response.json().concepts;",
+                  "  pm.expect(c.LINKED_LIST.mastery).to.be.below(0.45);",
+                  "  pm.expect(c.ARRAYS.mastery).to.be.above(0.6);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Next action: gap detected -> remediation",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/learners/{{userId}}/next-action",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "learners",
+                "{{userId}}",
+                "next-action"
+              ]
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 200', () => pm.response.to.have.status(200));",
+                  "const r = pm.response.json();",
+                  "pm.test('concept gap on linked list', () => {",
+                  "  pm.expect(r.gap.type).to.eql('CONCEPT_GAP');",
+                  "  pm.expect(r.gap.concept).to.eql('LINKED_LIST');",
+                  "});",
+                  "pm.test('remediation recommended', () => {",
+                  "  pm.expect(r.recommendation.type).to.eql('EASIER_PROBLEM');",
+                  "  pm.expect(r.recommendation.topic).to.eql('LINKED_LIST');",
+                  "  pm.expect(r.recommendation.evidence).to.not.be.empty;",
+                  "});",
+                  "pm.test('feedback requested', () => pm.expect(r.feedback.required).to.eql(true));",
+                  "pm.collectionVariables.set('recommendedProblem', r.recommendation.problemId);",
+                  "pm.collectionVariables.set('recommendationId', r.recommendation.recommendationId);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Event: solve the recommended problem (new evidence)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/events",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "events"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"{{userId}}\",\n  \"problemId\": \"{{recommendedProblem}}\",\n  \"eventId\": \"{{$guid}}\",\n  \"timestamp\": \"{{$isoTimestamp}}\",\n  \"attemptNumber\": 1,\n  \"result\": \"ACCEPTED\",\n  \"timeSpentSeconds\": 900,\n  \"hintUsed\": false,\n  \"solutionViewed\": false,\n  \"confidence\": 3\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 201', () => pm.response.to.have.status(201));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "State: mastery recovers",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/learners/{{userId}}/state",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "learners",
+                "{{userId}}",
+                "state"
+              ]
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 200', () => pm.response.to.have.status(200));",
+                  "pm.test('6 events', () => pm.expect(pm.response.json().totalEvents).to.eql(6));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "History (raw observations)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/learners/{{userId}}/history?limit=50",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "learners",
+                "{{userId}}",
+                "history"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "50"
+                }
+              ]
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 200', () => pm.response.to.have.status(200));",
+                  "pm.test('6 stored events', () => pm.expect(pm.response.json().length).to.eql(6));"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Recommendation audit trail",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/learners/{{userId}}/recommendations?limit=20",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "learners",
+                "{{userId}}",
+                "recommendations"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "20"
+                }
+              ]
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 200', () => pm.response.to.have.status(200));",
+                  "pm.test('decisions persisted', () => pm.expect(pm.response.json().length).to.be.at.least(2));"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "3. Feedback",
+      "item": [
+        {
+          "name": "Submit feedback for recommendation",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/feedback",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "feedback"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"{{userId}}\",\n  \"problemId\": \"LC21\",\n  \"recommendationId\": \"{{recommendationId}}\",\n  \"answers\": [\n    {\n      \"question\": \"What prevented you from solving the problem?\",\n      \"answer\": \"Pointer updates when merging\"\n    },\n    {\n      \"question\": \"Did you understand the prerequisite?\",\n      \"answer\": \"Partly\"\n    }\n  ],\n  \"freeText\": \"Recursion version was confusing\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 201', () => pm.response.to.have.status(201));",
+                  "pm.test('recorded', () => pm.expect(pm.response.json().status).to.eql('RECORDED'));"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "4. Error handling",
+      "item": [
+        {
+          "name": "400 validation error",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/events",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "events"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"\",\n  \"problemId\": \"LC1\",\n  \"attemptNumber\": 0\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 400', () => pm.response.to.have.status(400));",
+                  "pm.test('consistent error body', () => {",
+                  "  const b = pm.response.json();",
+                  "  pm.expect(b).to.have.all.keys('timestamp','status','error','message','path','details');",
+                  "});",
+                  "pm.test('field details', () => pm.expect(pm.response.json().details).to.not.be.empty);"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "400 invalid enum value",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/events",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "events"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"{{userId}}\",\n  \"problemId\": \"LC1\",\n  \"eventId\": \"{{$guid}}\",\n  \"timestamp\": \"{{$isoTimestamp}}\",\n  \"attemptNumber\": 1,\n  \"result\": \"MAYBE\",\n  \"timeSpentSeconds\": 900,\n  \"hintUsed\": false,\n  \"solutionViewed\": false\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 400', () => pm.response.to.have.status(400));",
+                  "pm.test('consistent error body', () => {",
+                  "  const b = pm.response.json();",
+                  "  pm.expect(b).to.have.all.keys('timestamp','status','error','message','path','details');",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "422 unknown problem",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/events",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "events"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"userId\": \"{{userId}}\",\n  \"problemId\": \"LC_DOES_NOT_EXIST\",\n  \"eventId\": \"{{$guid}}\",\n  \"timestamp\": \"{{$isoTimestamp}}\",\n  \"attemptNumber\": 1,\n  \"result\": \"ACCEPTED\",\n  \"timeSpentSeconds\": 900,\n  \"hintUsed\": false,\n  \"solutionViewed\": false\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 422', () => pm.response.to.have.status(422));",
+                  "pm.test('consistent error body', () => {",
+                  "  const b = pm.response.json();",
+                  "  pm.expect(b).to.have.all.keys('timestamp','status','error','message','path','details');",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "404 unknown learner",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/learners/NO_SUCH_LEARNER/next-action",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "learners",
+                "NO_SUCH_LEARNER",
+                "next-action"
+              ]
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 404', () => pm.response.to.have.status(404));",
+                  "pm.test('consistent error body', () => {",
+                  "  const b = pm.response.json();",
+                  "  pm.expect(b).to.have.all.keys('timestamp','status','error','message','path','details');",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "409 duplicate problem",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/problems",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "problems"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"problemKey\": \"LC1\",\n  \"title\": \"Two Sum\",\n  \"staticDifficulty\": \"EASY\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 409', () => pm.response.to.have.status(409));",
+                  "pm.test('consistent error body', () => {",
+                  "  const b = pm.response.json();",
+                  "  pm.expect(b).to.have.all.keys('timestamp','status','error','message','path','details');",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "422 prerequisite cycle",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/concepts/LINKED_LIST/prerequisites",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "concepts",
+                "LINKED_LIST",
+                "prerequisites"
+              ]
+            },
+            "description": "",
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"prerequisiteCode\": \"GRAPHS\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 422', () => pm.response.to.have.status(422));",
+                  "pm.test('consistent error body', () => {",
+                  "  const b = pm.response.json();",
+                  "  pm.expect(b).to.have.all.keys('timestamp','status','error','message','path','details');",
+                  "});"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "405 wrong method",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/events",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "events"
+              ]
+            },
+            "description": ""
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 405', () => pm.response.to.have.status(405));",
+                  "pm.test('consistent error body', () => {",
+                  "  const b = pm.response.json();",
+                  "  pm.expect(b).to.have.all.keys('timestamp','status','error','message','path','details');",
+                  "});"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "5. Model status (DKT, Jev)",
+      "item": [
+        {
+          "name": "DKT status",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/models/dkt",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "models",
+                "dkt"
+              ]
+            },
+            "description": "DKT is off by default (KT_DKT_ENABLED=false). When enabled, trainedOn reports whether the loaded model was trained on synthetic or real data (docs/dkt.md)."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 200', () => pm.response.to.have.status(200));",
+                  "const d = pm.response.json();",
+                  "pm.test('status fields', () => pm.expect(d).to.include.keys('enabled','available','status','modelPath','blendWeight','minHistory'));",
+                  "pm.test('disabled means DISABLED', () => { if (!d.enabled) pm.expect(d.status).to.eql('DISABLED'); });",
+                  "pm.test('loaded model is labelled', () => { if (d.trainedOn !== undefined) pm.expect(d.trainedOn).to.be.a('string'); });"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Jev status (provider + bandit arms)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/models/jev",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "models",
+                "jev"
+              ]
+            },
+            "description": "Active decision provider (KT_JEV_PROVIDER) and the LinUCB bandit's per-arm statistics (docs/jev.md)."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test('status 200', () => pm.response.to.have.status(200));",
+                  "const j = pm.response.json();",
+                  "pm.test('known provider', () => {",
+                  "  pm.expect(j.providers).to.have.members(['deterministic','bandit','http']);",
+                  "  pm.expect(j.providers).to.include(j.provider);",
+                  "});",
+                  "pm.test('one bandit arm per action type', () => {",
+                  "  const arms = j.bandit.arms.map(a => a.arm);",
+                  "  pm.expect(arms).to.include.members(['CALIBRATION_PROBLEM','EASIER_PROBLEM','PREREQUISITE_REVIEW']);",
+                  "});"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "6. Research export (disabled by default)",
+      "item": [
+        {
+          "name": "Export catalog",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/research/catalog",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "research",
+                "catalog"
+              ]
+            },
+            "description": "Catalog in the data/seed/catalog_1000.json schema. Requires KT_RESEARCH_EXPORT=true and a secret KT_PSEUDONYM_SALT (docs/privacy.md)."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// Disabled by default: 404 unless KT_RESEARCH_EXPORT=true, 422 while KT_PSEUDONYM_SALT is the default.",
+                  "pm.test('200, or 404/422 when export is off', () => pm.expect(pm.response.code).to.be.oneOf([200,404,422]));",
+                  "if (pm.response.code !== 200) {",
+                  "  pm.test('consistent error body', () => {",
+                  "    pm.expect(pm.response.json()).to.have.all.keys('timestamp','status','error','message','path','details');",
+                  "  });",
+                  "}",
+                  "if (pm.response.code === 200) {",
+                  "  pm.test('concepts and problems', () => pm.expect(pm.response.json()).to.include.keys('concepts','problems'));",
+                  "}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Export events (kt-events-v1 NDJSON)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/research/events",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "research",
+                "events"
+              ]
+            },
+            "description": "All events as kt-events-v1 JSON lines with keyed learner pseudonyms; the input of model/dkt/train_dkt.py --real (see scripts/export_events.py)."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// Disabled by default: 404 unless KT_RESEARCH_EXPORT=true, 422 while KT_PSEUDONYM_SALT is the default.",
+                  "pm.test('200, or 404/422 when export is off', () => pm.expect(pm.response.code).to.be.oneOf([200,404,422]));",
+                  "if (pm.response.code !== 200) {",
+                  "  pm.test('consistent error body', () => {",
+                  "    pm.expect(pm.response.json()).to.have.all.keys('timestamp','status','error','message','path','details');",
+                  "  });",
+                  "}",
+                  "if (pm.response.code === 200) {",
+                  "  const rows = pm.response.text().split('\\n').filter(l => l.trim()).map(l => JSON.parse(l));",
+                  "  pm.test('kt-events-v1 records', () => rows.forEach(r => pm.expect(r.schema).to.eql('kt-events-v1')));",
+                  "  pm.test('learners are pseudonymised', () => rows.forEach(r => pm.expect(r.learnerId).to.not.eql(pm.collectionVariables.get('userId'))));",
+                  "}"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "Export rewarded decisions (kt-decisions-v1 NDJSON)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "X-API-Key",
+                "value": "{{apiKey}}",
+                "disabled": false
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/api/research/decisions?limit=100",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "research",
+                "decisions"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "100"
+                }
+              ]
+            },
+            "description": "Logged Jev decisions that have a reward, for offline policy evaluation."
+          },
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "// Disabled by default: 404 unless KT_RESEARCH_EXPORT=true, 422 while KT_PSEUDONYM_SALT is the default.",
+                  "pm.test('200, or 404/422 when export is off', () => pm.expect(pm.response.code).to.be.oneOf([200,404,422]));",
+                  "if (pm.response.code !== 200) {",
+                  "  pm.test('consistent error body', () => {",
+                  "    pm.expect(pm.response.json()).to.have.all.keys('timestamp','status','error','message','path','details');",
+                  "  });",
+                  "}",
+                  "if (pm.response.code === 200) {",
+                  "  const rows = pm.response.text().split('\\n').filter(l => l.trim()).map(l => JSON.parse(l));",
+                  "  pm.test('kt-decisions-v1 records', () => rows.forEach(r => pm.expect(r.schema).to.eql('kt-decisions-v1')));",
+                  "  pm.test('learners are pseudonymised', () => rows.forEach(r => pm.expect(r.learnerId).to.not.eql(pm.collectionVariables.get('userId'))));",
+                  "}"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

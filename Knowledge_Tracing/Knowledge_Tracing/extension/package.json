@@ -1,0 +1,9 @@
+{
+  "name": "knowledge-tracer-extension",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MV3 browser extension for the Knowledge Tracer research prototype",
+  "scripts": {
+    "test": "node --test tests/"
+  }
+}

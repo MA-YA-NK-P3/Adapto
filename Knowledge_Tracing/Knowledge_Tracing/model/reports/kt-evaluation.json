@@ -1,0 +1,107 @@
+{
+  "_note": "Held-out learners; synthetic data measures behaviour under simulator assumptions only.",
+  "events": "events.jsonl.gz",
+  "testLearners": 384,
+  "testEvents": 15534,
+  "dktModel": {
+    "trainedOn": "synthetic",
+    "createdAt": "2026-09-29T18:36:56Z",
+    "hiddenSize": 64
+  },
+  "prediction": {
+    "oracle": {
+      "n": 15534,
+      "accuracy": 0.7678,
+      "auc": 0.7792,
+      "logLoss": 0.4955,
+      "brier": 0.1623,
+      "ece": 0.0096,
+      "aucFirstUnassisted": 0.7699
+    },
+    "prior-only": {
+      "n": 15534,
+      "accuracy": 0.7231,
+      "auc": 0.6876,
+      "logLoss": 0.6107,
+      "brier": 0.1986,
+      "ece": 0.0961,
+      "aucFirstUnassisted": 0.6816
+    },
+    "success-rate": {
+      "n": 15534,
+      "accuracy": 0.6853,
+      "auc": 0.6083,
+      "logLoss": 0.612,
+      "brier": 0.2107,
+      "ece": 0.0549,
+      "aucFirstUnassisted": 0.6056
+    },
+    "irt-prior": {
+      "n": 15534,
+      "accuracy": 0.7198,
+      "auc": 0.7231,
+      "logLoss": 0.5768,
+      "brier": 0.1909,
+      "ece": 0.084,
+      "aucFirstUnassisted": 0.7166
+    },
+    "irt-calibrated": {
+      "n": 15534,
+      "accuracy": 0.7285,
+      "auc": 0.7178,
+      "logLoss": 0.5617,
+      "brier": 0.1867,
+      "ece": 0.0624,
+      "aucFirstUnassisted": 0.7113
+    },
+    "irt+mastery": {
+      "n": 15534,
+      "accuracy": 0.7289,
+      "auc": 0.7171,
+      "logLoss": 0.5741,
+      "brier": 0.1893,
+      "ece": 0.0769,
+      "aucFirstUnassisted": 0.7114
+    },
+    "dkt": {
+      "n": 15534,
+      "accuracy": 0.7406,
+      "auc": 0.7309,
+      "logLoss": 0.5362,
+      "brier": 0.1786,
+      "ece": 0.0164,
+      "aucFirstUnassisted": 0.7275
+    }
+  },
+  "masteryRecovery": {
+    "beta": {
+      "pairs": 5329,
+      "spearman": 0.4512,
+      "mae": 0.1951
+    },
+    "dkt": {
+      "pairs": 5329,
+      "spearman": 0.6578,
+      "mae": 0.1391
+    },
+    "weakestConceptHitRate": {
+      "truth": 0.8458,
+      "beta": 0.166,
+      "irt-residual": 0.1739,
+      "dkt": 0.083,
+      "dkt-relative": 0.0949,
+      "random": 0.0966,
+      "learners": 253
+    }
+  },
+  "itemRecovery": {
+    "items": 796,
+    "minTrainResponses": 20,
+    "spearmanPrior": 0.9102,
+    "spearmanCalibrated": 0.9022
+  },
+  "figures": [
+    "figures/calibration.png",
+    "figures/dkt_training.png"
+  ]
+}

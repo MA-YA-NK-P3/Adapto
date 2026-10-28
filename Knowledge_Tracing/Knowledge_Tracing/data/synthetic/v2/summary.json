@@ -1,0 +1,36 @@
+{
+  "_note": "SYNTHETIC / DEVELOPMENT DATA \u2014 NOT EVIDENCE OF REAL LEARNING OUTCOMES",
+  "schema": "kt-events-v1",
+  "seed": 20260929,
+  "catalog": "catalog_1000.json",
+  "learners": 2500,
+  "events": 106506,
+  "problemsCovered": 1000,
+  "eventsPerProblem": {
+    "median": 53.5,
+    "max": 2078
+  },
+  "sequenceLength": {
+    "mean": 42.6,
+    "median": 34.0,
+    "p90": 82,
+    "max": 335
+  },
+  "results": {
+    "ACCEPTED": 72968,
+    "WRONG_ANSWER": 21618,
+    "TIME_LIMIT_EXCEEDED": 6670,
+    "RUNTIME_ERROR": 3801,
+    "ABANDONED": 1449
+  },
+  "correctRate": 0.6851,
+  "meanTrueP": 0.6862,
+  "hintRate": 0.0252,
+  "solutionViewRate": 0.0076,
+  "retryRate": 0.2197,
+  "cohorts": {
+    "beginner": 840,
+    "intermediate": 1161,
+    "advanced": 499
+  }
+}

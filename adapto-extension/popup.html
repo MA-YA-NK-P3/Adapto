@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Adapto</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="bg-glow"></div>
+    <main class="shell">
+      <header class="header">
+        <img src="icon48.png" alt="Adapto" width="28" height="28" />
+        <div>
+          <h1>Adapto</h1>
+          <p class="tagline">Focus Mode &amp; AI Tutor</p>
+        </div>
+        <label class="switch" title="Toggle Focus Mode">
+          <input type="checkbox" id="focusToggle" />
+          <span class="slider"></span>
+        </label>
+      </header>
+
+      <!-- Mode Switcher -->
+      <nav class="nav-tabs">
+        <button class="tab-btn active" id="tabAdaptive">🧠 AI Tutor</button>
+        <button class="tab-btn" id="tabByos">📄 My Sheet</button>
+        <button class="tab-btn icon-tab" id="tabSettings" title="Settings">⚙</button>
+      </nav>
+
+      <!-- Panel 1: Adaptive Learning / Knowledge Tracing -->
+      <section id="panelAdaptive" class="tab-panel">
+        <div class="server-status" id="serverStatus">
+          <span class="status-dot online" id="serverDot"></span>
+          <span id="serverText">Connecting to KT_python (:8081)...</span>
+        </div>
+
+        <div class="glass rec-card" id="recCard">
+          <div class="rec-header">
+            <span class="rec-badge" id="recType">RECOMMENDATION</span>
+            <span class="diff-badge medium" id="recDiff">MEDIUM</span>
+          </div>
+          <h2 class="rec-title" id="recTitle">Analyzing your practice...</h2>
+          <p class="rec-reason" id="recReason">Solve or submit problems on LeetCode to build your cognitive profile.</p>
+
+          <div class="gap-box" id="gapBox" hidden>
+            <span class="gap-label">Focus Area:</span>
+            <span class="gap-val" id="gapVal">None</span>
+          </div>
+
+          <div class="rec-actions">
+            <button class="action-btn primary" id="btnOpenProblem">🚀 Solve Problem</button>
+            <button class="action-btn secondary" id="btnApplyRec">🎯 Filter List</button>
+            <button class="action-btn ghost" id="btnRefreshRec" title="Refresh">🔄</button>
+          </div>
+        </div>
+
+        <div class="glass metrics-card" id="metricsCard">
+          <div class="metric">
+            <span class="metric-val" id="metricAbility">--</span>
+            <span class="metric-lbl">Ability (θ)</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric">
+            <span class="metric-val" id="metricStatus">--</span>
+            <span class="metric-lbl">Status</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric">
+            <span class="metric-val" id="metricQueued">0</span>
+            <span class="metric-lbl">Queued</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Panel 2: BYOS (Bring Your Own Sheet) -->
+      <section id="panelByos" class="tab-panel" hidden>
+        <div class="glass" id="dropZone" tabindex="0" role="button" aria-label="Upload sheet">
+          <div class="cursor-dot" id="cursorDot"></div>
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.6" class="upload-icon">
+            <path d="M12 16V4m0 0l-4 4m4-4l4 4" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2" stroke-linecap="round"/>
+          </svg>
+          <p class="dz-title">Drop your syllabus here</p>
+          <p class="dz-sub">.txt or .csv with problem URLs</p>
+          <input type="file" id="fileInput" accept=".txt,.csv,text/plain,text/csv" hidden />
+        </div>
+
+        <div class="glass stats" id="statsCard" hidden>
+          <div class="stat">
+            <span class="stat-num" id="problemCount">0</span>
+            <span class="stat-label">problems in sheet</span>
+          </div>
+          <button class="ghost-btn" id="clearBtn">Clear sheet</button>
+        </div>
+
+        <div class="list-wrap" id="listWrap" hidden>
+          <p class="list-title">Your syllabus</p>
+          <ul class="problem-list" id="problemList"></ul>
+        </div>
+      </section>
+
+      <!-- Panel 3: Settings -->
+      <section id="panelSettings" class="tab-panel" hidden>
+        <div class="glass settings-card">
+          <label class="setting-item">
+            <span>Tracking Enabled</span>
+            <input type="checkbox" id="chkTracking" checked />
+          </label>
+          <label class="setting-lbl">KT Brain API URL</label>
+          <input type="text" class="text-input" id="inpApiUrl" placeholder="http://127.0.0.1:8081" />
+          <label class="setting-lbl">Learner User ID</label>
+          <input type="text" class="text-input" id="inpUserId" readonly />
+          <div class="settings-actions">
+            <button class="ghost-btn" id="btnSaveSettings">Save Settings</button>
+            <button class="ghost-btn" id="btnFlushEvents">Flush Events</button>
+          </div>
+        </div>
+      </section>
+
+      <p class="status" id="statusMsg">Focus Mode is idle.</p>
+
+      <footer class="footer">
+        <span id="focusState" class="pill off">Focus Mode OFF</span>
+        <span class="privacy" id="activeModeLabel">AI Tutor Mode</span>
+      </footer>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

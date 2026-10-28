@@ -1,0 +1,280 @@
+{
+ "learners": 300,
+ "steps": 40,
+ "seed": 7,
+ "qualityWeight": 0.0,
+ "results": [
+  {
+   "provider": "random-candidate",
+   "learners": 300,
+   "steps": 40,
+   "meanReward": 0.48976,
+   "trueMasteryGain": {
+    "mean": 0.03304,
+    "ci95": 0.0013
+   },
+   "weakConceptGain": {
+    "mean": 0.02923,
+    "ci95": 0.00464
+   },
+   "firstAttemptSolveRate": {
+    "mean": 0.35083,
+    "ci95": 0.00773
+   },
+   "productiveZoneRate": {
+    "mean": 0.47967,
+    "ci95": 0.01328
+   },
+   "actions": {
+    "CALIBRATION_PROBLEM": 1001,
+    "EASIER_PROBLEM": 1699,
+    "HARDER_PROBLEM": 791,
+    "PREREQUISITE_REVIEW": 222,
+    "RETRY_PROBLEM": 3038,
+    "SAME_LEVEL_PROBLEM": 3212,
+    "SPACED_REVIEW": 2037
+   }
+  },
+  {
+   "provider": "deterministic",
+   "learners": 300,
+   "steps": 40,
+   "meanReward": 0.48652,
+   "trueMasteryGain": {
+    "mean": 0.03346,
+    "ci95": 0.00131
+   },
+   "weakConceptGain": {
+    "mean": 0.03187,
+    "ci95": 0.00487
+   },
+   "firstAttemptSolveRate": {
+    "mean": 0.62967,
+    "ci95": 0.01132
+   },
+   "productiveZoneRate": {
+    "mean": 0.52733,
+    "ci95": 0.01707
+   },
+   "actions": {
+    "CALIBRATION_PROBLEM": 1433,
+    "EASIER_PROBLEM": 3884,
+    "PREREQUISITE_REVIEW": 782,
+    "SAME_LEVEL_PROBLEM": 5901
+   }
+  },
+  {
+   "provider": "linucb-guarded(a=0.5)",
+   "learners": 300,
+   "steps": 40,
+   "meanReward": 0.50143,
+   "trueMasteryGain": {
+    "mean": 0.03311,
+    "ci95": 0.00133
+   },
+   "weakConceptGain": {
+    "mean": 0.03575,
+    "ci95": 0.00678
+   },
+   "firstAttemptSolveRate": {
+    "mean": 0.371,
+    "ci95": 0.01139
+   },
+   "productiveZoneRate": {
+    "mean": 0.4165,
+    "ci95": 0.01562
+   },
+   "actions": {
+    "CALIBRATION_PROBLEM": 4,
+    "EASIER_PROBLEM": 3608,
+    "HARDER_PROBLEM": 2053,
+    "PREREQUISITE_REVIEW": 489,
+    "RETRY_PROBLEM": 2696,
+    "SAME_LEVEL_PROBLEM": 1169,
+    "SPACED_REVIEW": 1981
+   }
+  },
+  {
+   "provider": "linucb(a=0.5)",
+   "learners": 300,
+   "steps": 40,
+   "meanReward": 0.50036,
+   "trueMasteryGain": {
+    "mean": 0.03206,
+    "ci95": 0.00126
+   },
+   "weakConceptGain": {
+    "mean": 0.02949,
+    "ci95": 0.00595
+   },
+   "firstAttemptSolveRate": {
+    "mean": 0.18908,
+    "ci95": 0.00927
+   },
+   "productiveZoneRate": {
+    "mean": 0.367,
+    "ci95": 0.01387
+   },
+   "actions": {
+    "CALIBRATION_PROBLEM": 8,
+    "EASIER_PROBLEM": 1013,
+    "HARDER_PROBLEM": 1377,
+    "PREREQUISITE_REVIEW": 195,
+    "RETRY_PROBLEM": 4642,
+    "SAME_LEVEL_PROBLEM": 1422,
+    "SPACED_REVIEW": 3343
+   }
+  }
+ ],
+ "figures": [
+  "figures/jev_reward.png",
+  "figures/jev_outcomes.png",
+  "figures/jev_theta.png"
+ ],
+ "theta": {
+  "linucb-guarded(a=0.5)": {
+   "CALIBRATION_PROBLEM": [
+    -0.193,
+    -0.0964,
+    -0.193,
+    -0.0001,
+    -0.1705,
+    0.0,
+    0.0,
+    0.8552
+   ],
+   "SAME_LEVEL_PROBLEM": [
+    -0.2668,
+    -0.1536,
+    -0.2567,
+    0.0279,
+    0.3598,
+    0.1729,
+    0.0,
+    0.7799
+   ],
+   "RETRY_PROBLEM": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+   ],
+   "PREREQUISITE_REVIEW": [
+    -0.1087,
+    -0.0495,
+    -0.0123,
+    0.0931,
+    0.2356,
+    -0.0434,
+    -0.0866,
+    0.913
+   ],
+   "EASIER_PROBLEM": [
+    -0.1316,
+    -0.1593,
+    0.0435,
+    -0.0389,
+    0.0901,
+    -0.0113,
+    -0.0055,
+    0.9013
+   ],
+   "HARDER_PROBLEM": [
+    0.0054,
+    0.0184,
+    0.0065,
+    -0.021,
+    -0.0628,
+    -0.0362,
+    0.0,
+    1.003
+   ],
+   "SPACED_REVIEW": [
+    0.0446,
+    0.005,
+    0.0004,
+    0.0023,
+    0.0022,
+    0.0446,
+    0.0,
+    1.0178
+   ]
+  },
+  "linucb(a=0.5)": {
+   "CALIBRATION_PROBLEM": [
+    -0.1824,
+    -0.0907,
+    -0.1824,
+    -0.0006,
+    -0.0957,
+    0.0,
+    0.0,
+    0.8632
+   ],
+   "SAME_LEVEL_PROBLEM": [
+    -0.0368,
+    -0.3924,
+    0.1005,
+    0.5215,
+    0.2243,
+    0.101,
+    0.0,
+    0.6044
+   ],
+   "RETRY_PROBLEM": [
+    -0.0,
+    -0.0,
+    0.0,
+    -0.0,
+    -0.0,
+    -0.0,
+    0.0,
+    1.0
+   ],
+   "PREREQUISITE_REVIEW": [
+    -0.0451,
+    -0.0861,
+    0.087,
+    0.0715,
+    0.0372,
+    -0.1363,
+    -0.1333,
+    0.9639
+   ],
+   "EASIER_PROBLEM": [
+    -0.1382,
+    -0.0852,
+    -0.001,
+    0.0408,
+    0.1945,
+    -0.0157,
+    -0.0495,
+    0.8964
+   ],
+   "HARDER_PROBLEM": [
+    -0.0315,
+    0.0024,
+    -0.0301,
+    -0.0242,
+    0.0772,
+    -0.0044,
+    0.0,
+    0.9827
+   ],
+   "SPACED_REVIEW": [
+    0.045,
+    0.004,
+    -0.0,
+    0.0022,
+    0.002,
+    0.045,
+    0.0,
+    1.018
+   ]
+  }
+ }
+}

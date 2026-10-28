@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Knowledge Tracer — learner dashboard (Python API)</title>
+<style>
+  :root { --fg:#1f2328; --muted:#656d76; --line:#d0d7de; --bg:#f6f8fa; --weak:#cf222e; --ok:#1a7f37; --mid:#bf8700; --accent:#0969da; }
+  * { box-sizing: border-box; }
+  body { font: 14px/1.45 system-ui, -apple-system, sans-serif; color: var(--fg); margin: 0; background: #fff; }
+  header { padding: 12px 20px; border-bottom: 1px solid var(--line); display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  header h1 { font-size: 17px; margin: 0 12px 0 0; }
+  header input { padding: 5px 8px; border: 1px solid var(--line); border-radius: 6px; }
+  button { padding: 5px 12px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); cursor: pointer; }
+  main { padding: 16px 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(440px, 1fr)); gap: 16px; }
+  section { border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; min-width: 0; }
+  section h2 { font-size: 14px; margin: 0 0 8px; }
+  .muted { color: var(--muted); }
+  .kpis { display: flex; gap: 20px; flex-wrap: wrap; }
+  .kpi b { display: block; font-size: 22px; }
+  .banner { background: #fff8c5; border: 1px solid #d4a72c; border-radius: 6px; padding: 6px 10px; margin: 12px 20px 0; }
+  .error { background: #ffebe9; border: 1px solid var(--weak); border-radius: 6px; padding: 6px 10px; margin: 12px 20px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  th, td { text-align: left; padding: 3px 6px; border-bottom: 1px solid var(--bg); white-space: nowrap; }
+  td.reason { white-space: normal; }
+  .scroll { max-height: 280px; overflow: auto; }
+  svg text { font: 11px system-ui, sans-serif; fill: var(--fg); }
+  .pill { display: inline-block; padding: 0 6px; border-radius: 10px; font-size: 11.5px; border: 1px solid var(--line); }
+  .ACCEPTED { color: var(--ok); } .WRONG_ANSWER, .RUNTIME_ERROR { color: var(--weak); } .TIME_LIMIT_EXCEEDED { color: var(--mid); }
+  ul.evidence { margin: 4px 0 0; padding-left: 18px; }
+  .wide { grid-column: 1 / -1; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Knowledge Tracer <span class="muted">learner dashboard · python api</span></h1>
+  <label>Base URL <input id="baseUrl" size="24" placeholder="http://127.0.0.1:8081"></label>
+  <label>User ID <input id="userId" size="22" placeholder="e.g. U123"></label>
+  <label>API key <input id="apiKey" type="password" size="12" placeholder="optional"></label>
+  <button id="load">Load</button>
+  <span id="status" class="muted"></span>
+</header>
+<div class="banner">All values are <b>model estimates with uncertainty</b>, not labels or grades. Estimates from few events are unreliable.</div>
+<div id="error" class="error" hidden></div>
+<main>
+  <section>
+    <h2>Learner state</h2>
+    <div class="kpis" id="kpis"><span class="muted">Load a learner.</span></div>
+  </section>
+  <section>
+    <h2>Next action</h2>
+    <div id="next" class="muted">—</div>
+  </section>
+  <section>
+    <h2>Concept mastery <span class="muted">(bar = posterior mean, whisker = ±1 sd, dashed = weak threshold 0.45)</span></h2>
+    <svg id="mastery" width="100%" height="10"></svg>
+  </section>
+  <section>
+    <h2>Knowledge graph <span class="muted">(arrow: prerequisite → concept; colour = mastery, grey = no evidence)</span></h2>
+    <svg id="graph" width="100%" height="10"></svg>
+  </section>
+  <section class="wide">
+    <h2>Difficulty landscape <span class="muted">(x = estimated difficulty, y = learner's predicted P(success); vertical line = ability; ○ unattempted, ● solved, ✕ failed)</span></h2>
+    <svg id="landscape" width="100%" height="300"></svg>
+  </section>
+  <section>
+    <h2>Recommendation history</h2>
+    <div class="scroll"><table id="recs"></table></div>
+  </section>
+  <section>
+    <h2>Event history</h2>
+    <div class="scroll"><table id="events"></table></div>
+  </section>
+</main>
+<script>
+'use strict';
+const NS = 'http://www.w3.org/2000/svg';
+const $ = (id) => document.getElementById(id);
+const WEAK = 0.45;
+const DEFAULT_BASE = 'http://127.0.0.1:8081';
+const LS = { baseUrl: 'kt.baseUrl', apiKey: 'kt.apiKey', userId: 'kt.userId' };
+
+// localStorage can be unavailable (file:// in some browsers, sandboxed frames);
+// degrade to in-memory defaults rather than breaking the page.
+const store = {
+  get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { if (v) { localStorage.setItem(k, v); } else { localStorage.removeItem(k); } } catch (e) { /* ignore */ } },
+};
+
+function el(tag, attrs = {}, text) {
+  const e = tag.startsWith('svg:') ? document.createElementNS(NS, tag.slice(4)) : document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) e.setAttribute(k, v);
+  if (text !== undefined) e.textContent = text;
+  return e;
+}
+const svgEl = (tag, attrs, text) => el('svg:' + tag, attrs, text);
+
+function masteryColour(m) {
+  if (m === undefined) return '#d0d7de';
+  const t = Math.max(0, Math.min(1, m));
+  const r = Math.round(207 + (26 - 207) * t), g = Math.round(34 + (127 - 34) * t), b = Math.round(46 + (55 - 46) * t);
+  return `rgb(${r},${g},${b})`;
+}
+
+function baseUrl() {
+  return ($('baseUrl').value.trim() || DEFAULT_BASE).replace(/\/+$/, '');
+}
+
+async function api(path) {
+  const headers = {};
+  const key = $('apiKey').value.trim();
+  if (key) headers['X-API-Key'] = key;
+  let res;
+  try {
+    res = await fetch(baseUrl() + path, { headers });
+  } catch (e) {
+    // Network-level failure: server down, wrong port, or CORS rejection.
+    throw Object.assign(
+      new Error(`Cannot reach the API at ${baseUrl()} — is the Python server running? (python3 scripts/run_server.py)`),
+      { status: 0 });
+  }
+  const body = await res.json().catch(() => null);
+  if (!res.ok) throw Object.assign(new Error((body && body.message) || res.statusText), { status: res.status });
+  return body;
+}
+
+function renderKpis(state) {
+  const k = $('kpis');
+  k.replaceChildren();
+  const add = (label, value) => { const d = el('div', { class: 'kpi' }); d.append(el('b', {}, value), el('span', { class: 'muted' }, label)); k.append(d); };
+  add('ability (0–10)', `${state.ability.toFixed(2)} ± ${state.uncertainty.toFixed(2)}`);
+  add('calibration', state.calibrated ? 'calibrated' : 'calibrating');
+  add('events', String(state.totalEvents));
+  add('concepts with evidence', String(Object.keys(state.concepts || {}).length));
+}
+
+function renderNext(next) {
+  const box = $('next');
+  box.replaceChildren();
+  box.classList.remove('muted');
+  const r = next.recommendation || {};
+  box.append(el('div', {}, `${r.type || '—'} → ${r.problemId || 'none'}${r.topic ? ' (' + r.topic + ')' : ''}`));
+  if (r.reason) box.append(el('div', { class: 'muted' }, r.reason));
+  box.append(el('div', { class: 'muted' },
+    `decided by ${r.decidedBy || '?'}${r.fallbackUsed ? ' (fallback)' : ''} · confidence ${r.confidence != null ? r.confidence.toFixed(2) : '–'}`));
+  const g = next.gap || {};
+  if (g.type) {
+    box.append(el('div', {}, `Gap: ${g.type}${g.concept ? ' · ' + g.concept : ''}${g.prerequisite ? ' ← ' + g.prerequisite : ''} (confidence ${Number(g.confidence || 0).toFixed(2)})`));
+    const ul = el('ul', { class: 'evidence' });
+    (g.evidence || []).forEach((e) => ul.append(el('li', {}, e)));
+    box.append(ul);
+  }
+  if (next.models) {
+    box.append(el('div', { class: 'muted' }, 'models: ' + Object.entries(next.models).map(([k, v]) => `${k}=${v}`).join(', ')));
+  }
+}
+
+function renderMastery(concepts, allConcepts) {
+  const svg = $('mastery');
+  svg.replaceChildren();
+  if (!allConcepts.length) {
+    svg.setAttribute('height', 26);
+    svg.append(svgEl('text', { x: 6, y: 17, fill: '#656d76' }, 'no concepts registered on the server'));
+    return;
+  }
+  const codes = allConcepts.map((c) => c.code).sort((a, b) => {
+    const ma = concepts[a] ? concepts[a].mastery : 2, mb = concepts[b] ? concepts[b].mastery : 2;
+    return ma - mb || a.localeCompare(b);
+  });
+  const rowH = 18, left = 150, width = svg.clientWidth || 440, barW = width - left - 70;
+  svg.setAttribute('height', codes.length * rowH + 20);
+  const x = (m) => left + m * barW;
+  codes.forEach((code, i) => {
+    const y = i * rowH + 4;
+    const c = concepts[code];
+    svg.append(svgEl('text', { x: left - 6, y: y + 11, 'text-anchor': 'end' }, code));
+    svg.append(svgEl('rect', { x: left, y, width: barW, height: 12, fill: '#f6f8fa' }));
+    if (c) {
+      svg.append(svgEl('rect', { x: left, y, width: Math.max(1, c.mastery * barW), height: 12, fill: masteryColour(c.mastery) }));
+      const lo = Math.max(0, c.mastery - c.uncertainty), hi = Math.min(1, c.mastery + c.uncertainty);
+      svg.append(svgEl('line', { x1: x(lo), x2: x(hi), y1: y + 6, y2: y + 6, stroke: '#1f2328', 'stroke-width': 1 }));
+      svg.append(svgEl('text', { x: left + barW + 6, y: y + 11 }, `${c.mastery.toFixed(2)} (n=${c.evidenceCount})`));
+    } else {
+      svg.append(svgEl('text', { x: left + barW + 6, y: y + 11, fill: '#656d76' }, 'no evidence'));
+    }
+  });
+  const tx = x(WEAK);
+  svg.append(svgEl('line', { x1: tx, x2: tx, y1: 0, y2: codes.length * rowH + 4, stroke: '#cf222e', 'stroke-dasharray': '3,3' }));
+  svg.append(svgEl('text', { x: tx + 3, y: codes.length * rowH + 16, fill: '#cf222e' }, '0.45'));
+}
+
+function renderGraph(allConcepts, concepts) {
+  const svg = $('graph');
+  svg.replaceChildren();
+  if (!allConcepts.length) {
+    svg.setAttribute('height', 26);
+    svg.append(svgEl('text', { x: 6, y: 17, fill: '#656d76' }, 'no concepts registered on the server'));
+    return;
+  }
+  const byCode = Object.fromEntries(allConcepts.map((c) => [c.code, c]));
+  const depth = {};
+  const d = (code, seen = new Set()) => {
+    if (depth[code] !== undefined) return depth[code];
+    if (seen.has(code)) return 0;
+    seen.add(code);
+    const pre = (byCode[code] && byCode[code].directPrerequisites) || [];
+    return (depth[code] = pre.length ? 1 + Math.max(...pre.map((p) => d(p, seen))) : 0);
+  };
+  allConcepts.forEach((c) => d(c.code));
+  const layers = {};
+  allConcepts.forEach((c) => (layers[depth[c.code]] = layers[depth[c.code]] || []).push(c.code));
+  const width = svg.clientWidth || 440, layerKeys = Object.keys(layers).map(Number).sort((a, b) => a - b);
+  const colW = width / layerKeys.length, maxRows = Math.max(...Object.values(layers).map((l) => l.length));
+  const rowH = 30, height = maxRows * rowH + 20;
+  svg.setAttribute('height', height);
+  const pos = {};
+  layerKeys.forEach((k, ci) => layers[k].sort().forEach((code, ri) => {
+    pos[code] = { x: ci * colW + colW / 2, y: 18 + ri * rowH + (maxRows - layers[k].length) * rowH / 2 };
+  }));
+  const defs = svgEl('defs');
+  const marker = svgEl('marker', { id: 'arr', viewBox: '0 0 10 10', refX: 10, refY: 5, markerWidth: 6, markerHeight: 6, orient: 'auto-start-reverse' });
+  marker.append(svgEl('path', { d: 'M 0 0 L 10 5 L 0 10 z', fill: '#8c959f' }));
+  defs.append(marker);
+  svg.append(defs);
+  allConcepts.forEach((c) => (c.directPrerequisites || []).forEach((p) => {
+    if (!pos[p] || !pos[c.code]) return;
+    svg.append(svgEl('line', { x1: pos[p].x + 42, y1: pos[p].y, x2: pos[c.code].x - 44, y2: pos[c.code].y,
+      stroke: '#8c959f', 'marker-end': 'url(#arr)' }));
+  }));
+  allConcepts.forEach((c) => {
+    const p = pos[c.code], m = concepts[c.code];
+    const g = svgEl('g');
+    g.append(svgEl('rect', { x: p.x - 42, y: p.y - 10, width: 84, height: 20, rx: 5, fill: masteryColour(m && m.mastery), opacity: m ? 0.9 : 1 }));
+    g.append(svgEl('text', { x: p.x, y: p.y + 4, 'text-anchor': 'middle', fill: m ? '#fff' : '#1f2328' }, c.code.replace(/_/g, ' ').slice(0, 14)));
+    g.append(svgEl('title', {}, `${c.name}: ${m ? 'mastery ' + m.mastery.toFixed(2) + ' ± ' + m.uncertainty.toFixed(2) + ', n=' + m.evidenceCount : 'no evidence'}`));
+    svg.append(g);
+  });
+}
+
+function renderLandscape(problems, state, events) {
+  const svg = $('landscape');
+  svg.replaceChildren();
+  const width = svg.clientWidth || 900, height = 300, l = 44, r = 16, t = 12, b = 34;
+  const x = (v) => l + (v / 10) * (width - l - r), y = (p) => t + (1 - p) * (height - t - b);
+  const sig = (z) => 1 / (1 + Math.exp(-z));
+  const solved = new Set(events.filter((e) => e.result === 'ACCEPTED').map((e) => e.problemId));
+  const failed = new Set(events.filter((e) => e.result !== 'ACCEPTED').map((e) => e.problemId));
+  for (let v = 0; v <= 10; v += 2) {
+    svg.append(svgEl('line', { x1: x(v), x2: x(v), y1: t, y2: height - b, stroke: '#eaeef2' }));
+    svg.append(svgEl('text', { x: x(v), y: height - b + 14, 'text-anchor': 'middle' }, String(v)));
+  }
+  [0, 0.25, 0.5, 0.65, 0.75, 1].forEach((p) => {
+    svg.append(svgEl('line', { x1: l, x2: width - r, y1: y(p), y2: y(p), stroke: p === 0.65 ? '#0969da' : '#eaeef2', 'stroke-dasharray': p === 0.65 ? '4,3' : '' }));
+    svg.append(svgEl('text', { x: l - 6, y: y(p) + 4, 'text-anchor': 'end', fill: p === 0.65 ? '#0969da' : '#1f2328' }, p.toFixed(2)));
+  });
+  svg.append(svgEl('text', { x: (width + l) / 2, y: height - 4, 'text-anchor': 'middle', fill: '#656d76' }, 'estimated difficulty (0–10)'));
+  const path = [];
+  for (let v = 0; v <= 10; v += 0.25) path.push(`${path.length ? 'L' : 'M'} ${x(v)} ${y(sig(state.ability - v))}`);
+  svg.append(svgEl('path', { d: path.join(' '), fill: 'none', stroke: '#8c959f' }));
+  svg.append(svgEl('rect', { x: x(Math.max(0, state.ability - state.uncertainty)), y: t,
+    width: x(Math.min(10, state.ability + state.uncertainty)) - x(Math.max(0, state.ability - state.uncertainty)), height: height - t - b, fill: '#0969da', opacity: 0.06 }));
+  svg.append(svgEl('line', { x1: x(state.ability), x2: x(state.ability), y1: t, y2: height - b, stroke: '#0969da' }));
+  problems.forEach((p) => {
+    const cx = x(p.estimatedDifficulty), cy = y(sig(state.ability - p.estimatedDifficulty));
+    const g = svgEl('g');
+    if (failed.has(p.problemId) && !solved.has(p.problemId)) {
+      g.append(svgEl('path', { d: `M ${cx - 4} ${cy - 4} L ${cx + 4} ${cy + 4} M ${cx - 4} ${cy + 4} L ${cx + 4} ${cy - 4}`, stroke: '#cf222e', 'stroke-width': 2 }));
+    } else {
+      g.append(svgEl('circle', { cx, cy, r: 4.5, fill: solved.has(p.problemId) ? '#1a7f37' : '#fff', stroke: solved.has(p.problemId) ? '#1a7f37' : '#57606a' }));
+    }
+    g.append(svgEl('title', {}, `${p.problemId} ${p.title} · ${p.staticDifficulty} · est. ${p.estimatedDifficulty} ± ${p.difficultyUncertainty} (n=${p.sampleSize}) · P=${sig(state.ability - p.estimatedDifficulty).toFixed(2)} · ${(p.concepts || []).join(', ')}`));
+    svg.append(g);
+  });
+}
+
+function renderTable(tableId, columns, rows) {
+  const t = $(tableId);
+  t.replaceChildren();
+  const head = el('tr');
+  columns.forEach(([label]) => head.append(el('th', {}, label)));
+  t.append(head);
+  if (!rows.length) { const tr = el('tr'); tr.append(el('td', { colspan: columns.length, class: 'muted' }, 'none')); t.append(tr); }
+  rows.forEach((r) => {
+    const tr = el('tr');
+    columns.forEach(([, fn, cls]) => {
+      const v = fn(r);
+      tr.append(el('td', { class: typeof cls === 'function' ? cls(r) : (cls || '') }, v === null || v === undefined ? '–' : String(v)));
+    });
+    t.append(tr);
+  });
+}
+
+const time = (s) => (s ? new Date(s).toLocaleString() : '–');
+
+function saveSettings() {
+  store.set(LS.baseUrl, $('baseUrl').value.trim());
+  store.set(LS.apiKey, $('apiKey').value.trim());
+  store.set(LS.userId, $('userId').value.trim());
+}
+
+async function load() {
+  const userId = $('userId').value.trim();
+  $('error').hidden = true;
+  if (!userId) { $('status').textContent = 'enter a user id to load a learner'; return; }
+  saveSettings();
+  try { history.replaceState(null, '', '?userId=' + encodeURIComponent(userId)); } catch (e) { /* file:// pages may forbid this */ }
+  $('status').textContent = 'loading…';
+  try {
+    const enc = encodeURIComponent(userId);
+    const [state, next, recs, events, problems, concepts] = await Promise.all([
+      api(`/api/learners/${enc}/state`), api(`/api/learners/${enc}/next-action`),
+      api(`/api/learners/${enc}/recommendations?limit=50`), api(`/api/learners/${enc}/history?limit=100`),
+      api('/api/problems'), api('/api/concepts'),
+    ]);
+    renderKpis(state);
+    renderNext(next);
+    renderMastery(state.concepts || {}, concepts);
+    renderGraph(concepts, state.concepts || {});
+    renderLandscape(problems, state, events);
+    renderTable('recs', [['time', (r) => time(r.createdAt)], ['action', (r) => r.type], ['problem', (r) => r.problemId],
+      ['topic', (r) => r.topic], ['by', (r) => r.decidedBy + (r.fallbackUsed ? ' (fallback)' : '')], ['reason', (r) => r.reason, 'reason']], recs);
+    renderTable('events', [['time', (e) => time(e.timestamp)], ['problem', (e) => e.problemId],
+      ['result', (e) => e.result, (e) => e.result], ['attempt', (e) => e.attemptNumber],
+      ['time spent', (e) => (e.timeSpentSeconds != null ? Math.round(e.timeSpentSeconds / 60) + ' min' : null)],
+      ['hint', (e) => (e.hintUsed ? 'yes' : '')], ['solution', (e) => (e.solutionViewed ? 'yes' : '')]], events);
+    $('status').textContent = 'loaded ' + new Date().toLocaleTimeString();
+  } catch (e) {
+    $('status').textContent = '';
+    $('error').textContent = e.status === 0 ? e.message
+      : e.status === 404 ? `Learner "${userId}" not found (no events yet). Send an event or POST /api/learners first.`
+      : e.status === 401 ? 'Unauthorized: the server has KT_API_KEY set — enter the same key above.'
+      : e.status === 403 ? 'Forbidden: check the API key.'
+      : 'Failed to load: ' + e.message;
+    $('error').hidden = false;
+  }
+}
+
+$('load').addEventListener('click', load);
+$('userId').addEventListener('keydown', (e) => { if (e.key === 'Enter') load(); });
+['baseUrl', 'apiKey', 'userId'].forEach((id) => $(id).addEventListener('change', saveSettings));
+
+// Init: query param wins (shareable links), then localStorage, then defaults.
+$('baseUrl').value = store.get(LS.baseUrl) || DEFAULT_BASE;
+$('apiKey').value = store.get(LS.apiKey) || '';
+const initial = new URLSearchParams(location.search).get('userId') || store.get(LS.userId) || '';
+$('userId').value = initial;
+if (initial) load();
+</script>
+</body>
+</html>
